@@ -1,5 +1,6 @@
 using Avalonia.Controls;
 using Avalonia.Input;
+using Avalonia.Input.Platform;
 using Avalonia.Interactivity;
 using Avalonia.Themes.Neumorphism.Controls;
 using Avalonia.Threading;
@@ -23,7 +24,7 @@ namespace Neumorphism.Avalonia.Demo.Pages
                 this.Get<Button>("SearchButton").Command.Execute(textBox.Text);
         }
 
-        private void TextBox_OnGotFocus(object sender, GotFocusEventArgs e)
+        private void TextBox_OnGotFocus(object sender, FocusChangedEventArgs e)
         {
             var textBox = (TextBox)sender!;
             Dispatcher.UIThread.Post(textBox.SelectAll);

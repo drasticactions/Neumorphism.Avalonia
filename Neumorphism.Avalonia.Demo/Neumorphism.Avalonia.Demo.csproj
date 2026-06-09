@@ -1,44 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <!-- if you want to check exceptions, change this to "Exe" and start your app from the console -->
-    <OutputType Condition="'$(Configuration.toUpper())' != 'DEBUG'">WinExe</OutputType>
-    <OutputType Condition="'$(Configuration.toUpper())' == 'DEBUG'">WinExe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <!-- WinExe suppresses the console window on Windows; on macOS/Linux it behaves like Exe. -->
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
     <ApplicationIcon>Assets/app.ico</ApplicationIcon>
     <InvariantGlobalization>false</InvariantGlobalization>
     <Nullable>disable</Nullable>
-    <PublishAot>true</PublishAot>
-    <SuppressTrimAnalysisWarnings>true</SuppressTrimAnalysisWarnings>
-    <PublishTrimmed>true</PublishTrimmed>
-    <TrimMode>full</TrimMode>
     <BuiltInComInteropSupport>false</BuiltInComInteropSupport>
-    <SelfContained>true</SelfContained>
     <AvaloniaNameGenerator>false</AvaloniaNameGenerator>
-    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <LangVersion>default</LangVersion>
-
-	<!--Hardcore optims-->
-    <!--<UseSystemResourceKeys>true</UseSystemResourceKeys>
-    <IlcOptimizationPreference>Size</IlcOptimizationPreference>
-    <IlcGenerateStackTraceData>false</IlcGenerateStackTraceData>
-    <DebuggerSupport>false</DebuggerSupport>
-    <EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>
-    <EventSourceSupport>false</EventSourceSupport>
-    <HttpActivityPropagationSupport>false</HttpActivityPropagationSupport>
-    <MetadataUpdaterSupport>false</MetadataUpdaterSupport>-->
+    <!--
+      Cross-platform: no RuntimeIdentifier or AOT settings are hard-coded, so
+      `dotnet run`/`dotnet build` work on Windows, macOS and Linux.
+      For a Native AOT, trimmed, self-contained build, opt in at publish time, e.g.:
+        dotnet publish -c Release -r win-x64   -p:PublishAot=true
+        dotnet publish -c Release -r osx-arm64 -p:PublishAot=true
+        dotnet publish -c Release -r linux-x64 -p:PublishAot=true
+    -->
   </PropertyGroup>
-  
+
   <PropertyGroup>
     <IsWindows Condition="$([MSBuild]::IsOSPlatform('Windows'))">true</IsWindows>
     <IsLinux Condition="$([MSBuild]::IsOSPlatform('Linux'))">true</IsLinux>
     <IsOSX Condition="$([MSBuild]::IsOSPlatform('OSX'))">true</IsOSX>
   </PropertyGroup>
-  
-  <PropertyGroup>
+
+  <!-- Native AOT / trimming options, applied only when explicitly publishing with -p:PublishAot=true -->
+  <PropertyGroup Condition="'$(PublishAot)' == 'true'">
+    <SuppressTrimAnalysisWarnings>true</SuppressTrimAnalysisWarnings>
+    <PublishTrimmed>true</PublishTrimmed>
+    <SelfContained>true</SelfContained>
     <TrimMode>link</TrimMode>
-    <!--These can help when debugging weird exceptions especially when reflection is involved. See https://github.com/dotnet/corert/blob/master/Documentation/using-corert/optimizing-corert.md -->  
-    <!--RootAllApplicationAssemblies: False -> TrimMode:link See https://github.com/dotnet/runtimelab/issues/597 and https://github.com/dotnet/runtimelab/blob/feature/NativeAOT/docs/using-nativeaot/optimizing.md -->
     <IlcGenerateCompleteTypeMetadata>false</IlcGenerateCompleteTypeMetadata>
     <IlcGenerateStackTraceData Condition="'$(Configuration.toUpper())' != 'DEBUG'">false</IlcGenerateStackTraceData>
     <IlcDisableUnhandledExceptionExperience>true</IlcDisableUnhandledExceptionExperience>
@@ -56,18 +49,16 @@
   </ItemGroup>
     
   <ItemGroup>
-	  <PackageReference Include="Avalonia" Version="11.2.3" />
-	  <PackageReference Include="Avalonia.Controls.ItemsRepeater" Version="11.1.5" />
-	  <PackageReference Include="Avalonia.Desktop" Version="11.2.3" />
-	  <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.2.3" />
-	  <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-	  <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.2.3" />
-	  <PackageReference Include="DialogHost.Avalonia" Version="0.9.1" />
+	  <PackageReference Include="Avalonia" Version="12.0.4" />
+	  <PackageReference Include="Avalonia.Controls.ItemsRepeater" Version="12.0.0" />
+	  <PackageReference Include="Avalonia.Desktop" Version="12.0.4" />
+	  <PackageReference Include="Avalonia.Controls.DataGrid" Version="12.0.0" />
+	  <PackageReference Include="DialogHost.Avalonia" Version="0.12.0" />
 	  <!--Condition below is needed to generate macOS App only.-->
 	  <PackageReference Include="Dotnet.Bundle" Version="0.9.13" Condition="$(RuntimeIdentifier.StartsWith('osx'))" />
-	  <PackageReference Include="Material.Icons.Avalonia" Version="2.1.10" />
-	  <PackageReference Include="ShowMeTheXaml.Avalonia" Version="1.5.1" />
-	  <PackageReference Include="ShowMeTheXaml.Avalonia.Generator" Version="1.5.1" />
+	  <PackageReference Include="Material.Icons.Avalonia" Version="3.0.2" />
+	  <PackageReference Include="ShowMeTheXaml.Avalonia" Version="1.5.3" />
+	  <PackageReference Include="ShowMeTheXaml.Avalonia.Generator" Version="1.5.3" />
   </ItemGroup>
     
   <ItemGroup>

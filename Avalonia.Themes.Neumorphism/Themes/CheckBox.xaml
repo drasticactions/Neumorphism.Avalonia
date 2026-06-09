@@ -59,7 +59,7 @@
 
                 <Border.BoxShadow>
                   <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
-                    <Binding ElementName="OuterGraphicBorder" Path="Tag" RelativeSource="{RelativeSource TemplatedParent}"/>
+                    <Binding ElementName="OuterGraphicBorder" Path="Tag"/>
                     <DynamicResource ResourceKey="MaterialDesignShadowLight" />
                     <DynamicResource ResourceKey="MaterialDesignShadowDark" />
                   </MultiBinding>
@@ -121,7 +121,7 @@
       <Setter Property="BoxShadow">
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding ElementName="OuterGraphicBorder" Path="Tag" RelativeSource="{RelativeSource TemplatedParent}"/>
+            <Binding Path="(assist:SelectionControlAssist.Size)" RelativeSource="{RelativeSource AncestorType=CheckBox}"/>
             <DynamicResource ResourceKey="MaterialDesignShadowLight" />
             <DynamicResource ResourceKey="MaterialDesignShadowDark" />
           </MultiBinding>

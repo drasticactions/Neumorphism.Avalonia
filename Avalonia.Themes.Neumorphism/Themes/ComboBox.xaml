@@ -205,7 +205,7 @@
 							HorizontalOffset="-10"
 							Margin="-8"
 							WindowManagerAddShadowHint="False"
-							PlacementTarget="{Binding ElementName=templateRoot}"
+							PlacementTarget="{Binding ElementName=PART_Border}"
 							IsLightDismissEnabled="True"
 							UseLayoutRounding="True"
 							ClipToBounds="False" >
@@ -215,13 +215,13 @@
 															CornerRadius="5">
 							<Border.BoxShadow>
 								<MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
-									<Binding ElementName="PART_Popup" Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
+									<Binding ElementName="PART_Popup" Path="Height"/>
 									<DynamicResource ResourceKey="MaterialDesignShadowLight" />
 									<DynamicResource ResourceKey="MaterialDesignShadowDark" />
 								</MultiBinding>
 							</Border.BoxShadow>
 
-							<ScrollViewer Background="{Binding Background, ElementName=PART_Popup}"
+							<ScrollViewer Background="{TemplateBinding Background}"
 											MaxHeight="{TemplateBinding MaxDropDownHeight}"
 											MinHeight="1" >
 								<ItemsPresenter Name="PART_ItemsPresenter"
@@ -491,7 +491,7 @@
 						   HorizontalOffset="-10"
 						   Margin="-8"
 						   WindowManagerAddShadowHint="False"
-						   PlacementTarget="{Binding ElementName=templateRoot}"
+						   PlacementTarget="{Binding ElementName=PART_Border}"
 						   IsLightDismissEnabled="True"
 						   UseLayoutRounding="True"
 						   ClipToBounds="False" >
@@ -501,12 +501,12 @@
 														  CornerRadius="5">
 							<Border.BoxShadow>
 								<MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
-									<Binding ElementName="PART_Popup" Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
+									<Binding ElementName="PART_Popup" Path="Height"/>
 									<DynamicResource ResourceKey="MaterialDesignShadowLight" />
 									<DynamicResource ResourceKey="MaterialDesignShadowDark" />
 								</MultiBinding>
 							</Border.BoxShadow>
-							<ScrollViewer Background="{Binding Background, ElementName=PART_Popup}"
+							<ScrollViewer Background="{TemplateBinding Background}"
 										  MaxHeight="{TemplateBinding MaxDropDownHeight}"
 										  MinHeight="1" >
 

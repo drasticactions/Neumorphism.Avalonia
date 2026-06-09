@@ -39,21 +39,21 @@
 				  Header="Cut"
 				  Command="{Binding $parent[TextBox].Cut}"
 				  IsEnabled="{Binding $parent[TextBox].CanCut}"
-				  InputGesture="{Binding Converter={StaticResource GetPlatformHotkeyConfig}, ConverterParameter=cut}"
+				  InputGesture="{Binding $parent[TextBox], Converter={StaticResource GetPlatformHotkeyConfig}, ConverterParameter=cut}"
 				  Icon="{extensions:MaterialInternalIcon Kind=MaterialContentCut}" />
 
 		<MenuItem Name="TextBoxContextMenuCopyItem"
 				  Header="Copy"
 				  Command="{Binding $parent[TextBox].Copy}"
 				  IsEnabled="{Binding $parent[TextBox].CanCopy}"
-				  InputGesture="{Binding Converter={StaticResource GetPlatformHotkeyConfig}, ConverterParameter=copy}"
+				  InputGesture="{Binding $parent[TextBox], Converter={StaticResource GetPlatformHotkeyConfig}, ConverterParameter=copy}"
 					Icon="{extensions:MaterialInternalIcon Kind=MaterialContentCopy}" />
     
 		<MenuItem Name="TextBoxContextMenuPasteItem"
 				  Header="Paste"
 				  Command="{Binding $parent[TextBox].Paste}"
 				  IsEnabled="{Binding $parent[TextBox].CanPaste}"
-				  InputGesture="{Binding Converter={StaticResource GetPlatformHotkeyConfig}, ConverterParameter=paste}"
+				  InputGesture="{Binding $parent[TextBox], Converter={StaticResource GetPlatformHotkeyConfig}, ConverterParameter=paste}"
 				  Icon="{extensions:MaterialInternalIcon Kind=MaterialContentPaste}"/>
 
 		<Separator />
@@ -61,7 +61,7 @@
 		<MenuItem Name="TextBoxContextMenuSelectAllItem"
 				  Header="Select All"
 				  Command="{Binding $parent[TextBox].SelectAll}"
-				  InputGesture="{Binding Converter={StaticResource GetPlatformHotkeyConfig}, ConverterParameter=selectall}"
+				  InputGesture="{Binding $parent[TextBox], Converter={StaticResource GetPlatformHotkeyConfig}, ConverterParameter=selectall}"
 					Icon="{extensions:MaterialInternalIcon Kind=MaterialSelectAll}" />
 	</ContextMenu>
 

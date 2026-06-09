@@ -221,10 +221,10 @@
 		    <showMeTheXaml:XamlDisplay UniqueId="RadioButtonsCard2">
           <controls:Card Padding="0" InsideClipping="True" Margin="0,16,0,0" Height="38" ToolTip.Tip='RadioButtons group with theme "RadioButtonButton" applied and with custom colors'>
 				    <StackPanel Orientation="Horizontal">
-					    <RadioButton Theme="{StaticResource RadioButtonButton}" Width="50" Classes="Left" GroupName="5" Height="38" Content="{icons:MaterialIconExt Kind=SourceBranchMinus, Size=20}" assist:RadioButtonAssist.CheckedBackground="#FF77dbf0" assist:RadioButtonAssist.CheckedForeground="White" IsChecked="True" />
-					    <RadioButton Theme="{StaticResource RadioButtonButton}" Width="50" GroupName="5" Height="38" Content="{icons:MaterialIconExt Kind=SourceBranchPlus, Size=20}" assist:RadioButtonAssist.CheckedBackground="#FF77dbf0" assist:RadioButtonAssist.CheckedForeground="White" />
-					    <RadioButton Theme="{StaticResource RadioButtonButton}" Width="50" GroupName="5" Height="38" Content="{icons:MaterialIconExt Kind=SourceBranchRefresh, Size=20}" assist:RadioButtonAssist.CheckedBackground="#FF77dbf0" assist:RadioButtonAssist.CheckedForeground="White" />
-					    <RadioButton Theme="{StaticResource RadioButtonButton}" Width="50" Classes="Right" GroupName="5" Height="38" Content="{icons:MaterialIconExt Kind=SourceBranchSync, Size=20}" assist:RadioButtonAssist.CheckedBackground="#FF77dbf0" assist:RadioButtonAssist.CheckedForeground="White" />
+					    <RadioButton Theme="{StaticResource RadioButtonButton}" Width="50" Classes="Left" GroupName="5" Height="38" Content="{icons:MaterialIconExt Kind=SourceBranchMinus, IconSize=20}" assist:RadioButtonAssist.CheckedBackground="#FF77dbf0" assist:RadioButtonAssist.CheckedForeground="White" IsChecked="True" />
+					    <RadioButton Theme="{StaticResource RadioButtonButton}" Width="50" GroupName="5" Height="38" Content="{icons:MaterialIconExt Kind=SourceBranchPlus, IconSize=20}" assist:RadioButtonAssist.CheckedBackground="#FF77dbf0" assist:RadioButtonAssist.CheckedForeground="White" />
+					    <RadioButton Theme="{StaticResource RadioButtonButton}" Width="50" GroupName="5" Height="38" Content="{icons:MaterialIconExt Kind=SourceBranchRefresh, IconSize=20}" assist:RadioButtonAssist.CheckedBackground="#FF77dbf0" assist:RadioButtonAssist.CheckedForeground="White" />
+					    <RadioButton Theme="{StaticResource RadioButtonButton}" Width="50" Classes="Right" GroupName="5" Height="38" Content="{icons:MaterialIconExt Kind=SourceBranchSync, IconSize=20}" assist:RadioButtonAssist.CheckedBackground="#FF77dbf0" assist:RadioButtonAssist.CheckedForeground="White" />
 				    </StackPanel>
 			    </controls:Card>
 		    </showMeTheXaml:XamlDisplay>

@@ -571,8 +571,7 @@
                          Margin="{Binding Margin, ElementName=InnerBubbleText}" Foreground="Transparent"/>
             </Border>
             <Border Name="PART_ContentContainer" Background="{DynamicResource MaterialDesignToolTipBackground}"
-                    Padding="4, 8" CornerRadius="2" RenderTransform="{Binding TransformedBounds, 
-                  ElementName=PART_Positioner, Converter={StaticResource AutoCorrectPositionConverter}}">
+                    Padding="4, 8" CornerRadius="2">
 
               <TextBlock Name="InnerBubbleText" Classes="Caption" Text="{Binding $parent[Slider].Value}"
                          Foreground="{DynamicResource MaterialDesignBackground}"/>

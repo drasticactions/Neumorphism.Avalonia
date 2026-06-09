@@ -1236,7 +1236,7 @@
       <Setter Property="BoxShadow">
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
+            <Binding Path="Bounds.Height" RelativeSource="{RelativeSource Self}"/>
             <DynamicResource ResourceKey="MaterialDesignShadowLight" />
             <DynamicResource ResourceKey="MaterialDesignShadowDark" />
           </MultiBinding>
@@ -1248,7 +1248,7 @@
       <Setter Property="BoxShadow">
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Width" RelativeSource="{RelativeSource TemplatedParent}"/>
+            <Binding Path="Bounds.Width" RelativeSource="{RelativeSource Self}"/>
             <DynamicResource ResourceKey="MaterialDesignShadowLight" />
             <DynamicResource ResourceKey="MaterialDesignShadowDark" />
           </MultiBinding>

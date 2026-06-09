@@ -265,16 +265,16 @@
                 </StackPanel>
                 <!--<Right side menu-->
                 <Menu Grid.Column="5" Height="32" Padding="0" Margin="0" Cursor="Hand" Theme="{StaticResource NoMaterialMenu}">
-                  <MenuItem Height="32" Width="32" CornerRadius="6" Header="{icons:MaterialIconExt DotsVertical, Size=24}"
+                  <MenuItem Height="32" Width="32" CornerRadius="6" Header="{icons:MaterialIconExt DotsVertical, IconSize=24}"
                     assist:MenuAssist.PopupAnchor="TopRight"
                     assist:MenuAssist.PopupPlacement="BottomEdgeAlignedRight"
                     assist:MenuAssist.PopupHorizontalOffset="0"
                     assist:MenuAssist.PopupVerticalOffset="0">
-                    <MenuItem Header="Hello !" Icon="{icons:MaterialIconExt Smiley, Size=24}" Command="{Binding SayHelloCommand}" CommandParameter="Hello"/>
+                    <MenuItem Header="Hello !" Icon="{icons:MaterialIconExt Smiley, IconSize=24}" Command="{Binding SayHelloCommand}" CommandParameter="Hello"/>
                     <Separator />
-                    <MenuItem Header="About" Icon="{icons:MaterialIconExt AboutCircleOutline, Size=24}" IsEnabled="{Binding AboutEnabled}" Command="{Binding HelpAboutMethod}" />
+                    <MenuItem Header="About" Icon="{icons:MaterialIconExt AboutCircleOutline, IconSize=24}" IsEnabled="{Binding AboutEnabled}" Command="{Binding HelpAboutMethod}" />
                     <Separator />
-                    <MenuItem Header="Exit" Icon="{icons:MaterialIconExt ExitToApp, Size=24}" Command="{Binding AppExitCommand}"/>
+                    <MenuItem Header="Exit" Icon="{icons:MaterialIconExt ExitToApp, IconSize=24}" Command="{Binding AppExitCommand}"/>
                   </MenuItem>
                 </Menu>
               </Grid>

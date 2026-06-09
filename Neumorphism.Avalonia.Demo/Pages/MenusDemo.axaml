@@ -316,17 +316,17 @@
               </Style>
             </MenuItem.Styles>
 
-				    <MenuItem Header="Hello !" Icon="{icons:MaterialIconExt Hand, Size=22}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+				    <MenuItem Header="Hello !" Icon="{icons:MaterialIconExt Hand, IconSize=22}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
             <Separator />
-            <MenuItem Header="Follow us" Icon="{icons:MaterialIconExt Share, Size=22}">
-              <MenuItem Header="Twitter" Icon="{icons:MaterialIconExt Twitter, Size=22}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
-              <MenuItem Header="Instagram" Icon="{icons:MaterialIconExt Instagram, Size=22}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
-              <MenuItem Header="Facebook" Icon="{icons:MaterialIconExt Facebook, Size=22}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+            <MenuItem Header="Follow us" Icon="{icons:MaterialIconExt Share, IconSize=22}">
+              <MenuItem Header="Twitter" Icon="{icons:MaterialIconExt Twitter, IconSize=22}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+              <MenuItem Header="Instagram" Icon="{icons:MaterialIconExt Instagram, IconSize=22}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+              <MenuItem Header="Facebook" Icon="{icons:MaterialIconExt Facebook, IconSize=22}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
             </MenuItem>
 				    <Separator />
-				    <MenuItem Header="About" Icon="{icons:MaterialIconExt AboutOutline, Size=22}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+				    <MenuItem Header="About" Icon="{icons:MaterialIconExt AboutOutline, IconSize=22}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
 				    <Separator />
-				    <MenuItem Header="Goodbye" Icon="{icons:MaterialIconExt ExitToApp, Size=22}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+				    <MenuItem Header="Goodbye" Icon="{icons:MaterialIconExt ExitToApp, IconSize=22}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
 				  </MenuItem>
 			  </Menu>
         </showMeTheXaml:XamlDisplay>
@@ -335,16 +335,16 @@
 				<Menu Height="32" Padding="0" Margin="0" HorizontalAlignment="Center"
               ToolTip.Tip='Custom icon based menu with theme "NoMaterialMenu" applied'
               Theme="{StaticResource NoMaterialMenu}">
-					<MenuItem Height="32" Width="32" CornerRadius="6" Header="{icons:MaterialIconExt Menu, Size=24}"
+					<MenuItem Height="32" Width="32" CornerRadius="6" Header="{icons:MaterialIconExt Menu, IconSize=24}"
 											assist:MenuAssist.PopupAnchor="TopLeft"
 											assist:MenuAssist.PopupPlacement="BottomEdgeAlignedLeft"
 											assist:MenuAssist.PopupHorizontalOffset="0"
 											assist:MenuAssist.PopupVerticalOffset="0">
-						<MenuItem Header="Hello !" Icon="{icons:MaterialIconExt Hand, Size=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+						<MenuItem Header="Hello !" Icon="{icons:MaterialIconExt Hand, IconSize=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
 						<Separator />
-						<MenuItem Header="About" Icon="{icons:MaterialIconExt AboutCircle, Size=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+						<MenuItem Header="About" Icon="{icons:MaterialIconExt AboutCircle, IconSize=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
 						<Separator />
-						<MenuItem Header="Goodbye" Icon="{icons:MaterialIconExt ExitRun, Size=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+						<MenuItem Header="Goodbye" Icon="{icons:MaterialIconExt ExitRun, IconSize=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
 					</MenuItem>
 				</Menu>
       </showMeTheXaml:XamlDisplay>
@@ -353,38 +353,38 @@
         <Menu Height="48" Padding="0" Margin="0" HorizontalAlignment="Center"
               Theme="{StaticResource NoMaterialMenu}" VerticalAlignment="Center"
               ToolTip.Tip='Custom icons based menu with theme "NoMaterialMenu" applied'>
-          <MenuItem Height="48" Width="48" CornerRadius="6" Header="{icons:MaterialIconExt RocketLaunchOutline, Size=34}" Foreground="{DynamicResource MaterialDesignBodyLight}" Margin="10,0,10,0"
+          <MenuItem Height="48" Width="48" CornerRadius="6" Header="{icons:MaterialIconExt RocketLaunchOutline, IconSize=34}" Foreground="{DynamicResource MaterialDesignBodyLight}" Margin="10,0,10,0"
 											assist:MenuAssist.PopupAnchor="TopLeft"
 											assist:MenuAssist.PopupPlacement="Top"
 											assist:MenuAssist.PopupHorizontalOffset="0"
 											assist:MenuAssist.PopupVerticalOffset="-10">
-            <MenuItem Header="Go to the moon !" Icon="{icons:MaterialIconExt SpaceInvaders, Size=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+            <MenuItem Header="Go to the moon !" Icon="{icons:MaterialIconExt SpaceInvaders, IconSize=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
             <Separator />
-            <MenuItem Header="Go to mars !" Icon="{icons:MaterialIconExt SpaceInvaders, Size=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+            <MenuItem Header="Go to mars !" Icon="{icons:MaterialIconExt SpaceInvaders, IconSize=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
             <Separator />
-            <MenuItem Header="Go to Saturn !" Icon="{icons:MaterialIconExt SpaceInvaders, Size=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+            <MenuItem Header="Go to Saturn !" Icon="{icons:MaterialIconExt SpaceInvaders, IconSize=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
           </MenuItem>
-          <MenuItem Height="48" Width="48" CornerRadius="6" Header="{icons:MaterialIconExt UserOutline, Size=34}" Foreground="{DynamicResource MaterialDesignBodyLight}" Margin="10,0,10,0"
+          <MenuItem Height="48" Width="48" CornerRadius="6" Header="{icons:MaterialIconExt UserOutline, IconSize=34}" Foreground="{DynamicResource MaterialDesignBodyLight}" Margin="10,0,10,0"
 											assist:MenuAssist.PopupAnchor="TopLeft"
 											assist:MenuAssist.PopupPlacement="Top"
 											assist:MenuAssist.PopupHorizontalOffset="0"
 											assist:MenuAssist.PopupVerticalOffset="-10">
-            <MenuItem Header="Create" Icon="{icons:MaterialIconExt CreateOutline, Size=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+            <MenuItem Header="Create" Icon="{icons:MaterialIconExt CreateOutline, IconSize=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
             <Separator />
-            <MenuItem Header="Disable" Icon="{icons:MaterialIconExt StopCircleOutline, Size=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+            <MenuItem Header="Disable" Icon="{icons:MaterialIconExt StopCircleOutline, IconSize=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
             <Separator />
-            <MenuItem Header="Lock" Icon="{icons:MaterialIconExt LockOffOutline, Size=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+            <MenuItem Header="Lock" Icon="{icons:MaterialIconExt LockOffOutline, IconSize=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
           </MenuItem>
-          <MenuItem Height="48" Width="48" CornerRadius="6" Header="{icons:MaterialIconExt SecurityAccountOutline, Size=34}" Foreground="{DynamicResource MaterialDesignBodyLight}" Margin="10,0,10,0"
+          <MenuItem Height="48" Width="48" CornerRadius="6" Header="{icons:MaterialIconExt SecurityAccountOutline, IconSize=34}" Foreground="{DynamicResource MaterialDesignBodyLight}" Margin="10,0,10,0"
 											assist:MenuAssist.PopupAnchor="TopLeft"
 											assist:MenuAssist.PopupPlacement="Top"
 											assist:MenuAssist.PopupHorizontalOffset="0"
 											assist:MenuAssist.PopupVerticalOffset="-10">
-            <MenuItem Header="Allow" Icon="{icons:MaterialIconExt UserAddOutline, Size=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+            <MenuItem Header="Allow" Icon="{icons:MaterialIconExt UserAddOutline, IconSize=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
             <Separator />
-            <MenuItem Header="Deny" Icon="{icons:MaterialIconExt UserRemoveOutline, Size=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+            <MenuItem Header="Deny" Icon="{icons:MaterialIconExt UserRemoveOutline, IconSize=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
             <Separator />
-            <MenuItem Header="Default" Icon="{icons:MaterialIconExt UserGroupOutline, Size=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
+            <MenuItem Header="Default" Icon="{icons:MaterialIconExt UserGroupOutline, IconSize=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
           </MenuItem>
         </Menu>
       </showMeTheXaml:XamlDisplay>

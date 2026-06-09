@@ -64,7 +64,7 @@
 
                 <Border.BoxShadow>
                   <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
-                    <Binding Path="Height" ElementName="OuterGraphicBorder" RelativeSource="{RelativeSource TemplatedParent}"/>
+                    <Binding Path="Height" ElementName="OuterGraphicBorder"/>
                     <DynamicResource ResourceKey="MaterialDesignShadowLight" />
                     <DynamicResource ResourceKey="MaterialDesignShadowDark" />
                   </MultiBinding>

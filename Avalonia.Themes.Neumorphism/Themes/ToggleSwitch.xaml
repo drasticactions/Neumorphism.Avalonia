@@ -108,7 +108,7 @@
                   <ScaleTransform ScaleX="1" ScaleY="1" />
                 </Ellipse.RenderTransform>
               </Ellipse>
-              <AdornerLayer>
+              <Panel>
                 <!--Circle-->
                 <Border Name="Thumb"
                         HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="{TemplateBinding Cursor}" Margin="5"
@@ -124,7 +124,7 @@
                     </MultiBinding>
                   </Border.BoxShadow>
                 </Border>
-              </AdornerLayer>
+              </Panel>
             </Grid>
           </Grid>
           <ContentPresenter Grid.Column="2" Name="PART_ContentPresenterRight"
@@ -465,7 +465,7 @@
                   <ScaleTransform ScaleX="1" ScaleY="1" />
                 </Ellipse.RenderTransform>
               </Ellipse>
-              <AdornerLayer>
+              <Panel>
                 <!--Circle-->
                 <Border Name="Thumb"
                         HorizontalAlignment="Center" VerticalAlignment="Center" Margin="6"
@@ -481,7 +481,7 @@
                     </MultiBinding>
                   </Border.BoxShadow>
                 </Border>
-              </AdornerLayer>
+              </Panel>
             </Grid>
           </Grid>
           <ContentPresenter Grid.Column="2" Name="PART_ContentPresenterRight"

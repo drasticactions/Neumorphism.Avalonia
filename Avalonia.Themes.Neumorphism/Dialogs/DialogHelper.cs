@@ -261,7 +261,7 @@ namespace Avalonia.Themes.Neumorphism.Dialogs
 
         public static void SetupWindowParameters(Window window, DialogWindowBuilderParamsBase @params)
         {
-            window.SystemDecorations = @params.Borderless ? SystemDecorations.None : SystemDecorations.Full;
+            window.WindowDecorations = @params.Borderless ? WindowDecorations.None : WindowDecorations.Full;
             window.ShowInTaskbar = @params.ShowInTaskbar;
             (window as IHasNegativeResult)?.SetNegativeResult(@params.NegativeResult);
         }
