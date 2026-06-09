@@ -79,7 +79,7 @@
         <controls:ColorZone Grid.Row="2" Padding="8" Mode="Standard" assist:ShadowAssist.ShadowDepth="Depth2">
             <Grid Margin="8" ColumnDefinitions="430,Auto,*,50">
 
-                  <TextBox Grid.Column="0" KeyDown="Search_OnKeyDown" Watermark="Search" Name="SearchBox" 
+                  <TextBox Grid.Column="0" KeyDown="Search_OnKeyDown" PlaceholderText="Search" Name="SearchBox" 
                             Width="300" Classes="Header" Text="{Binding SearchText}" Margin="0">
                       <TextBox.InnerRightContent>
                           <Button Width="60" Focusable="False"

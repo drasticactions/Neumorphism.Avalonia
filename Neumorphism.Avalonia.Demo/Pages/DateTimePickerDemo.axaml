@@ -48,7 +48,7 @@
           <!--****************************************************************-->
           <showMeTheXaml:XamlDisplay UniqueId="DateTimePicker1">
             <StackPanel Orientation="Vertical">
-              <controls:ExtendedCalendarDatePicker Watermark="What is your birthdate ?" SelectedDate="{Binding BirthDate}"
+              <controls:ExtendedCalendarDatePicker PlaceholderText="What is your birthdate ?" SelectedDate="{Binding BirthDate}"
                                                    ToolTip.Tip="Date with long display format, watermark and no selected date yet"
                                                    SelectedDateFormat="Long" Width="280" IsTodayHighlighted="True" Margin="0,10,0,0" />
               <TextBlock Text="{Binding ComputedAge, StringFormat={}You are {0} years old !, TargetNullValue={}}"
@@ -58,22 +58,22 @@
           </showMeTheXaml:XamlDisplay>
           <!--****************************************************************-->
           <showMeTheXaml:XamlDisplay UniqueId="DateTimePicker2">
-            <controls:ExtendedCalendarDatePicker UseFloatingWatermark="True"
-                                                 assist:DatePickerAssist.Label="Birthdate" Watermark="{Binding CurrentCultureDateWatermark}" Width="180"
+            <controls:ExtendedCalendarDatePicker UseFloatingPlaceholder="True"
+                                                 assist:DatePickerAssist.Label="Birthdate" PlaceholderText="{Binding CurrentCultureDateWatermark}" Width="180"
                                                  ToolTip.Tip="Date with short display format, floating watermark and no selected date yet"
                                                  SelectedDate="{Binding BirthDate}" />
           </showMeTheXaml:XamlDisplay>
           <!--****************************************************************-->
           <showMeTheXaml:XamlDisplay UniqueId="DateTimePicker3">
-            <controls:ExtendedCalendarDatePicker Watermark="yyyy-MM-dd"
+            <controls:ExtendedCalendarDatePicker PlaceholderText="yyyy-MM-dd"
                                                  ToolTip.Tip="Date with custom display format yyyy-MM-dd forced, watermark and already selected date yet"
                                                  SelectedDateFormat="Custom" CustomDateFormatString="yyyy-MM-dd"
                                                  SelectedDate="{Binding TestDate1}" Width="180" />
           </showMeTheXaml:XamlDisplay>
           <!--****************************************************************-->
           <showMeTheXaml:XamlDisplay UniqueId="DateTimePicker4">
-            <controls:ExtendedCalendarDatePicker UseFloatingWatermark="True" IsEnabled="False"
-                                                 assist:DatePickerAssist.Label="Custom date format" Watermark="yyyy-MM-dd" Width="220"
+            <controls:ExtendedCalendarDatePicker UseFloatingPlaceholder="True" IsEnabled="False"
+                                                 assist:DatePickerAssist.Label="Custom date format" PlaceholderText="yyyy-MM-dd" Width="220"
                                                  ToolTip.Tip="Date with custom display format yyyy-MM-dd forced, floating watermark and no selected date"
                                                  SelectedDate="{Binding TestDate2}" SelectedDateFormat="Custom" CustomDateFormatString="yyyy-MM-dd" />
           </showMeTheXaml:XamlDisplay>
@@ -116,15 +116,15 @@
         <!--****************************************************************-->
         <showMeTheXaml:XamlDisplay UniqueId="DateTimePicker9">
           <StackPanel Orientation="Horizontal" ToolTip.Tip="Date range with short display format, watermark and already selected dates">
-            <controls:ExtendedCalendarDatePicker Watermark="Holidays start" SelectedDateFormat="Short" SelectedDate="{Binding HolidaysDateStart}" Width="180" Margin="0,15,0,15" IsTodayHighlighted="True" />
-            <controls:ExtendedCalendarDatePicker Watermark="Holidays end" SelectedDateFormat="Short" SelectedDate="{Binding HolidaysDateEnd}" Width="180" Margin="15,15,0,15" IsTodayHighlighted="True" />
+            <controls:ExtendedCalendarDatePicker PlaceholderText="Holidays start" SelectedDateFormat="Short" SelectedDate="{Binding HolidaysDateStart}" Width="180" Margin="0,15,0,15" IsTodayHighlighted="True" />
+            <controls:ExtendedCalendarDatePicker PlaceholderText="Holidays end" SelectedDateFormat="Short" SelectedDate="{Binding HolidaysDateEnd}" Width="180" Margin="15,15,0,15" IsTodayHighlighted="True" />
           </StackPanel>
         </showMeTheXaml:XamlDisplay>
         <!--****************************************************************-->
         <showMeTheXaml:XamlDisplay UniqueId="DateTimePicker10">
           <StackPanel Orientation="Horizontal" ToolTip.Tip="Date range with custom display format yyyy-MM-dd, floating watermark and already selected dates">
-            <controls:ExtendedCalendarDatePicker UseFloatingWatermark="True" assist:DatePickerAssist.Label="Holidays start" Width="180" SelectedDate="{Binding HolidaysDateStart}" SelectedDateFormat="Custom" Margin="0,15,0,15" CustomDateFormatString="yyyy-MM-dd" />
-            <controls:ExtendedCalendarDatePicker UseFloatingWatermark="True" assist:DatePickerAssist.Label="Holidays end" Width="180" SelectedDate="{Binding HolidaysDateEnd}" SelectedDateFormat="Custom" Margin="15,15,0,15" CustomDateFormatString="yyyy-MM-dd" />
+            <controls:ExtendedCalendarDatePicker UseFloatingPlaceholder="True" assist:DatePickerAssist.Label="Holidays start" Width="180" SelectedDate="{Binding HolidaysDateStart}" SelectedDateFormat="Custom" Margin="0,15,0,15" CustomDateFormatString="yyyy-MM-dd" />
+            <controls:ExtendedCalendarDatePicker UseFloatingPlaceholder="True" assist:DatePickerAssist.Label="Holidays end" Width="180" SelectedDate="{Binding HolidaysDateEnd}" SelectedDateFormat="Custom" Margin="15,15,0,15" CustomDateFormatString="yyyy-MM-dd" />
           </StackPanel>
         </showMeTheXaml:XamlDisplay>
         <!--****************************************************************-->

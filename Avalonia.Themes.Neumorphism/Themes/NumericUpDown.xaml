@@ -11,14 +11,14 @@
         <NumericUpDown Minimum="0"
                        Maximum="10"
                        Increment="0.5"
-                       Watermark="Enter text" />
+                       PlaceholderText="Enter text" />
         <NumericUpDown Minimum="0"
                        Maximum="10"
                        Increment="0.5"
                        VerticalContentAlignment="Center"
                        HorizontalContentAlignment="Center"
                        ButtonSpinnerLocation="Left"
-                       Watermark="Enter text" />
+                       PlaceholderText="Enter text" />
       </StackPanel>
     </Border>
   </Design.PreviewWith>
@@ -78,7 +78,7 @@
                                     BorderThickness="0"
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Stretch"
-                                    Watermark="{TemplateBinding Watermark}"
+                                    PlaceholderText="{TemplateBinding Watermark}"
                                     DataValidationErrors.Errors="{TemplateBinding (DataValidationErrors.Errors)}"
                                     IsReadOnly="{TemplateBinding IsReadOnly}"
                                     Text="{TemplateBinding Text}"

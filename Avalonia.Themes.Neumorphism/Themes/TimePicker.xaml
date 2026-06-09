@@ -144,10 +144,10 @@
                              Padding="0"
                              Margin="0"
                              FontSize="{TemplateBinding FontSize}"
-                             UseFloatingWatermark="False"
+                             UseFloatingPlaceholder="False"
                              HorizontalAlignment="Left"
                              VerticalAlignment="Stretch"
-                             Watermark="{TemplateBinding Watermark}"
+                             PlaceholderText="{TemplateBinding Watermark}"
                              VerticalContentAlignment="Center"
                              HorizontalContentAlignment="Left"/>
                   </DataValidationErrors>

@@ -31,8 +31,8 @@
                                      HorizontalAlignment="Stretch"
                                      MaxLength="{CompiledBinding MaxCountChars}"
                                      Text="{CompiledBinding Text, Mode=TwoWay}"
-                                     Watermark="{CompiledBinding PlaceholderText}"
-                                     UseFloatingWatermark="True"
+                                     PlaceholderText="{CompiledBinding PlaceholderText}"
+                                     UseFloatingPlaceholder="True"
                                      assist:TextFieldAssist.Hints="{CompiledBinding AssistiveText}"
                                      assist:TextFieldAssist.Label="{CompiledBinding Label}" />
                         </DataTemplate>

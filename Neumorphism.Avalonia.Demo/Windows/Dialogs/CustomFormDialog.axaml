@@ -52,9 +52,9 @@
               </DataTemplate>
             </ComboBox.ItemTemplate>
             </ComboBox>
-          <TextBox Text="{CompiledBinding FirstName}" Width="180" UseFloatingWatermark="True" assist:TextFieldAssist.Label="Firstname"/>
-          <TextBox Text="{CompiledBinding LastName}" Width="180" UseFloatingWatermark="True" assist:TextFieldAssist.Label="Lastname"/>
-          <controls:ExtendedCalendarDatePicker Width="180" UseFloatingWatermark="True" assist:DatePickerAssist.Label="Birthdate" SelectedDate="{Binding BirthDate}" SelectedDateFormat="Short" IsTodayHighlighted="True"/>
+          <TextBox Text="{CompiledBinding FirstName}" Width="180" UseFloatingPlaceholder="True" assist:TextFieldAssist.Label="Firstname"/>
+          <TextBox Text="{CompiledBinding LastName}" Width="180" UseFloatingPlaceholder="True" assist:TextFieldAssist.Label="Lastname"/>
+          <controls:ExtendedCalendarDatePicker Width="180" UseFloatingPlaceholder="True" assist:DatePickerAssist.Label="Birthdate" SelectedDate="{Binding BirthDate}" SelectedDateFormat="Short" IsTodayHighlighted="True"/>
 
         </StackPanel>
       </ScrollViewer>

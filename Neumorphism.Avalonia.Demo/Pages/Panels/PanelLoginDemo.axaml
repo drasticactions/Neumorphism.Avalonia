@@ -19,7 +19,7 @@
 		  <StackPanel Margin="0,4" HorizontalAlignment="Stretch">
 			  <TextBlock Classes="Headline6" Text="Login form" TextAlignment="Center" Foreground="#ff555555" />
 
-			  <TextBox Watermark="Email or phone" Theme="{StaticResource TextBoxHeader}" Margin="0,40,0,20" Width="240" Height="38" CornerRadius="50"
+			  <TextBox PlaceholderText="Email or phone" Theme="{StaticResource TextBoxHeader}" Margin="0,40,0,20" Width="240" Height="38" CornerRadius="50"
 					   Text="{Binding Login}"
 					   assist:TextFieldAssist.InnerLeftBackground="Transparent"
 					   assist:TextFieldAssist.InnerLeftPadding="10,0,0,0">
@@ -28,7 +28,7 @@
 				  </TextBox.InnerLeftContent>
 			  </TextBox>
 
-			  <TextBox Watermark="Password" Theme="{StaticResource TextBoxHeader}" Margin="0,20,0,5" Width="240" Height="38" CornerRadius="50"
+			  <TextBox PlaceholderText="Password" Theme="{StaticResource TextBoxHeader}" Margin="0,20,0,5" Width="240" Height="38" CornerRadius="50"
 					   PasswordChar="*"
 					   Text="{Binding Password}"
 					   assist:TextFieldAssist.InnerLeftBackground="Transparent"

@@ -38,13 +38,13 @@ namespace Avalonia.Themes.Neumorphism.Controls
 
 
 
-        private void TextBox_Loaded(object sender, RoutedEventArgs e)
+        private void TextBox_Loaded(object? sender, RoutedEventArgs e)
         {
             if (_textBox != null)
             {
-                if (UseFloatingWatermark)
+                if (UseFloatingPlaceholder)
                 {
-                    _textBox.Watermark = string.Empty;
+                    _textBox.PlaceholderText = string.Empty;
                 }
 
                 if (e != null && e.Source != null)
@@ -55,7 +55,7 @@ namespace Avalonia.Themes.Neumorphism.Controls
             }
         }
 
-        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
+        private void TextBox_LostFocus(object? sender, RoutedEventArgs e)
         {
             if (_textBox != null)
             {
@@ -79,20 +79,20 @@ namespace Avalonia.Themes.Neumorphism.Controls
                     SetValue(SelectedDateProperty, null);
                 }
 
-                if (UseFloatingWatermark)
+                if (UseFloatingPlaceholder)
                 {
-                    _textBox.Watermark = string.Empty;
+                    _textBox.PlaceholderText = string.Empty;
                 }
             }
         }
 
-        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        private void TextBox_GotFocus(object? sender, RoutedEventArgs e)
         {
             if (_textBox != null)
             {
-                if (UseFloatingWatermark)
+                if (UseFloatingPlaceholder)
                 {
-                    _textBox.Watermark = Watermark;
+                    _textBox.PlaceholderText = PlaceholderText;
                 }
             }
         }

@@ -122,7 +122,7 @@
                  Padding="0"
                  Margin="0"
                  FontSize="{TemplateBinding FontSize}"
-                 UseFloatingWatermark="False"
+                 UseFloatingPlaceholder="False"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Stretch"
                  VerticalContentAlignment="Center"

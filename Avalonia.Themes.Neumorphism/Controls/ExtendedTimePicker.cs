@@ -94,7 +94,7 @@ namespace Avalonia.Themes.Neumorphism.Controls
         /// Defines the <see cref="Watermark"/> property.
         /// </summary>
         public static readonly StyledProperty<string?> WatermarkProperty =
-            TextBox.WatermarkProperty.AddOwner<ExtendedTimePicker>();
+            TextBox.PlaceholderTextProperty.AddOwner<ExtendedTimePicker>();
 
 
         /// <inheritdoc cref="TextBox.Watermark"/>
@@ -110,7 +110,7 @@ namespace Avalonia.Themes.Neumorphism.Controls
         /// Defines the <see cref="UseFloatingWatermark"/> property.
         /// </summary>
         public static readonly StyledProperty<bool> UseFloatingWatermarkProperty =
-            TextBox.UseFloatingWatermarkProperty.AddOwner<ExtendedTimePicker>();
+            TextBox.UseFloatingPlaceholderProperty.AddOwner<ExtendedTimePicker>();
 
 
         /// <inheritdoc cref="TextBox.UseFloatingWatermark"/>
@@ -435,7 +435,7 @@ namespace Avalonia.Themes.Neumorphism.Controls
 
         }
 
-        private void _textBox_LostFocus(object sender, RoutedEventArgs e)
+        private void _textBox_LostFocus(object? sender, RoutedEventArgs e)
         {
             SetTextBoxValue(_textBox?.Text ?? string.Empty);
         }
