@@ -46,6 +46,10 @@
                   ClipToBounds="True">
             <Grid MinHeight="{TemplateBinding MinHeight}"
                   MinWidth="{TemplateBinding MinWidth}" Background="Transparent">
+              <!--Pressed (inset) neumorphic shadow, cross-faded in on hover-->
+              <Border Name="PART_PressedShadow" IsHitTestVisible="False" Opacity="0"
+                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                      CornerRadius="{StaticResource FloatingButtonRoundCorner}"/>
               <Border Name="PART_HoverIndicator" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                       Background="{TemplateBinding assist:ButtonAssist.HoverColor}" />
               <ripple:RippleEffect RippleFill="{TemplateBinding assist:ButtonAssist.ClickFeedbackColor}" RaiseRippleCenter="True"
@@ -146,8 +150,9 @@
       </Setter>
     </Style>
 
-    <!-- Feedbacks -->
-    <Style Selector="^:pointerover:not(.no-material) /template/ Border#PART_ButtonRootBorder">
+    <!-- Feedbacks: cross-fade the inset (pressed) shadow in instead of popping the root shadow -->
+    <Style Selector="^:not(.no-material) /template/ Border#PART_PressedShadow">
+      <Setter Property="Opacity" Value="0"/>
       <Setter Property="BoxShadow">
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
@@ -157,6 +162,18 @@
           </MultiBinding>
         </Setter.Value>
       </Setter>
+    </Style>
+
+    <Style Selector="^:not(.notransitions) /template/ Border#PART_PressedShadow">
+      <Setter Property="Transitions">
+        <Transitions>
+          <DoubleTransition Duration="0:0:0.25" Property="Opacity" Easing="CubicEaseOut"/>
+        </Transitions>
+      </Setter>
+    </Style>
+
+    <Style Selector="^:pointerover:not(.no-material) /template/ Border#PART_PressedShadow">
+      <Setter Property="Opacity" Value="1"/>
     </Style>
 
     <Style Selector="^:pointerover:not(.no-material) /template/ Border#PART_HoverIndicator">

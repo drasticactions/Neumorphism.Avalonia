@@ -65,6 +65,10 @@
             VerticalAlignment="Bottom"
             Padding="{TemplateBinding Padding}">
           <Panel>
+            <!--Pressed (inset) neumorphic shadow, cross-faded in on select/hover-->
+            <Border Name="PART_PressedShadow" IsHitTestVisible="False" Opacity="0"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    CornerRadius="{Binding $parent[Border].CornerRadius}"/>
             <ContentPresenter
                 Name="PART_ContentPresenter"
                 Margin="0"
@@ -108,8 +112,9 @@
 
 
 
-    <!--  Selected state  -->
-    <Style Selector="^:selected /template/ Border#PART_LayoutRoot">
+    <!-- Pressed-shadow overlay: carries the inset shadow, cross-faded in on select/hover (root keeps its raised shadow) -->
+    <Style Selector="^ /template/ Border#PART_PressedShadow">
+      <Setter Property="Opacity" Value="0" />
       <Setter Property="BoxShadow">
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
@@ -119,6 +124,18 @@
           </MultiBinding>
         </Setter.Value>
       </Setter>
+    </Style>
+
+    <Style Selector="^:not(.notransitions) /template/ Border#PART_PressedShadow">
+      <Setter Property="Transitions">
+        <Transitions>
+          <DoubleTransition Duration="0:0:0.25" Property="Opacity" Easing="CubicEaseOut"/>
+        </Transitions>
+      </Setter>
+    </Style>
+
+    <Style Selector="^:selected /template/ Border#PART_PressedShadow, ^:pointerover /template/ Border#PART_PressedShadow">
+      <Setter Property="Opacity" Value="1" />
     </Style>
 
     <Style Selector="^:selected:not(.Button) /template/ Border#PART_LayoutRoot">
@@ -130,15 +147,6 @@
     <Style Selector="^:pointerover /template/ Border#PART_LayoutRoot">
       <Setter Property="Background" Value="{DynamicResource TabItemHeaderBackgroundUnselectedPointerOver}" />
       <Setter Property="TextElement.Foreground" Value="{DynamicResource TabItemHeaderForegroundUnselectedPointerOver}" />
-      <Setter Property="BoxShadow">
-        <Setter.Value>
-          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
-          </MultiBinding>
-        </Setter.Value>
-      </Setter>
     </Style>
 
     <!--  Selected PointerOver state  -->

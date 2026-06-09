@@ -59,6 +59,11 @@
 						BorderThickness="{TemplateBinding BorderThickness}"
 						CornerRadius="{TemplateBinding CornerRadius}">
           <Panel>
+            <!--Pressed (inset) neumorphic shadow, cross-faded in on hover-->
+            <Border Name="PART_PressedShadow" IsHitTestVisible="False" Opacity="0"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                    CornerRadius="{TemplateBinding CornerRadius}"/>
             <!--Outline-->
             <Border Name="PART_HoverIndicator" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}"
 							  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
@@ -119,6 +124,34 @@
       </Setter>
     </Style>
 
+    <!-- Cross-fade the pressed (inset) shadow in/out so the neumorphic press eases into place
+         instead of popping. Opacity animates cleanly; interpolating outset<->inset BoxShadows does not. -->
+    <Style Selector="^:not(.notransitions) /template/ Border#PART_PressedShadow">
+      <Setter Property="Transitions">
+        <Transitions>
+          <DoubleTransition Duration="0:0:0.25" Property="Opacity" Easing="CubicEaseOut"/>
+        </Transitions>
+      </Setter>
+    </Style>
+
+    <!-- Pressed-shadow overlay: hidden by default, carries the inset neumorphic shadow -->
+    <Style Selector="^ /template/ Border#PART_PressedShadow">
+      <Setter Property="Opacity" Value="0"/>
+      <Setter Property="BoxShadow">
+        <Setter.Value>
+          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
+            <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
+            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
+            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+          </MultiBinding>
+        </Setter.Value>
+      </Setter>
+    </Style>
+
+    <Style Selector="^[CornerRadius=0] /template/ Border#PART_PressedShadow">
+      <Setter Property="CornerRadius" Value="{TemplateBinding Height, Converter={StaticResource ControlHeightToCornerRadiusConverter}, ConverterParameter=0}"/>
+    </Style>
+
     <!-- Default state -->
     <Style Selector="^.DrawerItem">
       <Setter Property="Height" Value="48"/>
@@ -148,17 +181,8 @@
       <Setter Property="Opacity" Value="1"/>
     </Style>
 
-    <!--Pointer enter state -->
-    <Style Selector="^:pointerover:not(.no-material,.NoFeedback) /template/ Border#PART_ButtonRootBorder">
-      <Setter Property="BoxShadow">
-        <Setter.Value>
-          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
-          </MultiBinding>
-        </Setter.Value>
-      </Setter>
+    <!--Pointer enter state: fade the inset shadow overlay in (root keeps its raised shadow underneath) -->
+    <Style Selector="^:pointerover:not(.no-material,.NoFeedback) /template/ Border#PART_PressedShadow">
       <Setter Property="Opacity" Value="1"/>
     </Style>
 
@@ -322,6 +346,11 @@
 						  BorderThickness="{TemplateBinding BorderThickness}"
 						  CornerRadius="100">
           <Panel>
+            <!--Pressed (inset) neumorphic shadow, cross-faded in on hover-->
+            <Border Name="PART_PressedShadow" IsHitTestVisible="False" Opacity="0"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                    CornerRadius="100"/>
             <!--Outline-->
             <Border Name="PART_HoverIndicator" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}"
 						  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
@@ -373,19 +402,7 @@
       <Setter Property="Opacity" Value="1"/>
     </Style>
 
-    <!--Icon pointer enter state -->
-    <Style Selector="^:pointerover:not(.no-material,.NoFeedback) /template/ Border#PART_ButtonRootBorder">
-      <Setter Property="BoxShadow">
-        <Setter.Value>
-          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
-          </MultiBinding>
-        </Setter.Value>
-      </Setter>
-      <Setter Property="Opacity" Value="1"/>
-    </Style>
+    <!--Icon pointer enter state: inset shadow is cross-faded via the inherited PART_PressedShadow overlay -->
 
     <!-- Icon pressed state -->
     <Style Selector="^:pressed:not(.no-material,.Light,.Dark,.Accent) /template/ Border#PART_ButtonRootBorder">

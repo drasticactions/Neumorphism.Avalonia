@@ -108,6 +108,11 @@
                 CornerRadius="{TemplateBinding CornerRadius}"
                 Background="{TemplateBinding Background}"
                 Margin="{TemplateBinding Margin}">
+        <Panel>
+          <!--Pressed (inset) neumorphic shadow, cross-faded in on hover/press/expand-->
+          <Border Name="PART_PressedShadow" IsHitTestVisible="False" Opacity="0"
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                  CornerRadius="{TemplateBinding CornerRadius}"/>
         <DockPanel MinWidth="{TemplateBinding MinWidth}"
 							MaxWidth="{TemplateBinding MaxWidth}">
           <ToggleButton x:Name="ExpanderHeader"
@@ -135,6 +140,7 @@
 											VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
           </Border>
         </DockPanel>
+        </Panel>
         </Border>
       </ControlTemplate>
     </Setter>
@@ -190,12 +196,12 @@
     </Style>
 
 
-    <!-- Pointerover -->
-    <Style Selector="^:left:pointerover /template/ Border#BorderRoot">
+    <!-- Pressed-shadow overlay: inset shadow cross-faded in on hover/press/expand (BorderRoot keeps its raised shadow) -->
+    <Style Selector="^:left /template/ Border#PART_PressedShadow, ^:right /template/ Border#PART_PressedShadow">
       <Setter Property="BoxShadow">
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Width" RelativeSource="{RelativeSource TemplatedParent}"/>
+            <Binding Path="Bounds.Width" RelativeSource="{RelativeSource Self}"/>
             <DynamicResource ResourceKey="MaterialDesignShadowLight" />
             <DynamicResource ResourceKey="MaterialDesignShadowDark" />
           </MultiBinding>
@@ -203,11 +209,11 @@
       </Setter>
     </Style>
 
-    <Style Selector="^:right:pointerover /template/ Border#BorderRoot">
+    <Style Selector="^:up /template/ Border#PART_PressedShadow, ^:down /template/ Border#PART_PressedShadow">
       <Setter Property="BoxShadow">
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Width" RelativeSource="{RelativeSource TemplatedParent}"/>
+            <Binding Path="Bounds.Height" RelativeSource="{RelativeSource Self}"/>
             <DynamicResource ResourceKey="MaterialDesignShadowLight" />
             <DynamicResource ResourceKey="MaterialDesignShadowDark" />
           </MultiBinding>
@@ -215,126 +221,16 @@
       </Setter>
     </Style>
 
-    <Style Selector="^:up:pointerover /template/ Border#BorderRoot">
-      <Setter Property="BoxShadow">
-        <Setter.Value>
-          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
-          </MultiBinding>
-        </Setter.Value>
+    <Style Selector="^:not(.notransitions) /template/ Border#PART_PressedShadow">
+      <Setter Property="Transitions">
+        <Transitions>
+          <DoubleTransition Duration="0:0:0.25" Property="Opacity" Easing="CubicEaseOut"/>
+        </Transitions>
       </Setter>
     </Style>
 
-    <Style Selector="^:down:pointerover /template/ Border#BorderRoot">
-      <Setter Property="BoxShadow">
-        <Setter.Value>
-          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
-          </MultiBinding>
-        </Setter.Value>
-      </Setter>
-    </Style>
-
-    <!-- Pressed -->
-    <Style Selector="^:left:pressed /template/ Border#BorderRoot">
-      <Setter Property="BoxShadow">
-        <Setter.Value>
-          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Width" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
-          </MultiBinding>
-        </Setter.Value>
-      </Setter>
-    </Style>
-
-    <Style Selector="^:right:pressed /template/ Border#BorderRoot">
-      <Setter Property="BoxShadow">
-        <Setter.Value>
-          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Width" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
-          </MultiBinding>
-        </Setter.Value>
-      </Setter>
-    </Style>
-
-    <Style Selector="^:up:pressed /template/ Border#BorderRoot">
-      <Setter Property="BoxShadow">
-        <Setter.Value>
-          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
-          </MultiBinding>
-        </Setter.Value>
-      </Setter>
-    </Style>
-
-    <Style Selector="^:down:pressed /template/ Border#BorderRoot">
-      <Setter Property="BoxShadow">
-        <Setter.Value>
-          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
-          </MultiBinding>
-        </Setter.Value>
-      </Setter>
-    </Style>
-
-    <!-- Checked -->
-    <Style Selector="^:left:checked /template/ Border#BorderRoot">
-      <Setter Property="BoxShadow">
-        <Setter.Value>
-          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Width" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
-          </MultiBinding>
-        </Setter.Value>
-      </Setter>
-    </Style>
-
-    <Style Selector="^:right:checked /template/ Border#BorderRoot">
-      <Setter Property="BoxShadow">
-        <Setter.Value>
-          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Width" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
-          </MultiBinding>
-        </Setter.Value>
-      </Setter>
-    </Style>
-
-    <Style Selector="^:up:checked /template/ Border#BorderRoot">
-      <Setter Property="BoxShadow">
-        <Setter.Value>
-          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
-          </MultiBinding>
-        </Setter.Value>
-      </Setter>
-    </Style>
-
-    <Style Selector="^:down:checked /template/ Border#BorderRoot">
-      <Setter Property="BoxShadow">
-        <Setter.Value>
-          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
-            <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
-          </MultiBinding>
-        </Setter.Value>
-      </Setter>
+    <Style Selector="^:pointerover /template/ Border#PART_PressedShadow, ^:pressed /template/ Border#PART_PressedShadow, ^:checked /template/ Border#PART_PressedShadow">
+      <Setter Property="Opacity" Value="1"/>
     </Style>
 
     
