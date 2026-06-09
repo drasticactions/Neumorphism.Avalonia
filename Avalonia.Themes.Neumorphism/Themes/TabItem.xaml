@@ -98,6 +98,15 @@
       </Setter>
     </Style>
 
+    <!-- Animate the tab growing/shrinking into place when selected -->
+    <Style Selector="^:not(.notransitions) /template/ Border#PART_LayoutRoot">
+      <Setter Property="Transitions">
+        <Transitions>
+          <DoubleTransition Duration="0:0:0.25" Property="Height" Easing="CubicEaseOut"/>
+        </Transitions>
+      </Setter>
+    </Style>
+
     <!--  Selected state  -->
     <!--  We don't use selector to PART_LayoutRoot, so developer can override selected item background with TabStripItem.Background  -->
     <Style Selector="^:selected">
