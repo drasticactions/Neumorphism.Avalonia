@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Timers;
+using Avalonia.Animation;
+using Avalonia.Animation.Easings;
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Layout;
+using Avalonia.Media;
+using Avalonia.Styling;
 using Avalonia.Themes.Neumorphism.Commands;
 using Avalonia.Themes.Neumorphism.Models;
 using Avalonia.Threading;
@@ -18,6 +23,8 @@ namespace Avalonia.Themes.Neumorphism.Controls
 
         private readonly ObservableCollection<SnackbarModel> _snackbars;
         public ObservableCollection<SnackbarModel> SnackbarModels => _snackbars;
+
+        private ItemsControl _itemsContainer;
 
         /// <summary>
         /// Get the name of host. The name of host can be set only one time.
@@ -301,7 +308,65 @@ namespace Avalonia.Themes.Neumorphism.Controls
 
         private void RemoveSnackbarModel(SnackbarModel model, DispatcherPriority priority)
         {
-            Dispatcher.UIThread.Post(delegate { SnackbarModels.Remove(model); }, priority);
+            Dispatcher.UIThread.Post(async delegate
+            {
+                if (!SnackbarModels.Contains(model))
+                    return;
+
+                // Play the neumorphic recede (soft fade + scale down) on the live container
+                // before the item is removed, so it eases out instead of vanishing.
+                var container = _itemsContainer?.ContainerFromIndex(SnackbarModels.IndexOf(model));
+                if (container is Control control)
+                {
+                    try
+                    {
+                        await PlayExitAnimationAsync(control);
+                    }
+                    catch
+                    {
+                        // Never let an animation failure strand the snackbar.
+                    }
+                }
+
+                SnackbarModels.Remove(model);
+            }, priority);
+        }
+
+        private static async Task PlayExitAnimationAsync(Control container)
+        {
+            container.RenderTransformOrigin = RelativePoint.Center;
+
+            var animation = new Avalonia.Animation.Animation
+            {
+                Duration = TimeSpan.FromMilliseconds(280),
+                Easing = new CubicEaseIn(),
+                FillMode = FillMode.Forward,
+                Children =
+                {
+                    new KeyFrame
+                    {
+                        Cue = new Cue(0d),
+                        Setters =
+                        {
+                            new Setter(Visual.OpacityProperty, 1d),
+                            new Setter(ScaleTransform.ScaleXProperty, 1d),
+                            new Setter(ScaleTransform.ScaleYProperty, 1d),
+                        }
+                    },
+                    new KeyFrame
+                    {
+                        Cue = new Cue(1d),
+                        Setters =
+                        {
+                            new Setter(Visual.OpacityProperty, 0d),
+                            new Setter(ScaleTransform.ScaleXProperty, 0.9d),
+                            new Setter(ScaleTransform.ScaleYProperty, 0.9d),
+                        }
+                    },
+                }
+            };
+
+            await animation.RunAsync(container);
         }
 
         protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
@@ -330,6 +395,8 @@ namespace Avalonia.Themes.Neumorphism.Controls
             if (HostName is null)
                 throw new ArgumentNullException(nameof(HostName),
                     "The name of SnackbarHost is null. Please define it.");
+
+            _itemsContainer = e.NameScope.Find<ItemsControl>("PART_SnackbarHostItemsContainer");
 
             base.OnApplyTemplate(e);
         }
