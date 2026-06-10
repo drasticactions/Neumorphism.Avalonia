@@ -1,6 +1,5 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:ripple="clr-namespace:Avalonia.Themes.Neumorphism.Controls.Ripple">
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   
   
   <Design.PreviewWith>
@@ -73,13 +72,6 @@
           <Grid>
             <Border Name="selectedBorder"	Background="{TemplateBinding Foreground}"/>
             <Border Name="pointerOverBorder" Background="{TemplateBinding Foreground}"/>
-            <!--<ripple:RippleEffect Name="Ripple"
-											 RippleFill="White"
-											 Focusable="False"
-											 ContentTemplate="{TemplateBinding ContentTemplate}"
-											 HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-											 VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-											 Padding="{TemplateBinding Padding}">-->
               <ContentPresenter Name="PART_ContentPresenter"
 											  Background="{TemplateBinding Background}"
 											  BorderBrush="{TemplateBinding BorderBrush}"
@@ -89,7 +81,6 @@
 											  Padding="{TemplateBinding Padding}"
 											  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
 											  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" />
-            <!--</ripple:RippleEffect>-->
           </Grid>
         </Border>
       </ControlTemplate>

@@ -1,6 +1,5 @@
 ﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:ripple="clr-namespace:Avalonia.Themes.Neumorphism.Controls.Ripple"
                     xmlns:assist="clr-namespace:Avalonia.Themes.Neumorphism.Assist"
                     xmlns:system="clr-namespace:System;assembly=netstandard"
                     xmlns:converters="clr-namespace:Avalonia.Themes.Neumorphism.Converters"
@@ -397,10 +396,17 @@
       <Setter Property="Foreground" Value="{DynamicResource SecondaryHueMidBrush}"/>
     </Style>
 
-    <!-- Outline Accent pressed state -->
-    <Style Selector="^.Accent:pressed:not(.no-material) /template/ Border#PART_HoverIndicator">
+    <!-- Colour the outline at rest but keep it hidden (Opacity 0) so pressing fades it in
+         and releasing fades it out via the PART_HoverIndicator opacity transition, instead
+         of the brush popping in at full strength then dimming. -->
+    <Style Selector="^.Accent:not(.no-material) /template/ Border#PART_HoverIndicator">
       <Setter Property="BorderThickness" Value="5"/>
       <Setter Property="BorderBrush" Value="{DynamicResource SecondaryHueMidBrush}"/>
+      <Setter Property="BoxShadow" Value="0 0 0 0 #00000000"/>
+      <Setter Property="Opacity" Value="0"/>
+    </Style>
+
+    <Style Selector="^.Accent:pressed:not(.no-material) /template/ Border#PART_HoverIndicator">
       <Setter Property="Opacity" Value="0.5"/>
     </Style>
 
@@ -411,10 +417,14 @@
       <Setter Property="Foreground" Value="{DynamicResource PrimaryHueLightBrush}"/>
     </Style>
 
-    <!-- Outline Light pressed state -->
-    <Style Selector="^.Light:pressed:not(.no-material) /template/ Border#PART_HoverIndicator">
+    <Style Selector="^.Light:not(.no-material) /template/ Border#PART_HoverIndicator">
       <Setter Property="BorderThickness" Value="5"/>
       <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueLightBrush}"/>
+      <Setter Property="BoxShadow" Value="0 0 0 0 #00000000"/>
+      <Setter Property="Opacity" Value="0"/>
+    </Style>
+
+    <Style Selector="^.Light:pressed:not(.no-material) /template/ Border#PART_HoverIndicator">
       <Setter Property="Opacity" Value="0.5"/>
     </Style>
 
@@ -425,10 +435,14 @@
       <Setter Property="Foreground" Value="{DynamicResource PrimaryHueDarkBrush}"/>
     </Style>
 
-    <!-- Outline Dark pressed state -->
-    <Style Selector="^.Dark:pressed:not(.no-material) /template/ Border#PART_HoverIndicator">
+    <Style Selector="^.Dark:not(.no-material) /template/ Border#PART_HoverIndicator">
       <Setter Property="BorderThickness" Value="5"/>
       <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueDarkBrush}"/>
+      <Setter Property="BoxShadow" Value="0 0 0 0 #00000000"/>
+      <Setter Property="Opacity" Value="0"/>
+    </Style>
+
+    <Style Selector="^.Dark:pressed:not(.no-material) /template/ Border#PART_HoverIndicator">
       <Setter Property="Opacity" Value="0.5"/>
     </Style>
   </ControlTheme>

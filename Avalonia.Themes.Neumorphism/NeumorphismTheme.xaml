@@ -15,7 +15,6 @@
         <!--Resources and brushes will be merged into current dictionary for slightly better performance and possible optimizations--> 
         <MergeResourceInclude Source="/Accents/BaseResources.xaml" />
         <MergeResourceInclude Source="/Accents/NeumorphismControlResources.xaml" />
-        <MergeResourceInclude Source="/Themes/Ripple.axaml" />
       </ResourceDictionary.MergedDictionaries>
       
     </ResourceDictionary>

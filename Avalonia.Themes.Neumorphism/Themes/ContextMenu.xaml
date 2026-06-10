@@ -1,6 +1,5 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:ripple="clr-namespace:Avalonia.Themes.Neumorphism.Controls.Ripple"
         xmlns:controls="clr-namespace:Avalonia.Themes.Neumorphism.Controls">
 
 

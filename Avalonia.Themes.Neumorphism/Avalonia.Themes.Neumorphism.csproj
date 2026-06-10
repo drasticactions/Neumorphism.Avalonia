@@ -33,7 +33,6 @@
     <AvaloniaResource Include="Fonts\SF\SFProText-Light.ttf" />
     <AvaloniaResource Include="Fonts\SF\SFProText-Medium.ttf" />
     <AvaloniaResource Include="Fonts\SF\SFProText-Regular.ttf" />
-    <AvaloniaResource Include="Themes\Ripple.axaml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Icon.png" Pack="true" PackagePath="" />
