@@ -39,7 +39,7 @@
 						Margin="{TemplateBinding Margin}"
 						ClipToBounds="{TemplateBinding ClipToBounds}">
           <Grid>
-            <Border Name="selectedBorder"	Background="{TemplateBinding Foreground}"/>
+            <Border Name="selectedBorder"	Background="{TemplateBinding assist:SelectionControlAssist.Background}"/>
             <Border Name="pointerOverBorder" Background="{TemplateBinding Foreground}"/>
               <ContentPresenter Name="PART_ContentPresenter"
 											  Background="{TemplateBinding Background}"
@@ -99,7 +99,7 @@
           <Border Name="PART_InnerBorder" ClipToBounds="True" CornerRadius="{TemplateBinding CornerRadius}">
             <Grid>
               <Border Name="selectedBorder"
-									Background="{TemplateBinding Foreground}" CornerRadius="{TemplateBinding CornerRadius}" />
+									Background="{TemplateBinding assist:SelectionControlAssist.Background}" CornerRadius="{TemplateBinding CornerRadius}" />
               <Border Name="pointerOverBorder"
 									Background="{TemplateBinding Foreground}" CornerRadius="{TemplateBinding CornerRadius}"/>
                 <ContentPresenter Name="PART_ContentPresenter" CornerRadius="100"
@@ -186,7 +186,7 @@
           <Border Name="PART_InnerBorder" ClipToBounds="True" CornerRadius="{TemplateBinding CornerRadius}">
             <Grid>
               <Border Name="selectedBorder"
-									Background="{TemplateBinding Foreground}" CornerRadius="{TemplateBinding CornerRadius}" />
+									Background="{TemplateBinding assist:SelectionControlAssist.Background}" CornerRadius="{TemplateBinding CornerRadius}" />
               <Border Name="pointerOverBorder"
 									Background="{TemplateBinding Foreground}" CornerRadius="{TemplateBinding CornerRadius}" />
                 <ContentPresenter Name="PART_ContentPresenter"
@@ -250,7 +250,7 @@
 						Margin="{TemplateBinding Margin}"
 						ClipToBounds="{TemplateBinding ClipToBounds}">
           <Grid>
-            <Border Name="selectedBorder"	Background="{TemplateBinding Foreground}"/>
+            <Border Name="selectedBorder"	Background="{TemplateBinding assist:SelectionControlAssist.Background}"/>
             <Border Name="pointerOverBorder" Background="{TemplateBinding Foreground}"/>
               <ContentPresenter Name="PART_ContentPresenter"
 											  Background="{TemplateBinding Background}"
@@ -346,9 +346,6 @@
       <Setter Property="Opacity" Value="0.06" />
     </Style>
 
-    <Style Selector="^:selected /template/ Border#selectedBorder">
-      <Setter Property="Background" Value="{TemplateBinding assist:SelectionControlAssist.Background}" />
-    </Style>
 
     <Style Selector="^:selected /template/ ContentPresenter#PART_ContentPresenter">
       <Setter Property="TextBlock.Foreground" Value="{TemplateBinding assist:SelectionControlAssist.Foreground}" />
