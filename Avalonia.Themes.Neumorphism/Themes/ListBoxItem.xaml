@@ -42,12 +42,6 @@
           <Grid>
             <Border Name="selectedBorder"	Background="{TemplateBinding Foreground}"/>
             <Border Name="pointerOverBorder" Background="{TemplateBinding Foreground}"/>
-            <ripple:RippleEffect Name="Ripple"
-											 RippleFill="White"
-											 Focusable="False"
-											 HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-											 VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-											 Padding="{TemplateBinding Padding}">
               <ContentPresenter Name="PART_ContentPresenter"
 											  Background="{TemplateBinding Background}"
 											  BorderBrush="{TemplateBinding BorderBrush}"
@@ -57,7 +51,6 @@
 											  Padding="{TemplateBinding Padding}"
 											  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
 											  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" />
-            </ripple:RippleEffect>
           </Grid>
         </Border>
       </ControlTemplate>
@@ -110,13 +103,6 @@
 									Background="{TemplateBinding Foreground}" CornerRadius="{TemplateBinding CornerRadius}" />
               <Border Name="pointerOverBorder"
 									Background="{TemplateBinding Foreground}" CornerRadius="{TemplateBinding CornerRadius}"/>
-              <ripple:RippleEffect Name="Ripple" CornerRadius="100"
-												 RippleFill="White"
-												 RippleOpacity="0.4"
-												 Focusable="False"
-												 HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-												 VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-												 Padding="{TemplateBinding Padding}">
                 <ContentPresenter Name="PART_ContentPresenter" CornerRadius="100"
 												  Background="{TemplateBinding Background}"
 												  BorderBrush="{TemplateBinding BorderBrush}"
@@ -126,7 +112,6 @@
 												  Padding="{TemplateBinding Padding}"
 												  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
 												  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" />
-              </ripple:RippleEffect>
             </Grid>
           </Border>
         </Border>
@@ -205,13 +190,6 @@
 									Background="{TemplateBinding Foreground}" CornerRadius="{TemplateBinding CornerRadius}" />
               <Border Name="pointerOverBorder"
 									Background="{TemplateBinding Foreground}" CornerRadius="{TemplateBinding CornerRadius}" />
-              <ripple:RippleEffect Name="Ripple"
-												 RippleFill="White"
-												 RippleOpacity="0.4"
-												 Focusable="False"
-												 HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-												 VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-												 Padding="{TemplateBinding Padding}">
                 <ContentPresenter Name="PART_ContentPresenter"
 												  Background="{TemplateBinding Background}"
 												  BorderBrush="{TemplateBinding BorderBrush}"
@@ -221,7 +199,6 @@
 												  Padding="{TemplateBinding Padding}"
 												  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
 												  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" />
-              </ripple:RippleEffect>
             </Grid>
           </Border>
         </Border>
@@ -276,12 +253,6 @@
           <Grid>
             <Border Name="selectedBorder"	Background="{TemplateBinding Foreground}"/>
             <Border Name="pointerOverBorder" Background="{TemplateBinding Foreground}"/>
-            <ripple:RippleEffect Name="Ripple"
-											 RippleFill="White"
-											 Focusable="False"
-											 HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-											 VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-											 Padding="{TemplateBinding Padding}">
               <ContentPresenter Name="PART_ContentPresenter"
 											  Background="{TemplateBinding Background}"
 											  BorderBrush="Transparent"
@@ -291,7 +262,6 @@
 											  Padding="{TemplateBinding Padding}"
 											  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
 											  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" />
-            </ripple:RippleEffect>
           </Grid>
         </Border>
       </ControlTemplate>
@@ -337,12 +307,6 @@
 						Margin="{TemplateBinding Margin}"
 						ClipToBounds="{TemplateBinding ClipToBounds}">
           <Grid>
-            <ripple:RippleEffect Name="Ripple"
-											 RippleFill="White"
-											 Focusable="False"
-											 HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-											 VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-											 Padding="{TemplateBinding Padding}">
               <ContentPresenter Name="PART_ContentPresenter"
 											  Background="{TemplateBinding Background}"
 											  BorderBrush="Transparent"
@@ -352,7 +316,6 @@
 											  Padding="{TemplateBinding Padding}"
 											  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
 											  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" />
-            </ripple:RippleEffect>
           </Grid>
         </Border>
       </ControlTemplate>

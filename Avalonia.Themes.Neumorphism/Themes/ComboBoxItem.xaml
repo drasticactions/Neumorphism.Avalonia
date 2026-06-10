@@ -48,7 +48,6 @@
                   BorderBrush="Transparent"
                   BorderThickness="0"
                   Background="{TemplateBinding Background}" />
-          <ripple:RippleEffect RippleFill="{DynamicResource MaterialDesignFlatButtonRipple}">
             <ContentPresenter Name="PART_ContentPresenter"
                               Background="{TemplateBinding Background}"
                               BorderBrush="{TemplateBinding BorderBrush}"
@@ -58,7 +57,6 @@
                               HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                               VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
                               Padding="{TemplateBinding Padding}" />
-          </ripple:RippleEffect>
         </Grid>
       </ControlTemplate>
     </Setter>

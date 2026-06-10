@@ -79,8 +79,6 @@
 						<Grid>
 							<Border Name="PART_HoverIndicator" BorderThickness="0"
                                     Background="{TemplateBinding assist:ButtonAssist.HoverColor}" />
-							<ripple:RippleEffect RippleFill="{TemplateBinding assist:ButtonAssist.ClickFeedbackColor}"
-                                                 RippleOpacity="{StaticResource ButtonPressedOpacity}">
 								<ContentPresenter Name="PART_ContentPresenter"
                                                   ContentTemplate="{TemplateBinding ContentTemplate}"
                                                   Content="{TemplateBinding Content}"
@@ -88,7 +86,6 @@
                                                   TextBlock.Foreground="{TemplateBinding Foreground}"
                                                   HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                                   VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
-							</ripple:RippleEffect>
 						</Grid>
 					</Border>
 				</Border>
@@ -134,8 +131,11 @@
 			<Setter Property="Opacity" Value="{StaticResource ButtonHoveredOpacity}" />
 		</Style>
 
-		
-		
+		<!-- Pressed: deepen the tint (neumorphic press cue, replaces the ink ripple) -->
+		<Style Selector="^:not(.disabled):pressed /template/ Border#PART_HoverIndicator">
+			<Setter Property="Opacity" Value="0.4" />
+		</Style>
+
 	</ControlTheme>
 
 
@@ -166,8 +166,6 @@
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
                             ClipToBounds="True" CornerRadius="1000000">
-						<ripple:RippleEffect RippleFill="{DynamicResource MaterialDesignFlatButtonRipple}"
-                                             RippleOpacity="{StaticResource ButtonPressedOpacity}">
 							<ContentPresenter Name="PART_ContentPresenter"
                                               CornerRadius="{TemplateBinding assist:ButtonAssist.CornerRadius}"
                                               BorderBrush="{TemplateBinding BorderBrush}"
@@ -178,7 +176,6 @@
                                               TextBlock.Foreground="{TemplateBinding Foreground}"
                                               HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                               VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
-						</ripple:RippleEffect>
 					</Border>
 				</Grid>
 			</ControlTemplate>
@@ -186,6 +183,11 @@
 
 		<Style Selector="^:not(:disabled):pointerover /template/ Ellipse#PART_HoverIndicator">
 			<Setter Property="Opacity" Value="{StaticResource ButtonHoveredOpacity}" />
+		</Style>
+
+		<!-- Pressed: deepen the tint (neumorphic press cue, replaces the ink ripple) -->
+		<Style Selector="^:not(:disabled):pressed /template/ Ellipse#PART_HoverIndicator">
+			<Setter Property="Opacity" Value="0.4" />
 		</Style>
 
 		<!-- Transitions -->

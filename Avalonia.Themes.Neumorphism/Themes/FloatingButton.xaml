@@ -52,8 +52,6 @@
                       CornerRadius="{StaticResource FloatingButtonRoundCorner}"/>
               <Border Name="PART_HoverIndicator" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                       Background="{TemplateBinding assist:ButtonAssist.HoverColor}" />
-              <ripple:RippleEffect RippleFill="{TemplateBinding assist:ButtonAssist.ClickFeedbackColor}" RaiseRippleCenter="True"
-                                   RippleOpacity="{StaticResource ButtonPressedOpacity}">
                 <ContentPresenter Name="PART_ContentPresenter"
                                   ContentTemplate="{TemplateBinding ContentTemplate}"
                                   Content="{TemplateBinding Content}"
@@ -61,7 +59,6 @@
                                   Foreground="{TemplateBinding Foreground}"
                                   HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                   VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
-              </ripple:RippleEffect>
             </Grid>
           </Border>
         </Border>
