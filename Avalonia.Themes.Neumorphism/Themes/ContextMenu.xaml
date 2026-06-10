@@ -1,6 +1,7 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:controls="clr-namespace:Avalonia.Themes.Neumorphism.Controls">
+        xmlns:controls="clr-namespace:Avalonia.Themes.Neumorphism.Controls"
+        xmlns:naming="clr-namespace:Avalonia.Themes.Neumorphism.Resources.Naming">
 
 
 
@@ -58,13 +59,12 @@
 		<Setter Property="Template">
 			<ControlTemplate>
 				<Border Background="{TemplateBinding Background}"
-						BorderBrush="{TemplateBinding BorderBrush}"
-						BorderThickness="{TemplateBinding BorderThickness}"
+						BorderThickness="0"
 						Padding="{TemplateBinding Padding}"
 						MaxWidth="{TemplateBinding MaxWidth}"
 						MinHeight="{TemplateBinding MinHeight}"
 						HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
-						CornerRadius="{TemplateBinding CornerRadius}">
+						CornerRadius="{TemplateBinding CornerRadius}" Margin="8"><Border.BoxShadow><MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}"><Binding Path="Bounds.Height" RelativeSource="{RelativeSource Self}"/><DynamicResource ResourceKey="NeumorphismShadowLight" /><DynamicResource ResourceKey="NeumorphismShadowDark" /></MultiBinding></Border.BoxShadow>
 					<ScrollViewer Theme="{StaticResource FluentMenuScrollViewer}">
 						<ItemsPresenter Name="PART_ItemsPresenter"
 										ItemsPanel="{TemplateBinding ItemsPanel}"

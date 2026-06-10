@@ -145,13 +145,12 @@
                  IsOpen="{TemplateBinding IsSubMenuOpen, Mode=TwoWay}">
             <Border Name="PART_PopupBorder"
                     Background="{DynamicResource NeumorphismPaper}"
-                    BorderBrush="{TemplateBinding assist:MenuAssist.PopupBorderBrush}"
-                    BorderThickness="{TemplateBinding assist:MenuAssist.PopupBorderThickness}"
+                    BorderThickness="0"
                     Padding="{DynamicResource MenuFlyoutPresenterThemePadding}"
                     MaxWidth="{DynamicResource FlyoutThemeMaxWidth}"
                     MinHeight="{DynamicResource MenuFlyoutThemeMinHeight}"
                     HorizontalAlignment="Stretch"
-                    CornerRadius="{TemplateBinding assist:MenuAssist.PopupCornerRadius}">
+                    CornerRadius="{TemplateBinding assist:MenuAssist.PopupCornerRadius}" Margin="8"><Border.BoxShadow><MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}"><Binding Path="Bounds.Height" RelativeSource="{RelativeSource Self}"/><DynamicResource ResourceKey="NeumorphismShadowLight" /><DynamicResource ResourceKey="NeumorphismShadowDark" /></MultiBinding></Border.BoxShadow>
               <ScrollViewer Theme="{StaticResource FluentMenuScrollViewer}">
                 <ItemsPresenter Name="PART_ItemsPresenter"
                                 ItemsPanel="{TemplateBinding ItemsPanel}"
@@ -290,13 +289,12 @@
                    OverlayInputPassThroughElement="{Binding $parent[Menu]}">
               <Border Name="PART_PopupBorder"
                       Background="{DynamicResource NeumorphismPaper}"
-                      BorderBrush="{TemplateBinding assist:MenuAssist.PopupBorderBrush}"
-                      BorderThickness="{TemplateBinding assist:MenuAssist.PopupBorderThickness}"
+                      BorderThickness="0"
                       Padding="{DynamicResource MenuFlyoutPresenterThemePadding}"
                       MaxWidth="{DynamicResource FlyoutThemeMaxWidth}"
                       MinHeight="{DynamicResource MenuFlyoutThemeMinHeight}"
                       HorizontalAlignment="Stretch"
-                      CornerRadius="{TemplateBinding assist:MenuAssist.PopupCornerRadius}">
+                      CornerRadius="{TemplateBinding assist:MenuAssist.PopupCornerRadius}" Margin="8"><Border.BoxShadow><MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}"><Binding Path="Bounds.Height" RelativeSource="{RelativeSource Self}"/><DynamicResource ResourceKey="NeumorphismShadowLight" /><DynamicResource ResourceKey="NeumorphismShadowDark" /></MultiBinding></Border.BoxShadow>
                 <ScrollViewer Theme="{StaticResource FluentMenuScrollViewer}">
                   <ItemsPresenter Name="PART_ItemsPresenter"
                                   ItemsPanel="{TemplateBinding ItemsPanel}"
@@ -456,6 +454,33 @@
 
 
 
+
+
+  <!--Top-level item for the default neumorphic capsule Menu: flat at rest, recesses on hover/open-->
+  <ControlTheme x:Key="NeumorphismMenuBarItem" TargetType="MenuItem" BasedOn="{StaticResource NoMaterialTopLevelMenuItem}">
+    <Setter Property="Margin" Value="2,0" />
+    <Setter Property="Height" Value="34" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="CornerRadius" Value="17" />
+    <Setter Property="ClipToBounds" Value="False" />
+    <Setter Property="assist:MenuAssist.PopupVerticalOffset" Value="12" />
+
+    <!-- Recess the item into the capsule on hover / selection / open -->
+    <Style Selector="^:pointerover /template/ Border#PART_LayoutRoot,
+                     ^:selected /template/ Border#PART_LayoutRoot,
+                     ^:open /template/ Border#PART_LayoutRoot">
+      <Setter Property="Background" Value="Transparent" />
+      <Setter Property="BoxShadow">
+        <Setter.Value>
+          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
+            <Binding Path="Bounds.Height" RelativeSource="{RelativeSource Self}" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
+          </MultiBinding>
+        </Setter.Value>
+      </Setter>
+    </Style>
+  </ControlTheme>
 
 
   <!--Popup MenuCapsuleBarOutsetMenuItem level 0 theme-->
