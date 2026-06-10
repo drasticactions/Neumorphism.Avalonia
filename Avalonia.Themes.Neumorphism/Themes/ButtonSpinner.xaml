@@ -105,11 +105,11 @@
 							<Grid Grid.Column="1" RowDefinitions="*,*" IsVisible="{TemplateBinding ShowButtonSpinner}" Width="30">
 								<RepeatButton assist:ButtonAssist.CornerRadius="0" Theme="{StaticResource RepeatButtonMaterial}" Focusable="{TemplateBinding Focusable}"
 											  Background="Transparent"
-											  assist:ShadowAssist.ShadowDepth="Depth0"
+											  Classes="NoShadow"
 											  Grid.Row="0"
 											  Name="PART_IncreaseButton" />
 								<RepeatButton assist:ButtonAssist.CornerRadius="0" Theme="{StaticResource RepeatButtonMaterial}" Focusable="{TemplateBinding Focusable}"
-											  assist:ShadowAssist.ShadowDepth="Depth0"
+											  Classes="NoShadow"
 											  Background="Transparent"
 											  Grid.Row="1"
 											  Name="PART_DecreaseButton" />
@@ -135,12 +135,12 @@
 						<Grid ColumnDefinitions="Auto,*">
 							<Grid Grid.Column="0" RowDefinitions="*,*" IsVisible="{TemplateBinding ShowButtonSpinner}" Width="30">
 								<RepeatButton assist:ButtonAssist.CornerRadius="0" Theme="{StaticResource RepeatButtonMaterial}" Focusable="{TemplateBinding Focusable}"
-											  assist:ShadowAssist.ShadowDepth="Depth0"
+											  Classes="NoShadow"
 											  Background="Transparent"
 											  Grid.Row="0"
 											  Name="PART_IncreaseButton" />
 								<RepeatButton assist:ButtonAssist.CornerRadius="0" Theme="{StaticResource RepeatButtonMaterial}" Focusable="{TemplateBinding Focusable}"
-											  assist:ShadowAssist.ShadowDepth="Depth0"
+											  Classes="NoShadow"
 											  Background="Transparent"
 											  Grid.Row="1"
 											  Name="PART_DecreaseButton" />

@@ -9,7 +9,6 @@
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="VerticalContentAlignment" Value="Stretch" />
         <Setter Property="ClipToBounds" Value="False" />
-        <Setter Property="assist:ShadowAssist.ShadowDepth" Value="Depth2" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -17,8 +16,15 @@
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="{TemplateBinding CornerRadius}"
-                            assist:ShadowAssist.ShadowDepth="{TemplateBinding assist:ShadowAssist.ShadowDepth}">
+                            CornerRadius="{TemplateBinding CornerRadius}">
+                        <!--Raised neumorphic surface (dual light/dark shadow)-->
+                        <Border.BoxShadow>
+                          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}">
+                            <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
+                            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
+                            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                          </MultiBinding>
+                        </Border.BoxShadow>
                         <Border Name="{x:Static naming:PartNames.PartInnerBorder}"
                                 CornerRadius="{TemplateBinding CornerRadius}"
                                 Padding="{TemplateBinding Padding}">

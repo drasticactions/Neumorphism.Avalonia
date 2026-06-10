@@ -1,19 +1,23 @@
-﻿using System;
+using System;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using Avalonia.Styling;
-using Avalonia.Themes.Neumorphism.Colors;
 using Avalonia.Themes.Neumorphism.Colors.ColorManipulation;
 using Avalonia.Themes.Neumorphism.Enums;
 
 namespace Avalonia.Themes.Neumorphism
 {
     /// <summary>
-    /// Includes the fluent theme in an application.
+    /// Includes the Neumorphism theme in an application.
     /// </summary>
     public class NeumorphismTheme : Styles
     {
+        // Muted, low-saturation seeds suit the soft-UI look. Consumers can override
+        // with any colour; the light/mid/dark hue brushes are derived from the seed.
+        private static readonly Color DefaultAccentColor = Color.FromRgb(0x6C, 0x7A, 0x89);
+        private static readonly Color DefaultSecondaryAccent = Color.FromRgb(0xB0, 0x85, 0x7B);
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NeumorphismTheme"/> class.
         /// </summary>
@@ -21,6 +25,12 @@ namespace Avalonia.Themes.Neumorphism
         public NeumorphismTheme(IServiceProvider sp = null)
         {
             AvaloniaXamlLoader.Load(sp, this);
+
+            // Seed the hue brushes from the default accents so the theme renders even
+            // when a consumer never sets AccentColor/SecondaryAccent explicitly (those
+            // assignments would otherwise be the only thing that creates the brushes).
+            ApplyAccent(AccentColor);
+            ApplySecondaryAccent(SecondaryAccent);
         }
 
 
@@ -35,31 +45,31 @@ namespace Avalonia.Themes.Neumorphism
         }
 
 
-        public static readonly StyledProperty<PrimaryColor> PrimaryColorProperty =
-            AvaloniaProperty.Register<NeumorphismTheme, PrimaryColor>(nameof(PrimaryColor));
+        public static readonly StyledProperty<Color> AccentColorProperty =
+            AvaloniaProperty.Register<NeumorphismTheme, Color>(nameof(AccentColor), DefaultAccentColor);
 
-
-        // <summary>
-        /// Gets or sets the primary color of the neumorphism theme
+        /// <summary>
+        /// Gets or sets the primary accent colour. The light/mid/dark primary hue brushes
+        /// are derived from this single seed via perceptual lighten/darken.
         /// </summary>
-        public PrimaryColor PrimaryColor
+        public Color AccentColor
         {
-            get => GetValue(PrimaryColorProperty);
-            set => SetValue(PrimaryColorProperty, value);
+            get => GetValue(AccentColorProperty);
+            set => SetValue(AccentColorProperty, value);
         }
 
 
-        public static readonly StyledProperty<SecondaryColor> SecondaryColorProperty =
-            AvaloniaProperty.Register<NeumorphismTheme, SecondaryColor>(nameof(SecondaryColor));
+        public static readonly StyledProperty<Color> SecondaryAccentProperty =
+            AvaloniaProperty.Register<NeumorphismTheme, Color>(nameof(SecondaryAccent), DefaultSecondaryAccent);
 
-
-        // <summary>
-        /// Gets or sets the secondary color of the neumorphism theme
+        /// <summary>
+        /// Gets or sets the secondary accent colour. The light/mid/dark secondary hue brushes
+        /// are derived from this single seed via perceptual lighten/darken.
         /// </summary>
-        public SecondaryColor SecondaryColor
+        public Color SecondaryAccent
         {
-            get => GetValue(SecondaryColorProperty);
-            set => SetValue(SecondaryColorProperty, value);
+            get => GetValue(SecondaryAccentProperty);
+            set => SetValue(SecondaryAccentProperty, value);
         }
 
 
@@ -68,51 +78,49 @@ namespace Avalonia.Themes.Neumorphism
         {
             base.OnPropertyChanged(change);
 
-            if (change.Property == PrimaryColorProperty)
+            if (change.Property == AccentColorProperty)
             {
-                Color primaryColor = SwatchHelper.Lookup[(MaterialColor)PrimaryColor];
-
-                var primaryLight = primaryColor.Lighten();
-                var primaryMid = primaryColor;
-                var primaryDark = primaryColor.Darken();
-
-                Application.Current!.Resources["PrimaryHueLightBrush"] = primaryLight;
-                Application.Current!.Resources["PrimaryHueMidBrush"] = primaryMid;
-                Application.Current!.Resources["PrimaryHueDarkBrush"] = primaryDark;
-
-                // to finish !
-                Application.Current!.Resources["PrimaryHueLightForegroundBrush"] = Color.FromRgb(255, 255, 255);
-                Application.Current!.Resources["PrimaryHueMidForegroundBrush"] = Color.FromRgb(255, 255, 255);
-                Application.Current!.Resources["PrimaryHueDarkForegroundBrush"] = Color.FromRgb(255, 255, 255);
+                ApplyAccent(AccentColor);
             }
-            else if (change.Property == SecondaryColorProperty)
+            else if (change.Property == SecondaryAccentProperty)
             {
-                Color secondaryColor = SwatchHelper.Lookup[(MaterialColor)SecondaryColor];
-
-                var secondaryLight = secondaryColor.Lighten();
-                var secondaryMid = secondaryColor;
-                var secondaryDark = secondaryColor.Darken();
-
-                Application.Current!.Resources["SecondaryHueLightBrush"] = secondaryLight;
-                Application.Current!.Resources["SecondaryHueMidBrush"] = secondaryMid;
-                Application.Current!.Resources["SecondaryHueDarkBrush"] = secondaryDark;
-
-                // to finish !
-                Application.Current!.Resources["SecondaryHueLightForegroundBrush"] = Color.FromRgb(255, 255, 255); 
-                Application.Current!.Resources["SecondaryHueMidForegroundBrush"] = Color.FromRgb(255, 255, 255); 
-                Application.Current!.Resources["SecondaryHueDarkForegroundBrush"] = Color.FromRgb(255, 255, 255); 
+                ApplySecondaryAccent(SecondaryAccent);
             }
             else if (change.Property == BaseThemeProperty)
             {
-                if (BaseTheme == ApplicationTheme.Dark)
-                {
-                    Application.Current.SetValue(ThemeVariantScope.ActualThemeVariantProperty, ThemeVariant.Dark);
-                }
-                else
-                {
-                    Application.Current.SetValue(ThemeVariantScope.ActualThemeVariantProperty, ThemeVariant.Light);
-                }
+                Application.Current?.SetValue(ThemeVariantScope.ActualThemeVariantProperty,
+                    BaseTheme == ApplicationTheme.Dark ? ThemeVariant.Dark : ThemeVariant.Light);
             }
+        }
+
+        private static void ApplyAccent(Color accent)
+        {
+            var resources = Application.Current?.Resources;
+            if (resources is null)
+                return;
+
+            resources["PrimaryHueLightBrush"] = accent.Lighten();
+            resources["PrimaryHueMidBrush"] = accent;
+            resources["PrimaryHueDarkBrush"] = accent.Darken();
+
+            resources["PrimaryHueLightForegroundBrush"] = accent.Lighten().ContrastingForegroundColor();
+            resources["PrimaryHueMidForegroundBrush"] = accent.ContrastingForegroundColor();
+            resources["PrimaryHueDarkForegroundBrush"] = accent.Darken().ContrastingForegroundColor();
+        }
+
+        private static void ApplySecondaryAccent(Color accent)
+        {
+            var resources = Application.Current?.Resources;
+            if (resources is null)
+                return;
+
+            resources["SecondaryHueLightBrush"] = accent.Lighten();
+            resources["SecondaryHueMidBrush"] = accent;
+            resources["SecondaryHueDarkBrush"] = accent.Darken();
+
+            resources["SecondaryHueLightForegroundBrush"] = accent.Lighten().ContrastingForegroundColor();
+            resources["SecondaryHueMidForegroundBrush"] = accent.ContrastingForegroundColor();
+            resources["SecondaryHueDarkForegroundBrush"] = accent.Darken().ContrastingForegroundColor();
         }
     }
 }

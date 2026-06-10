@@ -3,6 +3,7 @@
 					xmlns:ripple="clr-namespace:Avalonia.Themes.Neumorphism.Controls.Ripple"
                     xmlns:assist="clr-namespace:Avalonia.Themes.Neumorphism.Assist"
                     xmlns:system="clr-namespace:System;assembly=netstandard"
+                    xmlns:naming="clr-namespace:Avalonia.Themes.Neumorphism.Resources.Naming"
                     xmlns:converters="clr-namespace:Avalonia.Themes.Neumorphism.Converters">
 
 
@@ -60,7 +61,6 @@
 		<Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}" />
 		<Setter Property="Cursor" Value="Hand" />
 		<Setter Property="Padding" Value="16 8" />
-		<Setter Property="assist:ShadowAssist.ShadowDepth" Value="Depth1" />
 		<Setter Property="assist:ButtonAssist.HoverColor" Value="{Binding Foreground, Converter={StaticResource BrushRoundConverter}, RelativeSource={RelativeSource Self}}" />
 		<Setter Property="assist:ButtonAssist.ClickFeedbackColor" Value="#000000" />
 		<Setter Property="TextBlock.FontWeight" Value="Medium" />
@@ -73,8 +73,7 @@
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
                         Background="{TemplateBinding Background}"
-                        CornerRadius="{TemplateBinding assist:ButtonAssist.CornerRadius}"
-                        assist:ShadowAssist.ShadowDepth="{TemplateBinding assist:ShadowAssist.ShadowDepth}">
+                        CornerRadius="{TemplateBinding assist:ButtonAssist.CornerRadius}">
 					<Border ClipToBounds="True"
                             CornerRadius="{TemplateBinding assist:ButtonAssist.CornerRadius}">
 						<Grid>
@@ -95,6 +94,21 @@
 				</Border>
 			</ControlTemplate>
 		</Setter>
+
+		<!-- Raised neumorphic surface (dual light/dark shadow). Opt out with the .NoShadow class. -->
+		<Style Selector="^ /template/ Border#PART_ButtonRootBorder">
+			<Setter Property="BoxShadow">
+				<MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}">
+					<Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
+					<DynamicResource ResourceKey="MaterialDesignShadowLight" />
+					<DynamicResource ResourceKey="MaterialDesignShadowDark" />
+				</MultiBinding>
+			</Setter>
+		</Style>
+
+		<Style Selector="^.NoShadow /template/ Border#PART_ButtonRootBorder">
+			<Setter Property="BoxShadow" Value="0 0 0 0 #00000000" />
+		</Style>
 
 		<!-- Transitions -->
 		<Style Selector="^:not(.notransitions) /template/ Border#PART_HoverIndicator">
@@ -205,7 +219,6 @@
 		<Setter Property="BorderBrush" Value="Transparent" />
 		<Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}" />
 		<Setter Property="Padding" Value="16 6" />
-		<Setter Property="assist:ShadowAssist.ShadowDepth" Value="Depth0" />
 		<Setter Property="assist:ButtonAssist.HoverColor" Value="{Binding $self.Foreground}" />
 		<Setter Property="assist:ButtonAssist.ClickFeedbackColor" Value="#CCCCCC" />
 
@@ -251,7 +264,6 @@
 		<Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}" />
 		<Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}" />
 		<Setter Property="Padding" Value="16 6" />
-		<Setter Property="assist:ShadowAssist.ShadowDepth" Value="Depth0" />
 
 		<Style Selector="^.Accent">
 			<Setter Property="BorderBrush" Value="{DynamicResource SecondaryHueMidBrush}" />

@@ -56,8 +56,8 @@
 			<Color x:Key="MaterialDesignFlatButtonRipple">#FFB6B6B6</Color>
 			<Color x:Key="MaterialDesignToolTipBackground">#757575</Color>
 			<Color x:Key="MaterialDesignChipBackground">#12000000</Color>
-			<Color x:Key="MaterialDesignSnackbarBackground">#FF323232</Color>
-			<Color x:Key="MaterialDesignSnackbarMouseOver">#FF464642</Color>
+			<Color x:Key="MaterialDesignSnackbarBackground">#FFE0E5EC</Color>
+			<Color x:Key="MaterialDesignSnackbarMouseOver">#FFD1D9E6</Color>
 			<Color x:Key="MaterialDesignSnackbarRipple">#FFB6B6B6</Color>
 			<Color x:Key="MaterialDesignTextFieldBoxBackground">#0F000000</Color>
 			<Color x:Key="MaterialDesignTextFieldBoxHoverBackground">#14000000</Color>
@@ -133,8 +133,8 @@
 			<Color x:Key="MaterialDesignFlatButtonRipple">#FFB6B6B6</Color>
 			<Color x:Key="MaterialDesignToolTipBackground">#EEEEEE</Color>
 			<Color x:Key="MaterialDesignChipBackground">#FF2E3C43</Color>
-			<Color x:Key="MaterialDesignSnackbarBackground">#FFCDCDCD</Color>
-			<Color x:Key="MaterialDesignSnackbarMouseOver">#FFB9B9BD</Color>
+			<Color x:Key="MaterialDesignSnackbarBackground">#FF2C3135</Color>
+			<Color x:Key="MaterialDesignSnackbarMouseOver">#FF3A4045</Color>
 			<Color x:Key="MaterialDesignSnackbarRipple">#FF494949</Color>
 			<Color x:Key="MaterialDesignTextFieldBoxBackground">#1AFFFFFF</Color>
 			<Color x:Key="MaterialDesignTextFieldBoxHoverBackground">#1FFFFFFF</Color>

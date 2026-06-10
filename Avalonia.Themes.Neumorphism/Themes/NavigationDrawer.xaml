@@ -135,12 +135,29 @@
     <Style Selector="^:open" >
       <Style Selector="^:left /template/ Border#PART_LeftDrawerBorder" >
         <Setter Property="Margin" Value="0" />
-        <Setter Property="assist:ShadowAssist.ShadowDepth" Value="CenterDepth3" />
+        <!--Raised neumorphic surface (dual light/dark shadow) instead of Material elevation-->
+        <Setter Property="BoxShadow">
+          <Setter.Value>
+            <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}">
+              <Binding Path="Bounds.Height" RelativeSource="{RelativeSource Self}"/>
+              <DynamicResource ResourceKey="MaterialDesignShadowLight" />
+              <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            </MultiBinding>
+          </Setter.Value>
+        </Setter>
       </Style>
 
       <Style Selector="^:right /template/ Border#PART_RightDrawerBorder" >
         <Setter Property="Margin" Value="0" />
-        <Setter Property="assist:ShadowAssist.ShadowDepth" Value="CenterDepth3" />
+        <Setter Property="BoxShadow">
+          <Setter.Value>
+            <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}">
+              <Binding Path="Bounds.Height" RelativeSource="{RelativeSource Self}"/>
+              <DynamicResource ResourceKey="MaterialDesignShadowLight" />
+              <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            </MultiBinding>
+          </Setter.Value>
+        </Setter>
       </Style>
 
       <Style Selector="^:left:not(:left-expand), ^:right:not(:right-expand)" >

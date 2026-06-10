@@ -16,7 +16,7 @@
 
 	<Application.Styles>
 		<!--Neumorphism theme color setup-->
-		<theme:NeumorphismTheme BaseTheme="Light" PrimaryColor="Purple" SecondaryColor="Lime"/>
+		<theme:NeumorphismTheme BaseTheme="Light" AccentColor="#6C7A89" SecondaryAccent="#B0857B"/>
 		<!--Dialogs styling setup-->
 		<dialogHostAvalonia:DialogHostStyles />
 		<!--Icons styling setup-->

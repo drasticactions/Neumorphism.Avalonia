@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls="clr-namespace:Avalonia.Themes.Neumorphism.Controls"
+                    xmlns:naming="clr-namespace:Avalonia.Themes.Neumorphism.Resources.Naming"
                     xmlns:assist="clr-namespace:Avalonia.Themes.Neumorphism.Assist">
 
 
@@ -33,7 +34,6 @@
     <Setter Property="HorizontalAlignment" Value="Left" />
     <Setter Property="VerticalAlignment" Value="Top" />
     <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />
-    <Setter Property="assist:ShadowAssist.ShadowDepth" Value="Depth1" />
     <Setter Property="FontSize" Value="14"/>
     <Setter Property="Template">
       <ControlTemplate>
@@ -56,8 +56,15 @@
                     Background="{TemplateBinding Background}"
                     BorderBrush="{TemplateBinding BorderBrush}"
                     BorderThickness="{TemplateBinding BorderThickness}"
-                    CornerRadius="{TemplateBinding CornerRadius}"
-                    assist:ShadowAssist.ShadowDepth="{TemplateBinding assist:ShadowAssist.ShadowDepth}">
+                    CornerRadius="{TemplateBinding CornerRadius}">
+              <!--Raised neumorphic surface (dual light/dark shadow); cleared per-placement below-->
+              <Border.BoxShadow>
+                <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}">
+                  <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
+                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
+                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                </MultiBinding>
+              </Border.BoxShadow>
               <ContentPresenter Name="PART_SelectedContentHost" Background="{TemplateBinding Background}"
                                 Margin="{TemplateBinding Margin}"
                                 Padding="{TemplateBinding Padding}"
@@ -122,7 +129,7 @@
       <Setter Property="BorderBrush" Value="#ffd1d6dc" />
       <Setter Property="CornerRadius" Value="0" />
       <Setter Property="Margin" Value="0,-2,0,0" />
-      <Setter Property="assist:ShadowAssist.ShadowDepth" Value="Depth0" />
+      <Setter Property="BoxShadow" Value="0 0 0 0 #00000000" />
     </Style>
 
     <Style Selector="^[TabStripPlacement=Bottom]:not(.Bordered) /template/ Border#PART_SelectedContentBorder">
@@ -130,7 +137,7 @@
       <Setter Property="BorderBrush" Value="#ffd1d6dc" />
       <Setter Property="CornerRadius" Value="0" />
       <Setter Property="Margin" Value="0,0,0,-1" />
-      <Setter Property="assist:ShadowAssist.ShadowDepth" Value="Depth0" />
+      <Setter Property="BoxShadow" Value="0 0 0 0 #00000000" />
     </Style>
 
     <Style Selector="^[TabStripPlacement=Left]:not(.Bordered) /template/ Border#PART_SelectedContentBorder">
@@ -138,7 +145,7 @@
       <Setter Property="BorderBrush" Value="#ffd1d6dc" />
       <Setter Property="CornerRadius" Value="0" />
       <Setter Property="Margin" Value="-10,0,0,0" />
-      <Setter Property="assist:ShadowAssist.ShadowDepth" Value="Depth0" />
+      <Setter Property="BoxShadow" Value="0 0 0 0 #00000000" />
     </Style>
 
     <Style Selector="^[TabStripPlacement=Right]:not(.Bordered) /template/ Border#PART_SelectedContentBorder">
@@ -146,7 +153,7 @@
       <Setter Property="BorderBrush" Value="#ffd1d6dc" />
       <Setter Property="CornerRadius" Value="0" />
       <Setter Property="Margin" Value="0,0,-10,0" />
-      <Setter Property="assist:ShadowAssist.ShadowDepth" Value="Depth0" />
+      <Setter Property="BoxShadow" Value="0 0 0 0 #00000000" />
     </Style>
 
 

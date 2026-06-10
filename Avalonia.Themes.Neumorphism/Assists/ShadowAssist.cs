@@ -10,35 +10,46 @@ namespace Avalonia.Themes.Neumorphism.Assist
 {
     public static class ShadowProvider
     {
-        public static Color MaterialShadowColor { get; set; } = Color.FromArgb(76, 0, 0, 0);
+        // The dark half of the neumorphic shadow pair. Kept public for back-compat /
+        // per-element overrides (e.g. ShadowAssist.Darken passes an opaque black).
+        public static Color MaterialShadowColor { get; set; } = Color.FromArgb(0x33, 0, 0, 0);
 
+        // The light half — a soft top-left highlight. Correct on both light and dark
+        // surfaces (a white highlight + dark shadow is the neumorphic dual-light look).
+        public static Color NeumorphicHighlightColor { get; set; } = Color.FromArgb(0xCC, 255, 255, 255);
+
+        /// <summary>
+        /// Maps a depth step to a neumorphic dual shadow: a light highlight offset to the
+        /// top-left and a dark shadow offset to the bottom-right (no longer a single
+        /// Material drop-shadow). Higher depths use larger offset/blur.
+        /// </summary>
         public static BoxShadows ToBoxShadows(this ShadowDepth shadowDepth, Color? overrideColor = null)
         {
-            return shadowDepth switch
+            var (offset, blur) = shadowDepth switch
             {
-                ShadowDepth.Depth0 => new BoxShadows(new BoxShadow()),
-                ShadowDepth.Depth1 => new BoxShadows(new BoxShadow
-                { Blur = 5, OffsetX = 1, OffsetY = 1, Color = overrideColor ?? MaterialShadowColor }),
-                ShadowDepth.Depth2 => new BoxShadows(new BoxShadow
-                { Blur = 8, OffsetX = 1.5, OffsetY = 1.5, Color = overrideColor ?? MaterialShadowColor }),
-                ShadowDepth.Depth3 => new BoxShadows(new BoxShadow
-                { Blur = 14, OffsetX = 4.5, OffsetY = 4.5, Color = overrideColor ?? MaterialShadowColor }),
-                ShadowDepth.Depth4 => new BoxShadows(new BoxShadow
-                { Blur = 25, OffsetX = 8, OffsetY = 8, Color = overrideColor ?? MaterialShadowColor }),
-                ShadowDepth.Depth5 => new BoxShadows(new BoxShadow
-                { Blur = 35, OffsetX = 13, OffsetY = 13, Color = overrideColor ?? MaterialShadowColor }),
-                ShadowDepth.CenterDepth1 => new BoxShadows(new BoxShadow
-                { Blur = 5, OffsetY = 1, Color = overrideColor ?? MaterialShadowColor }),
-                ShadowDepth.CenterDepth2 => new BoxShadows(new BoxShadow
-                { Blur = 8, OffsetY = 1.5, Color = overrideColor ?? MaterialShadowColor }),
-                ShadowDepth.CenterDepth3 => new BoxShadows(new BoxShadow
-                { Blur = 14, OffsetY = 4.5, Color = overrideColor ?? MaterialShadowColor }),
-                ShadowDepth.CenterDepth4 => new BoxShadows(new BoxShadow
-                { Blur = 25, OffsetY = 8, Color = overrideColor ?? MaterialShadowColor }),
-                ShadowDepth.CenterDepth5 => new BoxShadows(new BoxShadow
-                { Blur = 35, OffsetY = 13, Color = overrideColor ?? MaterialShadowColor }),
+                ShadowDepth.Depth0 => (0d, 0d),
+                ShadowDepth.Depth1 => (2d, 4d),
+                ShadowDepth.Depth2 => (3d, 6d),
+                ShadowDepth.Depth3 => (5d, 10d),
+                ShadowDepth.Depth4 => (8d, 16d),
+                ShadowDepth.Depth5 => (12d, 24d),
+                ShadowDepth.CenterDepth1 => (2d, 4d),
+                ShadowDepth.CenterDepth2 => (3d, 6d),
+                ShadowDepth.CenterDepth3 => (5d, 10d),
+                ShadowDepth.CenterDepth4 => (8d, 16d),
+                ShadowDepth.CenterDepth5 => (12d, 24d),
                 _ => throw new ArgumentOutOfRangeException()
             };
+
+            if (offset == 0d && blur == 0d)
+                return new BoxShadows(new BoxShadow());
+
+            var highlight = new BoxShadow
+            { OffsetX = -offset, OffsetY = -offset, Blur = blur, Color = NeumorphicHighlightColor };
+            var shadow = new BoxShadow
+            { OffsetX = offset, OffsetY = offset, Blur = blur, Color = overrideColor ?? MaterialShadowColor };
+
+            return new BoxShadows(highlight, new[] { shadow });
         }
     }
 
