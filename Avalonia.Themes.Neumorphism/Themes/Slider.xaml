@@ -432,78 +432,88 @@
       <Setter Property="IsVisible" Value="False" />
     </Style>
   </ControlTheme>
-
-
-  <!--NeumorphismSliderThumbHorizontal-->
+  <!--NeumorphismSliderThumbHorizontal: raised (extruded) neumorphic knob-->
   <ControlTheme x:Key="NeumorphismSliderThumbHorizontal" BasedOn="{StaticResource ThumbSliderBase}" TargetType="Thumb">
     <Setter Property="Template">
       <ControlTemplate>
-        <Grid HorizontalAlignment="Center" UseLayoutRounding="True" VerticalAlignment="Center" ClipToBounds="False">
-          <Grid.Styles>
-            <Style Selector="Ellipse:not(.notransitions)">
-              <Setter Property="Transitions">
-                <Transitions>
-                  <DoubleTransition Property="Opacity" Duration="0:0:0.25" Easing="CubicEaseOut" />
-                  <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.25" Easing="CubicEaseOut" />
-                </Transitions>
-              </Setter>
-            </Style>
-          </Grid.Styles>
-          <Ellipse Name="shadow"
-                   Width="{Binding $parent[Slider].Bounds.Height, Converter={StaticResource WidthToCustomValueConverter}, ConverterParameter=125%}"
-				           Height="{Binding $parent[Slider].Bounds.Height, Converter={StaticResource WidthToCustomValueConverter}, ConverterParameter=125%}"
-				           Margin="{Binding $parent[Slider].Bounds.Height, Converter={StaticResource MarginCreator}, ConverterParameter=2}"
-                   Fill="{TemplateBinding Foreground}"
-                   UseLayoutRounding="True" ClipToBounds="False" />
-          <Border Name="grip" Margin="0" Cursor="Hand"
-              Width="{Binding $parent[Slider].Bounds.Height, Converter={StaticResource WidthMinusValueConverter}, ConverterParameter=20%}"
-              Height="{Binding $parent[Slider].Bounds.Height, Converter={StaticResource WidthMinusValueConverter}, ConverterParameter=20%}"
-              CornerRadius="{Binding $parent[Slider].Bounds.Height, Converter={StaticResource HeightToCornerRadiusConverter}}"
-              Background="{TemplateBinding Foreground}">
-            <ContentPresenter Name="inner" Background="Transparent" Content="{TemplateBinding assist:SliderAssist.ThumbContent}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-          </Border>
-          <ContentPresenter Name="bubble" Width="0" Height="0"
-                          IsHitTestVisible="False"
-                          ClipToBounds="False"
-                          RenderTransformOrigin="0.5,0.5" />
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" ClipToBounds="False" UseLayoutRounding="True">
+          <Panel ClipToBounds="False"
+                 Width="{Binding $parent[Slider].Bounds.Height, Converter={StaticResource WidthToCustomValueConverter}, ConverterParameter=170%}"
+                 Height="{Binding $parent[Slider].Bounds.Height, Converter={StaticResource WidthToCustomValueConverter}, ConverterParameter=170%}">
+            <!--Raised (extruded) knob-->
+            <Border Name="grip" Cursor="Hand" CornerRadius="1000" RenderTransformOrigin="50%,50%"
+                    Background="{DynamicResource NeumorphismPaper}">
+              <Border.BoxShadow>
+                <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}">
+                  <Binding Path="$parent[Slider].Bounds.Height"/>
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
+                </MultiBinding>
+              </Border.BoxShadow>
+            </Border>
+            <!--Pressed (inset) overlay, cross-faded in while the knob is grabbed-->
+            <Border Name="PART_PressedShadow" CornerRadius="1000" Opacity="0" IsHitTestVisible="False">
+              <Border.BoxShadow>
+                <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedInset}">
+                  <Binding Path="$parent[Slider].Bounds.Height"/>
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
+                </MultiBinding>
+              </Border.BoxShadow>
+            </Border>
+            <!--Accent value dot-->
+            <Ellipse Name="dot" IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center"
+                     Width="{Binding $parent[Slider].Bounds.Height, Converter={StaticResource WidthToCustomValueConverter}, ConverterParameter=45%}"
+                     Height="{Binding $parent[Slider].Bounds.Height, Converter={StaticResource WidthToCustomValueConverter}, ConverterParameter=45%}"
+                     Fill="{TemplateBinding Foreground}" />
+            <ContentPresenter Name="inner" Background="Transparent" Content="{TemplateBinding assist:SliderAssist.ThumbContent}"
+                              HorizontalAlignment="Center" VerticalAlignment="Center"
+                              HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+          </Panel>
+          <ContentPresenter Name="bubble" Width="0" Height="0" IsHitTestVisible="False" ClipToBounds="False" RenderTransformOrigin="0.5,0.5" />
         </Grid>
       </ControlTemplate>
     </Setter>
   </ControlTheme>
-
-
-  <!--NeumorphismSliderThumbVertical-->
+  <!--NeumorphismSliderThumbVertical: raised (extruded) neumorphic knob-->
   <ControlTheme x:Key="NeumorphismSliderThumbVertical" BasedOn="{StaticResource ThumbSliderBase}" TargetType="Thumb">
     <Setter Property="Template">
       <ControlTemplate>
-        <Grid HorizontalAlignment="Center" UseLayoutRounding="True" VerticalAlignment="Center" ClipToBounds="False">
-          <Grid.Styles>
-            <Style Selector="Ellipse:not(.notransitions)">
-              <Setter Property="Transitions">
-                <Transitions>
-                  <DoubleTransition Property="Opacity" Duration="0:0:0.25" Easing="CubicEaseOut" />
-                  <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.25" Easing="CubicEaseOut" />
-                </Transitions>
-              </Setter>
-            </Style>
-          </Grid.Styles>
-          <Ellipse Name="shadow"
-							 Width="{Binding $parent[Slider].Bounds.Width, Converter={StaticResource WidthToCustomValueConverter}, ConverterParameter=125%}"
-							 Height="{Binding $parent[Slider].Bounds.Width, Converter={StaticResource WidthToCustomValueConverter}, ConverterParameter=125%}"
-							 Margin="{Binding $parent[Slider].Bounds.Width, Converter={StaticResource MarginCreator}, ConverterParameter=2}"
-							 Fill="{TemplateBinding Foreground}"
-							 UseLayoutRounding="True" ClipToBounds="False" />
-          <Border Name="grip" Margin="0" Cursor="Hand"
-							Width="{Binding $parent[Slider].Bounds.Width, Converter={StaticResource WidthMinusValueConverter}, ConverterParameter=20%}"
-							Height="{Binding $parent[Slider].Bounds.Width, Converter={StaticResource WidthMinusValueConverter}, ConverterParameter=20%}"
-							CornerRadius="{Binding $parent[Slider].Bounds.Width, Converter={StaticResource HeightToCornerRadiusConverter}}"
-							Background="{TemplateBinding Foreground}">
-            <ContentPresenter Name="inner" Background="Transparent" Content="{TemplateBinding assist:SliderAssist.ThumbContent}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-          </Border>
-          <ContentPresenter Name="bubble" Width="0" Height="0"
-									  IsHitTestVisible="False"
-									  ClipToBounds="False"
-									  RenderTransformOrigin="0.5,0.5" />
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" ClipToBounds="False" UseLayoutRounding="True">
+          <Panel ClipToBounds="False"
+                 Width="{Binding $parent[Slider].Bounds.Width, Converter={StaticResource WidthToCustomValueConverter}, ConverterParameter=170%}"
+                 Height="{Binding $parent[Slider].Bounds.Width, Converter={StaticResource WidthToCustomValueConverter}, ConverterParameter=170%}">
+            <!--Raised (extruded) knob-->
+            <Border Name="grip" Cursor="Hand" CornerRadius="1000" RenderTransformOrigin="50%,50%"
+                    Background="{DynamicResource NeumorphismPaper}">
+              <Border.BoxShadow>
+                <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}">
+                  <Binding Path="$parent[Slider].Bounds.Width"/>
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
+                </MultiBinding>
+              </Border.BoxShadow>
+            </Border>
+            <!--Pressed (inset) overlay, cross-faded in while the knob is grabbed-->
+            <Border Name="PART_PressedShadow" CornerRadius="1000" Opacity="0" IsHitTestVisible="False">
+              <Border.BoxShadow>
+                <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedInset}">
+                  <Binding Path="$parent[Slider].Bounds.Width"/>
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
+                </MultiBinding>
+              </Border.BoxShadow>
+            </Border>
+            <!--Accent value dot-->
+            <Ellipse Name="dot" IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center"
+                     Width="{Binding $parent[Slider].Bounds.Width, Converter={StaticResource WidthToCustomValueConverter}, ConverterParameter=45%}"
+                     Height="{Binding $parent[Slider].Bounds.Width, Converter={StaticResource WidthToCustomValueConverter}, ConverterParameter=45%}"
+                     Fill="{TemplateBinding Foreground}" />
+            <ContentPresenter Name="inner" Background="Transparent" Content="{TemplateBinding assist:SliderAssist.ThumbContent}"
+                              HorizontalAlignment="Center" VerticalAlignment="Center"
+                              HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+          </Panel>
+          <ContentPresenter Name="bubble" Width="0" Height="0" IsHitTestVisible="False" ClipToBounds="False" RenderTransformOrigin="0.5,0.5" />
         </Grid>
       </ControlTemplate>
     </Setter>
@@ -511,49 +521,49 @@
 
 
   <ControlTheme x:Key="ThumbSliderBase" TargetType="Thumb">
-    <Style Selector="^.SliderThumb:disabled /template/ Ellipse#grip">
-      <Setter Property="Fill" Value="{DynamicResource NeumorphismDisabled}" />
-      <Setter Property="Stroke" Value="{DynamicResource NeumorphismDisabled}" />
+    <!-- Transitions -->
+    <Style Selector="^:not(.notransitions) /template/ Border#PART_PressedShadow">
+      <Setter Property="Transitions">
+        <Transitions>
+          <DoubleTransition Property="Opacity" Duration="0:0:0.2" Easing="CubicEaseOut" />
+        </Transitions>
+      </Setter>
     </Style>
-    <Style Selector="^.SliderThumb /template/ Ellipse#shadow">
-      <Setter Property="Opacity" Value="0" />
-    </Style>
-    <Style Selector="^.SliderThumb:pointerover /template/ Ellipse#shadow">
-      <Setter Property="Opacity" Value="0.1" />
-    </Style>
-    <Style Selector="^.SliderThumb:focused /template/ Ellipse#shadow">
-      <Setter Property="Opacity" Value="0.2" />
-    </Style>
-    <Style Selector="^.SliderThumb:pressed /template/ Ellipse#shadow">
-      <Setter Property="Opacity" Value="0.4" />
-    </Style>
-
-    <Style Selector="^ /template/ Ellipse#shadow">
-      <Setter Property="Opacity" Value="0" />
-    </Style>
-    <Style Selector="^ /template/ Ellipse#grip">
-      <Setter Property="Fill" Value="{DynamicResource Foreground}" />
-    </Style>
-    <Style Selector="^:disabled /template/ Ellipse#grip">
-      <Setter Property="Fill" Value="{DynamicResource NeumorphismDisabled}" />
-      <Setter Property="Stroke" Value="{DynamicResource NeumorphismDisabled}" />
-    </Style>
-    <Style Selector="^:pointerover /template/ Ellipse#shadow">
-      <Setter Property="Opacity" Value="0.26" />
-    </Style>
-    <Style Selector="^:pressed /template/ Ellipse#shadow">
-      <Setter Property="RenderTransform" Value="scale(1.5)" />
-    </Style>
-    <Style Selector="^:pressed /template/ Ellipse#grip">
-      <Setter Property="RenderTransform" Value="scale(1.25)" />
+    <Style Selector="^:not(.notransitions) /template/ Border#grip">
+      <Setter Property="Transitions">
+        <Transitions>
+          <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.2" Easing="CubicEaseOut" />
+        </Transitions>
+      </Setter>
     </Style>
 
-    <Style Selector="^[IsEnabled=False] /template/ Border#grip">
+    <!-- Default state -->
+    <Style Selector="^ /template/ Border#PART_PressedShadow">
+      <Setter Property="Opacity" Value="0" />
+    </Style>
+
+    <!-- Hover: subtle lift -->
+    <Style Selector="^:pointerover /template/ Border#grip">
+      <Setter Property="RenderTransform" Value="scale(1.06)" />
+    </Style>
+
+    <!-- Pressed / dragging: the knob presses into the surface (inset shadow fades in) -->
+    <Style Selector="^:pressed /template/ Border#PART_PressedShadow">
+      <Setter Property="Opacity" Value="1" />
+    </Style>
+    <Style Selector="^:pressed /template/ Border#grip">
+      <Setter Property="RenderTransform" Value="scale(0.94)" />
+    </Style>
+
+    <!-- Disabled -->
+    <Style Selector="^:disabled /template/ Border#grip">
       <Setter Property="Background" Value="{DynamicResource NeumorphismDisabled}" />
-      <Setter Property="assist:SliderAssist.ThumbForeground" Value="{DynamicResource NeumorphismDisabled}"/>
+    </Style>
+    <Style Selector="^:disabled /template/ Ellipse#dot">
+      <Setter Property="Fill" Value="{DynamicResource NeumorphismDisabled}" />
     </Style>
 
-    <!--Discrete thumb definitions and styles-->
+    <!--Discrete thumb value tooltip ("bubble")-->
     <Style Selector="^[Tag=True] /template/ ContentPresenter#bubble">
       <Setter Property="Content">
         <Template>
