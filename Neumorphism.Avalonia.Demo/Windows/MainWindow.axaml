@@ -17,6 +17,8 @@
         WindowStartupLocation="CenterScreen"
         Title="Neumorphism.Avalonia.Demo"
         Icon="avares://Neumorphism.Avalonia.Demo/Assets/app.ico"
+        WindowDecorations="BorderOnly"
+        Background="{DynamicResource NeumorphismPaper}"
         x:CompileBindings="True"
         x:DataType="viewModels:ApplicationModelBase"
         x:Class="Neumorphism.Avalonia.Demo.Windows.MainWindow">
@@ -91,7 +93,11 @@
 
 
 
-  <dialogHost:DialogHost Identifier="MainDialogHost" Theme="{DynamicResource DialogHostTheme}">
+  <Grid RowDefinitions="Auto,*">
+    <!-- Neumorphic window chrome (works on Windows/Linux/macOS via WindowDecorations="BorderOnly") -->
+    <controls:WindowTitleBar Grid.Row="0" />
+
+    <dialogHost:DialogHost Grid.Row="1" Identifier="MainDialogHost" Theme="{DynamicResource DialogHostTheme}">
     <Grid>
       <controls:SnackbarHost HostName="Root" TemplateApplied="TemplatedControl_OnTemplateApplied"
                                               SnackbarVerticalAlignment="Bottom"
@@ -338,5 +344,6 @@
       <!--Child window dark overlay-->
       <Border Name="PART_DialogDarkOverlay" IsVisible="{Binding IsDialogOpened}" Background="Black" Opacity="0.6"/>
     </Grid>
-  </dialogHost:DialogHost>
+    </dialogHost:DialogHost>
+  </Grid>
 </Window>

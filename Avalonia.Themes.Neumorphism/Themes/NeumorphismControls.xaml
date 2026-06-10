@@ -52,7 +52,7 @@
                 <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/CalendarDatePicker.xaml" />
                 <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/CalendarDayButton.xaml" />
                 <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/CalendarItem.xaml" />
-                <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/WindowDrawnDecorations.xaml" />
+                <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/WindowTitleBar.xaml" />
                 <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/Carousel.xaml" />
                 <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/CheckBox.xaml" />
                 <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/FlyoutPresenter.xaml" />

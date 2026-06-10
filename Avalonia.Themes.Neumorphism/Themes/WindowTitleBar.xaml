@@ -1,0 +1,191 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:Avalonia.Themes.Neumorphism.Controls"
+                    xmlns:naming="clr-namespace:Avalonia.Themes.Neumorphism.Resources.Naming">
+
+  <!-- Windows/Linux caption button: a flat glyph at rest that recesses into the surface on
+       hover/press. The inset shadow renders inside the bounds, so it never clips. -->
+  <ControlTheme x:Key="WindowCaptionButton" TargetType="Button">
+    <Setter Property="Width" Value="34" />
+    <Setter Property="Height" Value="30" />
+    <Setter Property="Margin" Value="0" />
+    <Setter Property="Background" Value="{DynamicResource NeumorphismPaper}" />
+    <Setter Property="Foreground" Value="{DynamicResource NeumorphismBody}" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="FocusAdorner" Value="{x:Null}" />
+    <Setter Property="Template">
+      <ControlTemplate>
+        <!-- Transparent background makes the whole button hit-testable, not just the glyph. -->
+        <Panel Background="Transparent">
+          <Border Name="PART_Well" CornerRadius="8" Opacity="0" IsHitTestVisible="False"
+                  Background="{TemplateBinding Background}">
+            <Border.BoxShadow>
+              <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
+                <Binding Path="Bounds.Height" RelativeSource="{RelativeSource Self}" />
+                <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                <DynamicResource ResourceKey="NeumorphismShadowDark" />
+              </MultiBinding>
+            </Border.BoxShadow>
+          </Border>
+          <ContentPresenter Name="PART_ContentPresenter"
+                            Content="{TemplateBinding Content}"
+                            HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Foreground="{TemplateBinding Foreground}" />
+        </Panel>
+      </ControlTemplate>
+    </Setter>
+
+    <Style Selector="^:not(.notransitions) /template/ Border#PART_Well">
+      <Setter Property="Transitions">
+        <Transitions>
+          <DoubleTransition Property="Opacity" Duration="0:0:0.15" Easing="CubicEaseOut" />
+        </Transitions>
+      </Setter>
+    </Style>
+
+    <Style Selector="^:pointerover /template/ Border#PART_Well">
+      <Setter Property="Opacity" Value="0.55" />
+    </Style>
+    <Style Selector="^:pressed /template/ Border#PART_Well">
+      <Setter Property="Opacity" Value="1" />
+    </Style>
+
+    <Style Selector="^:disabled">
+      <Setter Property="Opacity" Value="0.4" />
+    </Style>
+  </ControlTheme>
+
+  <!-- Close button: same neumorphic shape, but the glyph tints to a soft red on hover. -->
+  <ControlTheme x:Key="WindowCaptionCloseButton" BasedOn="{StaticResource WindowCaptionButton}" TargetType="Button">
+    <Style Selector="^:pointerover">
+      <Setter Property="Foreground" Value="#D9534F" />
+    </Style>
+  </ControlTheme>
+
+  <!-- macOS "traffic-light" caption button: a soft colour-tinted dot whose glyph fades in on hover. -->
+  <ControlTheme x:Key="MacTrafficLightButton" TargetType="Button">
+    <Setter Property="Width" Value="14" />
+    <Setter Property="Height" Value="14" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="Foreground" Value="#90000000" />
+    <Setter Property="FocusAdorner" Value="{x:Null}" />
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Panel Background="Transparent">
+          <Ellipse Name="dot" Fill="{TemplateBinding Background}" />
+          <Viewbox Name="glyph" Width="8" Height="8" Opacity="0"
+                   HorizontalAlignment="Center" VerticalAlignment="Center">
+            <ContentPresenter Content="{TemplateBinding Content}" />
+          </Viewbox>
+        </Panel>
+      </ControlTemplate>
+    </Setter>
+
+    <Style Selector="^:not(.notransitions) /template/ Viewbox#glyph">
+      <Setter Property="Transitions">
+        <Transitions>
+          <DoubleTransition Property="Opacity" Duration="0:0:0.12" Easing="CubicEaseOut" />
+        </Transitions>
+      </Setter>
+    </Style>
+
+    <Style Selector="^:pointerover /template/ Viewbox#glyph">
+      <Setter Property="Opacity" Value="1" />
+    </Style>
+    <Style Selector="^:pressed /template/ Ellipse#dot">
+      <Setter Property="Opacity" Value="0.7" />
+    </Style>
+    <Style Selector="^:disabled">
+      <Setter Property="Opacity" Value="0.4" />
+    </Style>
+  </ControlTheme>
+
+
+  <ControlTheme x:Key="{x:Type controls:WindowTitleBar}" TargetType="controls:WindowTitleBar">
+    <Setter Property="Height" Value="44" />
+    <Setter Property="Background" Value="{DynamicResource NeumorphismPaper}" />
+    <Setter Property="Foreground" Value="{DynamicResource NeumorphismBody}" />
+    <Setter Property="Template">
+      <ControlTemplate>
+        <!-- Raised neumorphic ledge; the dual shadow separates it from the content below. -->
+        <Border Name="PART_Bar" Background="{TemplateBinding Background}">
+          <Border.BoxShadow>
+            <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}">
+              <Binding Path="Bounds.Height" RelativeSource="{RelativeSource TemplatedParent}" />
+              <DynamicResource ResourceKey="NeumorphismShadowLight" />
+              <DynamicResource ResourceKey="NeumorphismShadowDark" />
+            </MultiBinding>
+          </Border.BoxShadow>
+
+          <Grid ColumnDefinitions="Auto,Auto,*,Auto">
+
+            <!-- macOS traffic lights (left). Hidden unless :macos. Order: close, minimize, zoom. -->
+            <StackPanel Name="MacButtons" Grid.Column="0" Orientation="Horizontal" Spacing="8"
+                        Margin="12,0,0,0" VerticalAlignment="Center" IsVisible="False">
+              <Button Theme="{StaticResource MacTrafficLightButton}" Background="#E57373"
+                      Command="{TemplateBinding CloseCommand}" ToolTip.Tip="Close">
+                <Path Stroke="#90000000" StrokeThickness="1.1" Data="M0,0 L6,6 M0,6 L6,0" />
+              </Button>
+              <Button Theme="{StaticResource MacTrafficLightButton}" Background="#E7B85C"
+                      Command="{TemplateBinding MinimizeCommand}" ToolTip.Tip="Minimize">
+                <Path Stroke="#90000000" StrokeThickness="1.1" Data="M0,3 H6" />
+              </Button>
+              <Button Theme="{StaticResource MacTrafficLightButton}" Background="#84C499"
+                      Command="{TemplateBinding MaximizeRestoreCommand}"
+                      IsVisible="{TemplateBinding CanMaximize}" ToolTip.Tip="Zoom">
+                <Path Stroke="#90000000" StrokeThickness="1.1" Data="M3,0 V6 M0,3 H6" />
+              </Button>
+            </StackPanel>
+
+            <!-- Left slot (logo / menu button) -->
+            <ContentPresenter Grid.Column="1" Content="{TemplateBinding LeftContent}" VerticalAlignment="Center" />
+
+            <!-- Title -->
+            <TextBlock Grid.Column="2" Text="{Binding $parent[Window].Title}"
+                       VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Margin="14,0,0,0" FontSize="13"
+                       TextTrimming="CharacterEllipsis"
+                       Foreground="{TemplateBinding Foreground}" />
+
+            <!-- Windows/Linux caption buttons (right). Order: minimize, maximize, close. -->
+            <StackPanel Name="WinButtons" Grid.Column="3" Orientation="Horizontal" Spacing="8"
+                        Margin="0,0,8,0" VerticalAlignment="Center" IsVisible="True">
+              <Button Theme="{StaticResource WindowCaptionButton}" Command="{TemplateBinding MinimizeCommand}"
+                      ToolTip.Tip="Minimize">
+                <Viewbox Width="10" Height="10">
+                  <Path Stroke="{Binding $parent[Button].Foreground}" StrokeThickness="1.2" Data="M0,5 H10" />
+                </Viewbox>
+              </Button>
+              <Button Theme="{StaticResource WindowCaptionButton}" Command="{TemplateBinding MaximizeRestoreCommand}"
+                      IsVisible="{TemplateBinding CanMaximize}" ToolTip.Tip="Maximize">
+                <Viewbox Width="10" Height="10">
+                  <Path Name="MaxIcon" Stroke="{Binding $parent[Button].Foreground}" StrokeThickness="1.2"
+                        Data="M0.5,0.5 H9.5 V9.5 H0.5 Z" />
+                </Viewbox>
+              </Button>
+              <Button Theme="{StaticResource WindowCaptionCloseButton}" Command="{TemplateBinding CloseCommand}"
+                      ToolTip.Tip="Close">
+                <Viewbox Width="10" Height="10">
+                  <Path Stroke="{Binding $parent[Button].Foreground}" StrokeThickness="1.2" Data="M0,0 L10,10 M0,10 L10,0" />
+                </Viewbox>
+              </Button>
+            </StackPanel>
+          </Grid>
+        </Border>
+      </ControlTemplate>
+    </Setter>
+
+    <!-- macOS: show the traffic lights, hide the squared caption buttons -->
+    <Style Selector="^:macos /template/ StackPanel#MacButtons">
+      <Setter Property="IsVisible" Value="True" />
+    </Style>
+    <Style Selector="^:macos /template/ StackPanel#WinButtons">
+      <Setter Property="IsVisible" Value="False" />
+    </Style>
+
+    <!-- Maximized: show the "restore" glyph (two overlapping squares) on the squared button -->
+    <Style Selector="^:maximized /template/ Path#MaxIcon">
+      <Setter Property="Data" Value="M2.5,0.5 H9.5 V7.5 M7.5,2.5 H0.5 V9.5 H7.5 Z" />
+    </Style>
+  </ControlTheme>
+</ResourceDictionary>
