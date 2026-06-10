@@ -1,6 +1,5 @@
-﻿<ResourceDictionary	xmlns="https://github.com/avaloniaui"
+<ResourceDictionary	xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:ripple="clr-namespace:Avalonia.Themes.Neumorphism.Controls.Ripple"
                     xmlns:assist="clr-namespace:Avalonia.Themes.Neumorphism.Assist"
                     xmlns:system="clr-namespace:System;assembly=netstandard"
                     xmlns:converters="clr-namespace:Avalonia.Themes.Neumorphism.Converters"
@@ -13,27 +12,22 @@
   <Design.PreviewWith>
     <Border Padding="20">
       <StackPanel Spacing="10">
-        <RadioButton Content="Option 1" Background="Green" />
-        <RadioButton Content="Option 2" />
+        <RadioButton Content="Option 1" />
+        <RadioButton Content="Option 2" IsChecked="True" />
         <RadioButton IsEnabled="False" Content="Option 3" />
-        <RadioButton Content="Option 2" />
+        <RadioButton Content="Option 4" />
       </StackPanel>
     </Border>
   </Design.PreviewWith>
 
 
-  <system:Double x:Key="RadioButtonHoveredOpacity">0.12</system:Double>
-  <system:Double x:Key="RadioButtonPressedOpacity">0.26</system:Double>
-
-
-
   <!--Default RadioButton theme-->
   <ControlTheme x:Key="{x:Type RadioButton}" TargetType="RadioButton">
-    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />
     <Setter Property="BorderThickness" Value="0" />
     <Setter Property="BorderBrush" Value="Transparent" />
-    <Setter Property="assist:SelectionControlAssist.Foreground" Value="{DynamicResource PrimaryHueLightBrush}"/>
-    <Setter Property="assist:SelectionControlAssist.InnerForeground" Value="{DynamicResource PrimaryHueLightBrush}"/>
+    <Setter Property="assist:SelectionControlAssist.Foreground" Value="{DynamicResource MaterialDesignBody}"/>
+    <Setter Property="assist:SelectionControlAssist.InnerForeground" Value="{DynamicResource MaterialDesignBody}"/>
     <Setter Property="ClipToBounds" Value="False" />
     <Setter Property="assist:SelectionControlAssist.Size" Value="24" />
     <Setter Property="assist:SelectionControlAssist.InnerSize" Value="14" />
@@ -55,12 +49,13 @@
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Column="0">
-              <!--Background circle-->
+              <!--Raised (outset) neumorphic circle-->
               <Border Name="OuterGraphicBorder" Opacity="1" Cursor="{TemplateBinding Cursor}"
-									Width="{TemplateBinding assist:SelectionControlAssist.Size}"
-									Height="{TemplateBinding assist:SelectionControlAssist.Size}"
-									CornerRadius="100"
-									Padding="0" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                      Width="{TemplateBinding assist:SelectionControlAssist.Size}"
+                      Height="{TemplateBinding assist:SelectionControlAssist.Size}"
+                      CornerRadius="100"
+                      Background="{TemplateBinding Background}"
+                      Padding="0" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
 
                 <Border.BoxShadow>
                   <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
@@ -71,19 +66,17 @@
                 </Border.BoxShadow>
 
                 <Panel>
-                  <!--Checked circle-->
+                  <!--Pressed (inset) neumorphic shadow, cross-faded in when checked-->
+                  <Border Name="PART_PressedShadow" IsHitTestVisible="False" Opacity="0"
+                          HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="100"/>
+
+                  <!--Checked dot (neutral engraving, no accent fill)-->
                   <Border Name="InnerGraphicBorder"
-										CornerRadius="100"
-										HorizontalAlignment="Center" VerticalAlignment="Center"
-										Width="{TemplateBinding assist:SelectionControlAssist.InnerSize}"
-										Height="{TemplateBinding assist:SelectionControlAssist.InnerSize}"
-										Opacity="1">
-                  </Border>
-                  <!--Ripple effect-->
-                  <Border ClipToBounds="True" CornerRadius="100" Width="42" Height="42" Margin="-100" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <ripple:RippleEffect RaiseRippleCenter="True"
-															 RippleFill="Gray"
-															 RippleOpacity="{StaticResource RadioButtonPressedOpacity}"/>
+                          CornerRadius="100"
+                          HorizontalAlignment="Center" VerticalAlignment="Center"
+                          Width="{TemplateBinding assist:SelectionControlAssist.InnerSize}"
+                          Height="{TemplateBinding assist:SelectionControlAssist.InnerSize}"
+                          Opacity="1">
                   </Border>
                 </Panel>
               </Border>
@@ -112,10 +105,36 @@
       <Setter Property="RenderTransform" Value="Scale(0,0)"/>
     </Style>
 
-
     <Style Selector="^:checked /template/ Border#InnerGraphicBorder">
       <Setter Property="Background" Value="{TemplateBinding assist:SelectionControlAssist.Foreground}"/>
       <Setter Property="RenderTransform" Value="Scale(1,1)"/>
+    </Style>
+
+    <!--Pressed-shadow overlay carries the inset neumorphic shadow-->
+    <Style Selector="^ /template/ Border#PART_PressedShadow">
+      <Setter Property="Opacity" Value="0" />
+      <Setter Property="BoxShadow">
+        <Setter.Value>
+          <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
+            <Binding Path="(assist:SelectionControlAssist.Size)" RelativeSource="{RelativeSource AncestorType=RadioButton}"/>
+            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
+            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+          </MultiBinding>
+        </Setter.Value>
+      </Setter>
+    </Style>
+
+    <Style Selector="^:not(.notransitions) /template/ Border#PART_PressedShadow">
+      <Setter Property="Transitions">
+        <Transitions>
+          <DoubleTransition Duration="0:0:0.25" Property="Opacity" Easing="CubicEaseOut"/>
+        </Transitions>
+      </Setter>
+    </Style>
+
+    <!--Checked: press the circle in-->
+    <Style Selector="^:checked /template/ Border#PART_PressedShadow">
+      <Setter Property="Opacity" Value="1" />
     </Style>
 
     <Style Selector="^:not(:checked):pointerover /template/ Border#OuterGraphicBorder">
@@ -137,12 +156,6 @@
           <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.25" Easing="LinearEasing"/>
         </Transitions>
       </Setter>
-    </Style>
-
-    <!-- Accent -->
-    <Style Selector="^.Accent:not(:disabled)">
-      <Setter Property="assist:SelectionControlAssist.Foreground" Value="{DynamicResource SecondaryHueMidBrush}" />
-      <Setter Property="assist:SelectionControlAssist.InnerForeground" Value="{DynamicResource SecondaryHueMidBrush}" />
     </Style>
 
     <!-- Focused State (custom FocusAdorner) -->
@@ -181,26 +194,24 @@
           <Grid Name="templateRoot" Background="Transparent">
             <Border Name="PART_SelectedIndicator" Margin="0" Padding="0"
                     BorderBrush="{TemplateBinding BorderBrush}"
-										BorderThickness="{TemplateBinding BorderThickness}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
                     CornerRadius="{TemplateBinding CornerRadius}"
                     Background="{TemplateBinding Background}"
                     Cursor="{TemplateBinding Cursor}">
-              <ripple:RippleEffect RippleFill="{DynamicResource MaterialDesignFlatButtonRipple}">
-                <ContentPresenter Name="PART_ContentPresenter"
-												  BorderBrush="Transparent"
-												  BorderThickness="0"
-												  Background="Transparent"
-												  ContentTemplate="{TemplateBinding ContentTemplate}"
-												  Content="{TemplateBinding Content}"
-												  Padding="{TemplateBinding Padding}"
-												  Foreground="{TemplateBinding Foreground}"
-												  FontFamily="{Binding FontFamily, RelativeSource={RelativeSource TemplatedParent}}"
-												  FontSize="{Binding FontSize, RelativeSource={RelativeSource TemplatedParent}}"
-												  FontWeight="{Binding FontWeight, RelativeSource={RelativeSource TemplatedParent}}"
-												  FontStyle="{Binding FontStyle, RelativeSource={RelativeSource TemplatedParent}}"
-												  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-												  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
-              </ripple:RippleEffect>
+              <ContentPresenter Name="PART_ContentPresenter"
+                                BorderBrush="Transparent"
+                                BorderThickness="0"
+                                Background="Transparent"
+                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                Content="{TemplateBinding Content}"
+                                Padding="{TemplateBinding Padding}"
+                                Foreground="{TemplateBinding Foreground}"
+                                FontFamily="{Binding FontFamily, RelativeSource={RelativeSource TemplatedParent}}"
+                                FontSize="{Binding FontSize, RelativeSource={RelativeSource TemplatedParent}}"
+                                FontWeight="{Binding FontWeight, RelativeSource={RelativeSource TemplatedParent}}"
+                                FontStyle="{Binding FontStyle, RelativeSource={RelativeSource TemplatedParent}}"
+                                HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
             </Border>
           </Grid>
         </ControlTemplate>

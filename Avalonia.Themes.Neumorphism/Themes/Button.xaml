@@ -192,90 +192,24 @@
       <Setter Property="Opacity" Value="1"/>
     </Style>
 
-    <!--Class Light-->
+    <!--Class Light: accent-tinted label on the neumorphic surface (no Material fill).
+        Emphasis comes from the inherited raised->inset depth feedback, not a colour fill. -->
     <Style Selector="^.Light">
       <Setter Property="Background" Value="Transparent"/>
-      <Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}"/>
+      <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}"/>
     </Style>
-
-    <Style Selector="^.Light /template/ Border#PART_HoverIndicator">
-      <Setter Property="Background" Value="{DynamicResource PrimaryHueLightBrush}"/>
-    </Style>
-
-    <!---Class Light pointer enter state -->
-    <Style Selector="^.Light:pointerover:not(.no-material) /template/ Border#PART_HoverIndicator">
-      <Setter Property="Opacity" Value="0.2"/>
-    </Style>
-
-    <!---Class Light pressed state -->
-    <Style Selector="^.Light:pressed:not(.no-material) /template/ Border#PART_HoverIndicator">
-      <Setter Property="Opacity" Value="0.4"/>
-    </Style>
-    <Style Selector="^.Light:pressed:not(.no-material) /template/ Border#PART_ButtonRootBorder">
-      <Setter Property="Background" Value="{DynamicResource PrimaryHueLightBrush}"/>
-    </Style>
-    <Style Selector="^.Light:pressed:not(.no-material) /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="TextBlock.Foreground" Value="White"/>
-    </Style>
-
 
     <!--Class Dark-->
     <Style Selector="^.Dark">
       <Setter Property="Background" Value="Transparent"/>
-      <Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}"/>
+      <Setter Property="Foreground" Value="{DynamicResource PrimaryHueDarkBrush}"/>
     </Style>
-
-    <Style Selector="^.Dark /template/ Border#PART_HoverIndicator">
-      <Setter Property="Background" Value="{DynamicResource PrimaryHueDarkBrush}"/>
-    </Style>
-
-    <!---Class Dark pointer enter state -->
-    <Style Selector="^.Dark:pointerover:not(.no-material) /template/ Border#PART_HoverIndicator">
-      <Setter Property="Opacity" Value="0.2"/>
-    </Style>
-
-    <!--Class Dark pressed state-->
-    <Style Selector="^.Dark:pressed:not(.no-material) /template/ Border#PART_HoverIndicator">
-      <Setter Property="Opacity" Value="0.4"/>
-    </Style>
-    <Style Selector="^.Dark:pressed:not(.no-material) /template/ Border#PART_ButtonRootBorder">
-      <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}"/>
-    </Style>
-    <Style Selector="^.Dark:pressed:not(.no-material) /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="TextBlock.Foreground" Value="White"/>
-    </Style>
-
-
 
     <!--Class Accent-->
     <Style Selector="^.Accent">
       <Setter Property="Background" Value="Transparent"/>
-      <Setter Property="Foreground" Value="{DynamicResource SecondaryHueMidForegroundBrush}"/>
-    </Style>
-
-    <Style Selector="^.Accent /template/ Border#PART_HoverIndicator">
-      <Setter Property="Background" Value="{DynamicResource SecondaryHueMidBrush}"/>
-    </Style>
-
-    <Style Selector="^.Accent">
-      <Setter Property="Background" Value="Transparent"/>
       <Setter Property="BorderBrush" Value="Transparent"/>
-    </Style>
-
-    <!---Class Accent pointer enter state -->
-    <Style Selector="^.Accent:pointerover:not(.no-material) /template/ Border#PART_HoverIndicator">
-      <Setter Property="Opacity" Value="0.2"/>
-    </Style>
-
-    <!---Class Accent pressed state -->
-    <Style Selector="^.Accent:pressed:not(.no-material) /template/ Border#PART_HoverIndicator">
-      <Setter Property="Opacity" Value="0.4"/>
-    </Style>
-    <Style Selector="^.Accent:pressed:not(.no-material) /template/ Border#PART_ButtonRootBorder">
-      <Setter Property="Background" Value="{DynamicResource SecondaryHueMidBrush}"/>
-    </Style>
-    <Style Selector="^.Accent:pressed:not(.no-material) /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="TextBlock.Foreground" Value="White"/>
+      <Setter Property="Foreground" Value="{DynamicResource SecondaryHueMidBrush}"/>
     </Style>
 
     <!--Class Gradient-->
@@ -409,46 +343,19 @@
       <Setter Property="Background" Value="{DynamicResource MaterialDesignTextFieldBoxHoverBackground}"/>
     </Style>
 
-    <!--Class Icon Light default state-->
+    <!--Class Icon Light: accent-tinted glyph on the neumorphic surface (no Material fill)-->
     <Style Selector="^.Light">
-      <Setter Property="Background" Value="{DynamicResource PrimaryHueLightBrush}"/>
+      <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}"/>
     </Style>
 
-    <Style Selector="^.Light /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="TextBlock.Foreground" Value="White"/>
-    </Style>
-
-    <!---Class Icon Light pressed state -->
-    <Style Selector="^.Light:pressed /template/ Border#PART_ButtonRootBorder">
-      <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}"/>
-    </Style>
-
-    <!--Class Icon Dark default state-->
+    <!--Class Icon Dark-->
     <Style Selector="^.Dark">
-      <Setter Property="Background" Value="{DynamicResource PrimaryHueDarkBrush}"/>
+      <Setter Property="Foreground" Value="{DynamicResource PrimaryHueDarkBrush}"/>
     </Style>
 
-    <Style Selector="^.Dark /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="TextBlock.Foreground" Value="White"/>
-    </Style>
-
-    <!---Class Icon Light pressed state -->
-    <Style Selector="^.Dark:pressed /template/ Border#PART_ButtonRootBorder">
-      <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}"/>
-    </Style>
-
-    <!--Class Icon Accent default state-->
+    <!--Class Icon Accent-->
     <Style Selector="^.Accent">
-      <Setter Property="Background" Value="{DynamicResource SecondaryHueMidBrush}"/>
-    </Style>
-
-    <Style Selector="^.Accent /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="TextBlock.Foreground" Value="White"/>
-    </Style>
-
-    <!---Class Icon Accent pressed state -->
-    <Style Selector="^.Accent:pressed /template/ Border#PART_ButtonRootBorder">
-      <Setter Property="Background" Value="{DynamicResource SecondaryHueDarkBrush}"/>
+      <Setter Property="Foreground" Value="{DynamicResource SecondaryHueMidBrush}"/>
     </Style>
   </ControlTheme>
 
