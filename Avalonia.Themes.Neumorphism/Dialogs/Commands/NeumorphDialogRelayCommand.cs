@@ -8,13 +8,13 @@ namespace Avalonia.Themes.Neumorphism.Dialogs.Commands
     /// Do not use it in your project! It should be used only inside of Material.Avalonia.Dialogs.<br/>
     /// If you want to use this one, you should copy all whole code and paste them to your new RelayCommand.cs source file.
     /// </summary>
-    public sealed class MaterialDialogRelayCommand : ICommand
+    public sealed class NeumorphDialogRelayCommand : ICommand
     {
         private readonly Action<object> execute;
         private readonly Func<object, bool> canExecute;
         public event EventHandler CanExecuteChanged;
 
-        public MaterialDialogRelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
+        public NeumorphDialogRelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {
             this.execute = execute;
             this.canExecute = canExecute;

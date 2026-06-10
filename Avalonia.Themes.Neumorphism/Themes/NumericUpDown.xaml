@@ -52,8 +52,8 @@
           <Border.BoxShadow>
             <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedInset}">
               <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-              <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-              <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+              <DynamicResource ResourceKey="NeumorphismShadowLight" />
+              <DynamicResource ResourceKey="NeumorphismShadowDark" />
             </MultiBinding>
           </Border.BoxShadow>
 
@@ -66,7 +66,7 @@
                                       HorizontalContentAlignment="Stretch"
                                       VerticalContentAlignment="Stretch"
                                       VerticalAlignment="Center"
-                                      Foreground="{DynamicResource MaterialDesignForeground}"
+                                      Foreground="{DynamicResource NeumorphismForeground}"
                                       AllowSpin="{TemplateBinding AllowSpin}"
                                       ShowButtonSpinner="{TemplateBinding ShowButtonSpinner}"
                                       ButtonSpinnerLocation="{TemplateBinding ButtonSpinnerLocation}">
@@ -96,11 +96,11 @@
 
     <!-- Focused State (custom FocusAdorner) -->
     <Style Selector="^:focus-within /template/ Border#PART_RootBorder">
-      <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignFocus}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource NeumorphismFocus}" />
     </Style>
 
     <Style Selector="^.Filled">
-      <Setter Property="Background" Value="{DynamicResource MaterialDesignTextFieldBoxBackground}" />
+      <Setter Property="Background" Value="{DynamicResource NeumorphismTextFieldBoxBackground}" />
     </Style>
   </ControlTheme>
 </ResourceDictionary>

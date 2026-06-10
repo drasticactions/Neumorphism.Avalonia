@@ -89,7 +89,7 @@
                       Foreground="{TemplateBinding Foreground}"
                       Padding="1"
                       HorizontalContentAlignment="Left">
-                <controls:MaterialInternalIcon Kind="ChevronLeft" Width="24" Height="24" Margin="10,0,10,0"/>
+                <controls:NeumorphInternalIcon Kind="ChevronLeft" Width="24" Height="24" Margin="10,0,10,0"/>
               </Button>
               <Button Name="PART_HeaderButton"
                       Grid.Column="1"
@@ -105,7 +105,7 @@
                       Foreground="{TemplateBinding Foreground}"
                       Padding="1"
                       HorizontalContentAlignment="Left">
-                <controls:MaterialInternalIcon Kind="ChevronRight" Width="24" Height="24" Margin="10,0,10,0"/>
+                <controls:NeumorphInternalIcon Kind="ChevronRight" Width="24" Height="24" Margin="10,0,10,0"/>
               </Button>
             </Grid>
             <!--Border below is used only for MonthView but it can't be moved inside of Grid because CalendarItem expects it to be empty and it will cause side-effects-->

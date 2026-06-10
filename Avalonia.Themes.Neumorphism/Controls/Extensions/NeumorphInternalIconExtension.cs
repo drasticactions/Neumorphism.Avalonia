@@ -4,18 +4,18 @@ using Avalonia.Metadata;
 
 namespace Avalonia.Themes.Neumorphism.Controls.Extensions
 {
-    public sealed class MaterialInternalIconExtension : MarkupExtension
+    public sealed class NeumorphInternalIconExtension : MarkupExtension
     {
-        public MaterialInternalIconExtension()
+        public NeumorphInternalIconExtension()
         {
         }
 
-        public MaterialInternalIconExtension(string kind)
+        public NeumorphInternalIconExtension(string kind)
         {
             Kind = kind;
         }
 
-        public MaterialInternalIconExtension(string kind, double? size)
+        public NeumorphInternalIconExtension(string kind, double? size)
         {
             Kind = kind;
             Size = size;
@@ -27,7 +27,7 @@ namespace Avalonia.Themes.Neumorphism.Controls.Extensions
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {
-            var result = new MaterialInternalIcon
+            var result = new NeumorphInternalIcon
             {
                 Kind = Kind ?? string.Empty
             };

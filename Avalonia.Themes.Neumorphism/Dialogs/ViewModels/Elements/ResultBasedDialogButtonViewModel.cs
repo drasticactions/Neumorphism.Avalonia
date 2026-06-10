@@ -8,7 +8,7 @@ namespace Avalonia.Themes.Neumorphism.Dialogs.ViewModels.Elements
             : base(parent, content)
         {
             _result = result;
-            Command = new MaterialDialogRelayCommand(OnExecuteCommandHandler, CanExecuteCommandHandler);
+            Command = new NeumorphDialogRelayCommand(OnExecuteCommandHandler, CanExecuteCommandHandler);
         }
 
         private bool CanExecuteCommandHandler(object arg)

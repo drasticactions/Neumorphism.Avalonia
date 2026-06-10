@@ -21,8 +21,8 @@
     <Setter Property="BorderThickness" Value="0" />
     <Setter Property="BorderBrush" Value="Transparent" />
     <Setter Property="VerticalContentAlignment" Value="Center" />
-    <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />
-    <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
+    <Setter Property="Background" Value="{DynamicResource NeumorphismPaper}" />
+    <Setter Property="Foreground" Value="{DynamicResource NeumorphismBody}" />
     <Setter Property="ClipToBounds" Value="False" />
     <Setter Property="assist:SelectionControlAssist.Size" Value="24" />
     <Setter Property="assist:SelectionControlAssist.InnerSize" Value="14" />
@@ -57,8 +57,8 @@
                 <Border.BoxShadow>
                   <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
                     <Binding ElementName="OuterGraphicBorder" Path="Tag"/>
-                    <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                    <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                    <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                    <DynamicResource ResourceKey="NeumorphismShadowDark" />
                   </MultiBinding>
                 </Border.BoxShadow>
 
@@ -100,7 +100,7 @@
     <!--Checkmark drawn as a neutral engraving inside the recessed well (no Material accent fill)-->
     <Style Selector="^:checked /template/ Path#Graphic">
       <Setter Property="Data" Value="m 0.96444295 16.412941 c -1.15613384 -1.155304 -1.15613384 -3.029699 0 -4.184848 1.15530405 -1.156134 3.02969905 -1.156134 4.18583145 0 L 10.140131 17.217948 22.897978 1.1167036 C 23.907044 -0.16038227 25.760272 -0.37747322 27.037363 0.63058964 28.31445 1.6396555 28.531541 3.4928828 27.522659 4.769975 L 12.870241 23.26315 c -0.11038 0.169838 -0.239906 0.331134 -0.38979 0.480003 -1.155304 1.156133 -3.0296994 1.156133 -4.1848432 0 L 0.96548958 16.413034 Z" />
-      <Setter Property="Fill" Value="{DynamicResource MaterialDesignBody}" />
+      <Setter Property="Fill" Value="{DynamicResource NeumorphismBody}" />
     </Style>
 
     <Style Selector="^ /template/ Border#InnerGraphicBorder">
@@ -114,8 +114,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
             <Binding Path="(assist:SelectionControlAssist.Size)" RelativeSource="{RelativeSource AncestorType=CheckBox}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -153,14 +153,14 @@
 
     <Style Selector="^:indeterminate /template/ Path#Graphic">
       <Setter Property="Data" Value="M6,13L6,11L18,11L18,13M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z" />
-      <Setter Property="Fill" Value="{DynamicResource MaterialDesignBody}" />
+      <Setter Property="Fill" Value="{DynamicResource NeumorphismBody}" />
     </Style>
 
     <!-- Focused State (custom FocusAdorner) -->
     <Style Selector="^:focus">
       <Style Selector="^ /template/ Border#OuterGraphicBorder">
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignFocus}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource NeumorphismFocus}" />
       </Style>
     </Style>
   </ControlTheme>

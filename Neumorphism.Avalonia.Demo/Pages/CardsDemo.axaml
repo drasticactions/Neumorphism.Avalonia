@@ -21,9 +21,9 @@
     </StackPanel.Styles>
 
 
-    <TextBlock Classes="Headline4 Subheadline" Text="Cards" Foreground="{DynamicResource MaterialDesignDarkGray}" />
+    <TextBlock Classes="Headline4 Subheadline" Text="Cards" Foreground="{DynamicResource NeumorphismDarkGray}" />
 
-    <TextBlock Classes="Headline6 Subheadline2" Text="Outset cards" Foreground="{DynamicResource MaterialDesignMediumGray}" Margin="0,30,0,0" />
+    <TextBlock Classes="Headline6 Subheadline2" Text="Outset cards" Foreground="{DynamicResource NeumorphismMediumGray}" Margin="0,30,0,0" />
     <WrapPanel HorizontalAlignment="Stretch">
       <!--****************************************************************-->
       <showMeTheXaml:XamlDisplay UniqueId="Cards0">
@@ -64,8 +64,8 @@
           <StackPanel Orientation="Vertical" Margin="28">
             <Image Source="avares://Neumorphism.Avalonia.Demo/Assets/avalonia-logo.png" Width="80" Height="80" Stretch="Uniform" />
             <StackPanel Margin="16">
-              <TextBlock Classes="Headline6" Text="Card title" HorizontalAlignment="Center" Foreground="{DynamicResource MaterialDesignForeground}" />
-              <TextBlock Classes="Body2" Text="Secondary text" HorizontalAlignment="Center" Foreground="{DynamicResource MaterialDesignForeground}" />
+              <TextBlock Classes="Headline6" Text="Card title" HorizontalAlignment="Center" Foreground="{DynamicResource NeumorphismForeground}" />
+              <TextBlock Classes="Body2" Text="Secondary text" HorizontalAlignment="Center" Foreground="{DynamicResource NeumorphismForeground}" />
             </StackPanel>
           </StackPanel>
         </controls:Card>
@@ -73,11 +73,11 @@
       <!--****************************************************************-->
       <showMeTheXaml:XamlDisplay UniqueId="Cards3">
         <controls:Card Theme="{StaticResource CardOutset}" Width="250" Height="200" CornerRadius="8" Padding="0" VerticalAlignment="Top"
-					   Background="{DynamicResource MaterialDesignLinearGradient1}" ToolTip.Tip='Nested cards with theme "CardOutset" applied'>
+					   Background="{DynamicResource NeumorphismLinearGradient1}" ToolTip.Tip='Nested cards with theme "CardOutset" applied'>
           <controls:Card Theme="{StaticResource CardOutset}" HorizontalAlignment="Stretch" VerticalAlignment="100" CornerRadius="8" Padding="0" Margin="20" Background="Transparent">
             <StackPanel Orientation="Vertical" Margin="28">
-              <TextBlock Classes="Headline6" Text="Card title" HorizontalAlignment="Center" Foreground="{DynamicResource MaterialDesignForeground}" />
-              <TextBlock Classes="Body2" Text="Secondary text" HorizontalAlignment="Center" Foreground="{DynamicResource MaterialDesignForeground}" Opacity="0.6" />
+              <TextBlock Classes="Headline6" Text="Card title" HorizontalAlignment="Center" Foreground="{DynamicResource NeumorphismForeground}" />
+              <TextBlock Classes="Body2" Text="Secondary text" HorizontalAlignment="Center" Foreground="{DynamicResource NeumorphismForeground}" Opacity="0.6" />
             </StackPanel>
           </controls:Card>
         </controls:Card>
@@ -86,7 +86,7 @@
     </WrapPanel>
 
 
-    <TextBlock Classes="Headline6 Subheadline2" Text="Inset cards" Margin="0,30,0,0" Foreground="{DynamicResource MaterialDesignMediumGray}" />
+    <TextBlock Classes="Headline6 Subheadline2" Text="Inset cards" Margin="0,30,0,0" Foreground="{DynamicResource NeumorphismMediumGray}" />
     <WrapPanel HorizontalAlignment="Stretch">
       <!--****************************************************************-->
       <showMeTheXaml:XamlDisplay UniqueId="InsetCards0">
@@ -130,20 +130,20 @@
           <StackPanel Orientation="Vertical" Margin="28">
             <Image Source="avares://Neumorphism.Avalonia.Demo/Assets/avalonia-logo.png" Width="80" Height="80" Stretch="Uniform" />
             <StackPanel Margin="16">
-              <TextBlock Classes="Headline6" Text="Card title" HorizontalAlignment="Center" Foreground="{DynamicResource MaterialDesignForeground}" />
-              <TextBlock Classes="Body2" Text="Secondary text" HorizontalAlignment="Center" Foreground="{DynamicResource MaterialDesignForeground}" />
+              <TextBlock Classes="Headline6" Text="Card title" HorizontalAlignment="Center" Foreground="{DynamicResource NeumorphismForeground}" />
+              <TextBlock Classes="Body2" Text="Secondary text" HorizontalAlignment="Center" Foreground="{DynamicResource NeumorphismForeground}" />
             </StackPanel>
           </StackPanel>
         </controls:Card>
       </showMeTheXaml:XamlDisplay>
       <!--****************************************************************-->
       <showMeTheXaml:XamlDisplay UniqueId="InsetCards3">
-        <controls:Card Theme="{StaticResource CardInset}" Width="250" Height="200" CornerRadius="8" Padding="0" VerticalAlignment="Top" Background="{DynamicResource MaterialDesignLinearGradient1}"
+        <controls:Card Theme="{StaticResource CardInset}" Width="250" Height="200" CornerRadius="8" Padding="0" VerticalAlignment="Top" Background="{DynamicResource NeumorphismLinearGradient1}"
 					   ToolTip.Tip='Nested cards with theme "CardInset" applied'>
           <controls:Card Theme="{StaticResource CardInset}" HorizontalAlignment="Stretch" VerticalAlignment="100" CornerRadius="8" Padding="0" Margin="20" Background="Transparent">
             <StackPanel Orientation="Vertical" Margin="28">
-              <TextBlock Classes="Headline6" Text="Card title" HorizontalAlignment="Center" Foreground="{DynamicResource MaterialDesignForeground}" />
-              <TextBlock Classes="Body2" Text="Secondary text" HorizontalAlignment="Center" Foreground="{DynamicResource MaterialDesignForeground}" />
+              <TextBlock Classes="Headline6" Text="Card title" HorizontalAlignment="Center" Foreground="{DynamicResource NeumorphismForeground}" />
+              <TextBlock Classes="Body2" Text="Secondary text" HorizontalAlignment="Center" Foreground="{DynamicResource NeumorphismForeground}" />
             </StackPanel>
           </controls:Card>
         </controls:Card>

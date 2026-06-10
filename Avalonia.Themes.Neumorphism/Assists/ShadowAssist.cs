@@ -12,7 +12,7 @@ namespace Avalonia.Themes.Neumorphism.Assist
     {
         // The dark half of the neumorphic shadow pair. Kept public for back-compat /
         // per-element overrides (e.g. ShadowAssist.Darken passes an opaque black).
-        public static Color MaterialShadowColor { get; set; } = Color.FromArgb(0x33, 0, 0, 0);
+        public static Color NeumorphShadowColor { get; set; } = Color.FromArgb(0x33, 0, 0, 0);
 
         // The light half — a soft top-left highlight. Correct on both light and dark
         // surfaces (a white highlight + dark shadow is the neumorphic dual-light look).
@@ -47,7 +47,7 @@ namespace Avalonia.Themes.Neumorphism.Assist
             var highlight = new BoxShadow
             { OffsetX = -offset, OffsetY = -offset, Blur = blur, Color = NeumorphicHighlightColor };
             var shadow = new BoxShadow
-            { OffsetX = offset, OffsetY = offset, Blur = blur, Color = overrideColor ?? MaterialShadowColor };
+            { OffsetX = offset, OffsetY = offset, Blur = blur, Color = overrideColor ?? NeumorphShadowColor };
 
             return new BoxShadows(highlight, new[] { shadow });
         }

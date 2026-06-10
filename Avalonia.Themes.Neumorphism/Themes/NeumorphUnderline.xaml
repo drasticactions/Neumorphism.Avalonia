@@ -3,12 +3,12 @@
 					xmlns:naming="clr-namespace:Avalonia.Themes.Neumorphism.Resources.Naming"
 					xmlns:controls="clr-namespace:Avalonia.Themes.Neumorphism.Controls">
 
-	<!--Default MaterialUnderline theme-->
-	<ControlTheme x:Key="{x:Type controls:MaterialUnderline}" TargetType="controls:MaterialUnderline">
+	<!--Default NeumorphUnderline theme-->
+	<ControlTheme x:Key="{x:Type controls:NeumorphUnderline}" TargetType="controls:NeumorphUnderline">
 		<Setter Property="Height" Value="2" />
 		<Setter Property="Focusable" Value="False" />
 		<Setter Property="IsHitTestVisible" Value="False"/>
-		<Setter Property="IdleBrush" Value="{DynamicResource MaterialDesignTextBoxBorder}" />
+		<Setter Property="IdleBrush" Value="{DynamicResource NeumorphismTextBoxBorder}" />
 		<Setter Property="ActiveBrush" Value="{DynamicResource PrimaryHueMidBrush}" />
 		<Setter Property="Template" >
 			<ControlTemplate>
@@ -60,9 +60,9 @@
 		</Style>
 	</ControlTheme>
 
-	<ControlTheme x:Key="MaterialUnderlineY"
-                  BasedOn="{StaticResource {x:Type controls:MaterialUnderline}}"
-                  TargetType="controls:MaterialUnderline">
+	<ControlTheme x:Key="NeumorphUnderlineY"
+                  BasedOn="{StaticResource {x:Type controls:NeumorphUnderline}}"
+                  TargetType="controls:NeumorphUnderline">
 		<Style Selector="^ /template/ Rectangle#PART_BaseBorder" >
 			<Setter Property="Margin" Value="0,0,0,1"/>
 		</Style>

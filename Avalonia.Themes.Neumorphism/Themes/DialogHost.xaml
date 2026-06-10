@@ -66,12 +66,12 @@
                 BorderThickness="0" Margin="0"
                 CornerRadius="10"
                 ClipToBounds="True"
-                Background="{DynamicResource MaterialDesignPaper}">
+                Background="{DynamicResource NeumorphismPaper}">
           <Border.BoxShadow>
             <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
               <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-              <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-              <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+              <DynamicResource ResourceKey="NeumorphismShadowLight" />
+              <DynamicResource ResourceKey="NeumorphismShadowDark" />
             </MultiBinding>
           </Border.BoxShadow>
           

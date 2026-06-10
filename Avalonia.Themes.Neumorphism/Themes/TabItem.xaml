@@ -37,8 +37,8 @@
   <ControlTheme x:Key="{x:Type TabItem}" TargetType="TabItem">
     <Setter Property="FontSize" Value="14"/>
     <Setter Property="FontWeight" Value="Normal" />
-    <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />
-    <Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}" />
+    <Setter Property="Background" Value="{DynamicResource NeumorphismPaper}" />
+    <Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}" />
     <Setter Property="BorderThickness" Value="1" />
     <Setter Property="BorderBrush" Value="Transparent" />
     <Setter Property="Padding" Value="0" />
@@ -90,8 +90,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -127,8 +127,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -291,7 +291,7 @@
     <!-- Focused State (custom FocusAdorner) -->
     <Style Selector="^:focus">
       <Style Selector="^ /template/ Border#PART_LayoutRoot">
-        <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignFocus}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource NeumorphismFocus}" />
       </Style>
     </Style>
   </ControlTheme>

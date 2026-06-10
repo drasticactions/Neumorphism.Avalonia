@@ -24,12 +24,12 @@
     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
     <Setter Property="VerticalContentAlignment" Value="Stretch" />
     <Setter Property="Background" Value="Transparent" />
-    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}" />
-    <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}" />
+    <Setter Property="BorderBrush" Value="Transparent" />
+    <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}" />
     <Setter Property="Cursor" Value="Hand" />
     <Setter Property="Padding" Value="16" />
-    <Setter Property="assist:ButtonAssist.HoverColor" Value="{DynamicResource MaterialDesignSilverGray}"/>
-    <Setter Property="assist:ButtonAssist.ClickFeedbackColor" Value="{DynamicResource MaterialDesignSilverGray}"/>
+    <Setter Property="assist:ButtonAssist.HoverColor" Value="{DynamicResource NeumorphismSilverGray}"/>
+    <Setter Property="assist:ButtonAssist.ClickFeedbackColor" Value="{DynamicResource NeumorphismSilverGray}"/>
     <Setter Property="FontWeight" Value="Medium" />
     <Setter Property="FontSize" Value="14" />
     <Setter Property="BorderThickness" Value="0" />
@@ -69,7 +69,7 @@
       <Setter Property="FocusAdorner">
         <FocusAdornerTemplate>
           <Border BorderThickness="1" CornerRadius="{DynamicResource FloatingButtonRoundCorner}"
-                  BorderBrush="{DynamicResource MaterialDesignFocus}"/>
+                  BorderBrush="{DynamicResource NeumorphismFocus}"/>
         </FocusAdornerTemplate>
       </Setter>
     </Style>
@@ -139,8 +139,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -153,8 +153,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -197,7 +197,7 @@
     </Style>
 
     <Style Selector="^.Mini:pointerover:not(.Dark, .no-material) /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="Foreground" Value="White" />
+      <Setter Property="Foreground" Value="{TemplateBinding Foreground}" />
       <Setter Property="RenderTransform" Value="scale(1.25)"/>
     </Style>
 
@@ -244,23 +244,24 @@
       <Setter Property="Padding" Value="12" />
     </Style>
 
-    <!-- Color definitions -->
+    <!-- Color definitions: accent-tinted icon/label on the neumorphic raised surface
+         (no Material 'contained' fill). Emphasis comes from the raised->inset depth. -->
     <Style Selector="^.Light">
-      <Setter Property="Background" Value="{DynamicResource PrimaryHueLightBrush}"/>
-      <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueLightBrush}"/>
-      <Setter Property="Foreground" Value="{DynamicResource PrimaryHueLightForegroundBrush}"/>
+      <Setter Property="Background" Value="Transparent"/>
+      <Setter Property="BorderBrush" Value="Transparent"/>
+      <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}"/>
     </Style>
 
     <Style Selector="^.Dark">
-      <Setter Property="Background" Value="{DynamicResource PrimaryHueDarkBrush}"/>
-      <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueDarkBrush}"/>
-      <Setter Property="Foreground" Value="{DynamicResource PrimaryHueDarkForegroundBrush}"/>
+      <Setter Property="Background" Value="Transparent"/>
+      <Setter Property="BorderBrush" Value="Transparent"/>
+      <Setter Property="Foreground" Value="{DynamicResource PrimaryHueDarkBrush}"/>
     </Style>
 
     <Style Selector="^.Accent">
-      <Setter Property="Background" Value="{DynamicResource SecondaryHueMidBrush}"/>
-      <Setter Property="BorderBrush" Value="{DynamicResource SecondaryHueMidBrush}"/>
-      <Setter Property="Foreground" Value="{DynamicResource SecondaryHueMidForegroundBrush}"/>
+      <Setter Property="Background" Value="Transparent"/>
+      <Setter Property="BorderBrush" Value="Transparent"/>
+      <Setter Property="Foreground" Value="{DynamicResource SecondaryHueMidBrush}"/>
     </Style>
 
     <Style Selector="^:disabled:not(.no-material)">

@@ -33,7 +33,7 @@
     <Setter Property="Padding" Value="20" />
     <Setter Property="HorizontalAlignment" Value="Left" />
     <Setter Property="VerticalAlignment" Value="Top" />
-    <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />
+    <Setter Property="Background" Value="{DynamicResource NeumorphismPaper}" />
     <Setter Property="FontSize" Value="14"/>
     <Setter Property="Template">
       <ControlTemplate>
@@ -61,8 +61,8 @@
               <Border.BoxShadow>
                 <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}">
                   <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </Border.BoxShadow>
               <ContentPresenter Name="PART_SelectedContentHost" Background="{TemplateBinding Background}"

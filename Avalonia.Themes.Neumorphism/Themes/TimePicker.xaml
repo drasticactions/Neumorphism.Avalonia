@@ -58,7 +58,7 @@
 					  Margin="0" Cursor="{TemplateBinding Cursor}"
 					  ClipToBounds="False">
           
-					<controls:MaterialInternalIcon Background="Transparent" Cursor="Hand"
+					<controls:NeumorphInternalIcon Background="Transparent" Cursor="Hand"
 							   VerticalAlignment="Center"
 							   HorizontalAlignment="Center"
 							   Kind="Clock" Width="24" Height="24"/>
@@ -80,8 +80,8 @@
 
   
   <ControlTheme x:Key="{x:Type controls:ExtendedTimePicker}" TargetType="controls:ExtendedTimePicker">
-    <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />
-    <Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}" />
+    <Setter Property="Background" Value="{DynamicResource NeumorphismPaper}" />
+    <Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}" />
     <Setter Property="BorderBrush" Value="Transparent" />
     <Setter Property="BorderThickness" Value="1" />
     <Setter Property="assist:TimePickerAssist.InnerRightBackground" Value="#22444444"/>
@@ -111,8 +111,8 @@
             <Border.BoxShadow>
               <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedInset}">
                 <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                <DynamicResource ResourceKey="NeumorphismShadowDark" />
               </MultiBinding>
             </Border.BoxShadow>
 
@@ -176,8 +176,8 @@
                   <Border.BoxShadow>
                     <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
                       <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                      <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                      <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                      <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                      <DynamicResource ResourceKey="NeumorphismShadowDark" />
                     </MultiBinding>
                   </Border.BoxShadow>
                   <TimePickerPresenter Name="PART_PickerPresenter" />
@@ -199,7 +199,7 @@
 
     <!-- Focused State (custom FocusAdorner) -->
     <Style Selector="^:focus-within /template/ Border#PART_RootBorder">
-      <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignFocus}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource NeumorphismFocus}" />
     </Style>
 
    
@@ -313,7 +313,7 @@
             <Grid Name="PART_PickerContainer">
               <!--Ignore col defs here, set in code-->
               <Grid Name="PART_HourHost" Grid.Column="0" RowDefinitions="Auto,*,Auto">
-                <RepeatButton Name="PART_HourUpButton" Grid.Row="0" Theme="{StaticResource DateTimePickerUpButton}" Background="{DynamicResource MaterialDesignPaper}" CornerRadius="10,0,0,0"/>
+                <RepeatButton Name="PART_HourUpButton" Grid.Row="0" Theme="{StaticResource DateTimePickerUpButton}" Background="{DynamicResource NeumorphismPaper}" CornerRadius="10,0,0,0"/>
                 <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled"
                               VerticalScrollBarVisibility="Hidden">
                   <DateTimePickerPanel Name="PART_HourSelector"
@@ -321,11 +321,11 @@
                                        ShouldLoop="True" Width="120"
                                        ItemHeight="{DynamicResource TimePickerFlyoutPresenterItemHeight}"/>
                 </ScrollViewer>
-                <RepeatButton Name="PART_HourDownButton" Grid.Row="2" Theme="{StaticResource DateTimePickerDownButton}" Background="{DynamicResource MaterialDesignPaper}"/>
+                <RepeatButton Name="PART_HourDownButton" Grid.Row="2" Theme="{StaticResource DateTimePickerDownButton}" Background="{DynamicResource NeumorphismPaper}"/>
               </Grid>
 
               <Grid Name="PART_MinuteHost" Grid.Column="2" RowDefinitions="Auto,*,Auto">
-                <RepeatButton Name="PART_MinuteUpButton" Grid.Row="0" Theme="{StaticResource DateTimePickerUpButton}" Background="{DynamicResource MaterialDesignPaper}"/>
+                <RepeatButton Name="PART_MinuteUpButton" Grid.Row="0" Theme="{StaticResource DateTimePickerUpButton}" Background="{DynamicResource NeumorphismPaper}"/>
                 <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled"
                               VerticalScrollBarVisibility="Hidden">
                   <DateTimePickerPanel Name="PART_MinuteSelector"
@@ -333,11 +333,11 @@
                                        ShouldLoop="True" Width="120"
                                        ItemHeight="{DynamicResource TimePickerFlyoutPresenterItemHeight}"/>
                 </ScrollViewer>
-                <RepeatButton Name="PART_MinuteDownButton" Grid.Row="2" Theme="{StaticResource DateTimePickerDownButton}" Background="{DynamicResource MaterialDesignPaper}"/>
+                <RepeatButton Name="PART_MinuteDownButton" Grid.Row="2" Theme="{StaticResource DateTimePickerDownButton}" Background="{DynamicResource NeumorphismPaper}"/>
               </Grid>
 
               <Grid Name="PART_SecondHost" Grid.Column="3" RowDefinitions="Auto,*,Auto" IsVisible="True">
-                <RepeatButton Name="PART_SecondUpButton" Theme="{StaticResource DateTimePickerDownButton}" Background="{DynamicResource MaterialDesignPaper}"/>
+                <RepeatButton Name="PART_SecondUpButton" Theme="{StaticResource DateTimePickerDownButton}" Background="{DynamicResource NeumorphismPaper}"/>
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled"
                               VerticalScrollBarVisibility="Hidden">
                   <DateTimePickerPanel Name="PART_SecondSelector"
@@ -345,11 +345,11 @@
                                        ShouldLoop="True" Width="120"
                                        ItemHeight="{DynamicResource TimePickerFlyoutPresenterItemHeight}"/>
                 </ScrollViewer>
-                <RepeatButton Name="PART_SecondDownButton" Theme="{StaticResource DateTimePickerDownButton}" Background="{DynamicResource MaterialDesignPaper}"/>
+                <RepeatButton Name="PART_SecondDownButton" Theme="{StaticResource DateTimePickerDownButton}" Background="{DynamicResource NeumorphismPaper}"/>
               </Grid>
 
               <Grid Name="PART_PeriodHost" Grid.Column="4" RowDefinitions="Auto,*,Auto">
-				        <RepeatButton Name="PART_PeriodUpButton" Grid.Row="0" IsVisible="False" Theme="{StaticResource DateTimePickerUpButton}" Background="{DynamicResource MaterialDesignPaper}"/>
+				        <RepeatButton Name="PART_PeriodUpButton" Grid.Row="0" IsVisible="False" Theme="{StaticResource DateTimePickerUpButton}" Background="{DynamicResource NeumorphismPaper}"/>
 				        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled"
                               VerticalScrollBarVisibility="Hidden">
                   <DateTimePickerPanel Name="PART_PeriodSelector"
@@ -357,7 +357,7 @@
                                        ShouldLoop="False"
                                        ItemHeight="{DynamicResource TimePickerFlyoutPresenterItemHeight}"/>
                   </ScrollViewer>
-                <RepeatButton Name="PART_PeriodDownButton" Grid.Row="2" IsVisible="False" Theme="{StaticResource DateTimePickerDownButton}" Background="{DynamicResource MaterialDesignPaper}"/>
+                <RepeatButton Name="PART_PeriodDownButton" Grid.Row="2" IsVisible="False" Theme="{StaticResource DateTimePickerDownButton}" Background="{DynamicResource NeumorphismPaper}"/>
               </Grid>
 
               <Rectangle x:Name="HighlightRect" ZIndex="-1"

@@ -14,7 +14,7 @@
   <ControlTheme x:Key="{x:Type controls:SnackbarHost}" TargetType="controls:SnackbarHost">
     <Setter Property="Background" Value="Transparent" />
     <Setter Property="assist:SnackbarHostAssist.SnackbarCornerRadius" Value="10" />
-    <Setter Property="assist:SnackbarHostAssist.SnackbarBackground" Value="{DynamicResource MaterialDesignPaper}" />
+    <Setter Property="assist:SnackbarHostAssist.SnackbarBackground" Value="{DynamicResource NeumorphismPaper}" />
     <Setter Property="assist:SnackbarHostAssist.SnackbarVerticalOffset" Value="50" />
     <Setter Property="Template">
       <ControlTemplate>

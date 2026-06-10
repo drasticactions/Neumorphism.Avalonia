@@ -34,10 +34,10 @@
 
 
   <StackPanel Margin="20">
-    <TextBlock Classes="Headline4 Subheadline" Text="Toggles" Foreground="{DynamicResource MaterialDesignDarkGray}" />
+    <TextBlock Classes="Headline4 Subheadline" Text="Toggles" Foreground="{DynamicResource NeumorphismDarkGray}" />
 
     <!--Regular toggles-->
-    <TextBlock Classes="Headline6 Subheadline2" Text="Regular toggles" Foreground="{DynamicResource MaterialDesignMediumGray}" Margin="0,20,0,10"/>
+    <TextBlock Classes="Headline6 Subheadline2" Text="Regular toggles" Foreground="{DynamicResource NeumorphismMediumGray}" Margin="0,20,0,10"/>
     <StackPanel Orientation="Horizontal">
       <!--****************************************************************-->
       <showMeTheXaml:XamlDisplay UniqueId="RegularToggles0">
@@ -59,7 +59,7 @@
     </StackPanel>
 
     <!--Regular toggles (text left)-->
-    <TextBlock Classes="Headline6 Subheadline2" Text="Regular toggles (text left)" Foreground="{DynamicResource MaterialDesignMediumGray}" Margin="0,20,0,10"/>
+    <TextBlock Classes="Headline6 Subheadline2" Text="Regular toggles (text left)" Foreground="{DynamicResource NeumorphismMediumGray}" Margin="0,20,0,10"/>
     <StackPanel Orientation="Horizontal">
       <!--****************************************************************-->
       <showMeTheXaml:XamlDisplay UniqueId="RegularTogglesLeft0">
@@ -82,7 +82,7 @@
 
 
     <!--Outlined toggles-->
-    <TextBlock Classes="Headline6 Subheadline2" Text="Outlined toggles" Foreground="{DynamicResource MaterialDesignMediumGray}" Margin="0,20,0,10"/>
+    <TextBlock Classes="Headline6 Subheadline2" Text="Outlined toggles" Foreground="{DynamicResource NeumorphismMediumGray}" Margin="0,20,0,10"/>
     <StackPanel Orientation="Horizontal">
       <!--****************************************************************-->
       <showMeTheXaml:XamlDisplay UniqueId="OutlineToggles0">
@@ -104,7 +104,7 @@
     </StackPanel>
 
     <!--Outlined toggles (text left)-->
-    <TextBlock Classes="Headline6 Subheadline2" Text="Outlined toggles (text left)" Foreground="{DynamicResource MaterialDesignMediumGray}" Margin="0,20,0,10"/>
+    <TextBlock Classes="Headline6 Subheadline2" Text="Outlined toggles (text left)" Foreground="{DynamicResource NeumorphismMediumGray}" Margin="0,20,0,10"/>
     <StackPanel Orientation="Horizontal">
       <!--****************************************************************-->
       <showMeTheXaml:XamlDisplay UniqueId="OutlineTogglesLeft0">
@@ -126,7 +126,7 @@
     </StackPanel>
 
     <!--Checkboxes-->
-    <TextBlock Classes="Headline6 Subheadline2" Text="Checkboxes" Foreground="{DynamicResource MaterialDesignMediumGray}" Margin="0,20,0,10"/>
+    <TextBlock Classes="Headline6 Subheadline2" Text="Checkboxes" Foreground="{DynamicResource NeumorphismMediumGray}" Margin="0,20,0,10"/>
     <StackPanel Orientation="Horizontal">
       <!--****************************************************************-->
       <showMeTheXaml:XamlDisplay UniqueId="Checkboxes0">
@@ -159,7 +159,7 @@
     </StackPanel>
 
     <!--Radiobuttons-->
-    <TextBlock Classes="Headline6 Subheadline2" Text="RadioButtons" Foreground="{DynamicResource MaterialDesignMediumGray}" Margin="0,20,0,10"/>
+    <TextBlock Classes="Headline6 Subheadline2" Text="RadioButtons" Foreground="{DynamicResource NeumorphismMediumGray}" Margin="0,20,0,10"/>
     <StackPanel Orientation="Horizontal">
       <!--****************************************************************-->
       <showMeTheXaml:XamlDisplay UniqueId="RadioButtons0">
@@ -192,7 +192,7 @@
     </StackPanel>
 
     <!--Radiobuttons group-->
-    <TextBlock Classes="Headline6 Subheadline2" Text="RadioButtons (button like)" Foreground="{DynamicResource MaterialDesignMediumGray}" Margin="0,20,0,10"/>
+    <TextBlock Classes="Headline6 Subheadline2" Text="RadioButtons (button like)" Foreground="{DynamicResource NeumorphismMediumGray}" Margin="0,20,0,10"/>
     <StackPanel Orientation="Horizontal">
       <StackPanel Orientation="Vertical">
         <!--****************************************************************-->
@@ -233,7 +233,7 @@
     </StackPanel>
 
     <!--ToggleButtons-->
-    <TextBlock Classes="Headline6 Subheadline2" Text="ToggleButtons" Foreground="{DynamicResource MaterialDesignMediumGray}" Margin="0,20,0,10"/>
+    <TextBlock Classes="Headline6 Subheadline2" Text="ToggleButtons" Foreground="{DynamicResource NeumorphismMediumGray}" Margin="0,20,0,10"/>
     <StackPanel Orientation="Horizontal"  Margin="0,0,0,50">
 		<!--****************************************************************-->
 		<showMeTheXaml:XamlDisplay UniqueId="ToggleButtons0">
@@ -338,14 +338,14 @@
     </StackPanel>
 
     <!--Custom toggles-->
-    <TextBlock Classes="Headline6 Subheadline2" Text="Custom ToggleButtons" Margin="0,20,0,10" Foreground="{DynamicResource MaterialDesignMediumGray}" />
+    <TextBlock Classes="Headline6 Subheadline2" Text="Custom ToggleButtons" Margin="0,20,0,10" Foreground="{DynamicResource NeumorphismMediumGray}" />
     <StackPanel Orientation="Horizontal" Margin="0,0,0,50">
       <StackPanel>
         <!--****************************************************************-->
         <showMeTheXaml:XamlDisplay UniqueId="CustomToggles0">
           <ToggleSwitch Content="Custom" IsChecked="True" assist:SelectionControlAssist.Size="160"
                         OnContent="Custom (ON)" OffContent="Custom (OFF)"
-                        BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignBackground}"
+                        BorderThickness="1" BorderBrush="{DynamicResource NeumorphismBackground}"
                         assist:ToggleSwitchAssist.SwitchTrackOffBackground="{StaticResource OffGradient}"
                         assist:ToggleSwitchAssist.SwitchTrackOnBackground="{StaticResource OnGradient}"
                         assist:ToggleSwitchAssist.SwitchTrackOnForeground="Crimson"
@@ -362,7 +362,7 @@
                   assist:ToggleSwitchAssist.SwitchTrackOnForeground="#CCFF0000"
                   assist:ToggleSwitchAssist.SwitchTrackOffForeground="#CC00FF00"
                   assist:ToggleSwitchAssist.SwitchTrackOverForeground="Transparent"
-          BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignBorderShadow}"
+          BorderThickness="1" BorderBrush="{DynamicResource NeumorphismBorderShadow}"
                   Classes="LeftHeader"
                   ToolTip.Tip='Custom toggle switch' />
         </showMeTheXaml:XamlDisplay>
@@ -384,8 +384,8 @@
         <showMeTheXaml:XamlDisplay UniqueId="CustomToggles3">
           <ToggleSwitch Content="Custom" OnContent="Custom" OffContent="Custom" IsChecked="True" Classes="Outline LeftHeader"
                         assist:SelectionControlAssist.Size="60"
-                        assist:ToggleSwitchAssist.SwitchTrackOnBackground="{DynamicResource MaterialDesignTextAreaInactiveBorder}"
-                        assist:ToggleSwitchAssist.SwitchTrackOffBackground="{DynamicResource MaterialDesignBackground}"
+                        assist:ToggleSwitchAssist.SwitchTrackOnBackground="{DynamicResource NeumorphismTextAreaInactiveBorder}"
+                        assist:ToggleSwitchAssist.SwitchTrackOffBackground="{DynamicResource NeumorphismBackground}"
                         assist:ToggleSwitchAssist.SwitchTrackOnForeground="Orange"
                         assist:ToggleSwitchAssist.SwitchTrackOffForeground="Orange"
                         assist:ToggleSwitchAssist.SwitchTrackOverForeground="OrangeRed"

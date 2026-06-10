@@ -54,7 +54,7 @@
 		<Setter Property="Width" Value="NaN"/>
 		<Setter Property="Height" Value="40"/>
 		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}" />
+		<Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}" />
 		<Setter Property="FontFamily" Value="{DynamicResource NeumorphismFont2}"/>
 		<Setter Property="FontSize" Value="14"/>
 		<Setter Property="FontWeight" Value="Normal"/>
@@ -180,7 +180,7 @@
 												HorizontalAlignment="Right"
 												VerticalAlignment="Center"
 												Data="M7,10L12,15L17,10H7Z"
-												Fill="{DynamicResource MaterialDesignTextBoxBorder}" />
+												Fill="{DynamicResource NeumorphismTextBoxBorder}" />
 									</Border>
 								</Grid>
 
@@ -215,8 +215,8 @@
 							<Border.BoxShadow>
 								<MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
 									<Binding ElementName="PART_Popup" Path="Height"/>
-									<DynamicResource ResourceKey="MaterialDesignShadowLight" />
-									<DynamicResource ResourceKey="MaterialDesignShadowDark" />
+									<DynamicResource ResourceKey="NeumorphismShadowLight" />
+									<DynamicResource ResourceKey="NeumorphismShadowDark" />
 								</MultiBinding>
 							</Border.BoxShadow>
 
@@ -243,8 +243,8 @@
 				<Setter.Value>
 					<MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
 						<Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-						<DynamicResource ResourceKey="MaterialDesignShadowLight" />
-						<DynamicResource ResourceKey="MaterialDesignShadowDark" />
+						<DynamicResource ResourceKey="NeumorphismShadowLight" />
+						<DynamicResource ResourceKey="NeumorphismShadowDark" />
 					</MultiBinding>
 				</Setter.Value>
 			</Setter>
@@ -294,8 +294,8 @@
 				<Setter.Value>
 					<MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
 						<Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-						<DynamicResource ResourceKey="MaterialDesignShadowLight" />
-						<DynamicResource ResourceKey="MaterialDesignShadowDark" />
+						<DynamicResource ResourceKey="NeumorphismShadowLight" />
+						<DynamicResource ResourceKey="NeumorphismShadowDark" />
 					</MultiBinding>
 				</Setter.Value>
 			</Setter>
@@ -310,23 +310,23 @@
 		</Style>
 
 		<Style Selector="^[IsDropDownOpen=true]:not(.Filled) /template/ Border#PART_PopupBorder">
-			<Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}"/>
+			<Setter Property="Background" Value="{DynamicResource NeumorphismPaper}"/>
 		</Style>
 
 		<!--Filled-->
 		<Style Selector="^.Filled[IsDropDownOpen=true] /template/ Border#PART_PopupBorder">
-			<Setter Property="Background" Value="{DynamicResource MaterialDesignDisabledNoTransparency}"/>
+			<Setter Property="Background" Value="{DynamicResource NeumorphismDisabledNoTransparency}"/>
 		</Style>
 
 		<Style Selector="^.Filled /template/ Border#PART_Border">
-			<Setter Property="Background" Value="{DynamicResource MaterialDesignTextFieldBoxBackground}" />
+			<Setter Property="Background" Value="{DynamicResource NeumorphismTextFieldBoxBackground}" />
 		</Style>
 
 		<Style Selector="^[CornerRadius=0]">
 			<Setter Property="FocusAdorner">
 				<FocusAdornerTemplate>
 					<Border BorderThickness="1" CornerRadius="{Binding $self.(AdornerLayer.AdornedElement).(Border.Height), Converter={StaticResource ControlHeightToCornerRadiusConverter}, ConverterParameter=0}}"
-							BorderBrush="{DynamicResource MaterialDesignFocus}"/>
+							BorderBrush="{DynamicResource NeumorphismFocus}"/>
 				</FocusAdornerTemplate>
 			</Setter>
 		</Style>
@@ -335,7 +335,7 @@
       <Setter Property="FocusAdorner">
         <FocusAdornerTemplate>
           <Border BorderThickness="1" CornerRadius="{Binding $self.(AdornerLayer.AdornedElement).(Border.CornerRadius)}"
-                  BorderBrush="{DynamicResource MaterialDesignFocus}"/>
+                  BorderBrush="{DynamicResource NeumorphismFocus}"/>
         </FocusAdornerTemplate>
       </Setter>
     </Style>
@@ -352,8 +352,8 @@
 				<Setter.Value>
 					<MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
 						<Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-						<DynamicResource ResourceKey="MaterialDesignShadowLight" />
-						<DynamicResource ResourceKey="MaterialDesignShadowDark" />
+						<DynamicResource ResourceKey="NeumorphismShadowLight" />
+						<DynamicResource ResourceKey="NeumorphismShadowDark" />
 					</MultiBinding>
 				</Setter.Value>
 			</Setter>
@@ -375,7 +375,7 @@
 		<Setter Property="Width" Value="NaN"/>
 		<Setter Property="Height" Value="40"/>
 		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}" />
+		<Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}" />
 		<Setter Property="FontFamily" Value="{DynamicResource NeumorphismFont2}"/>
 		<Setter Property="FontWeight" Value="Normal"/>
 		<Setter Property="FontStyle" Value="Normal"/>
@@ -421,8 +421,8 @@
 						<Border.BoxShadow>
 							<MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
 								<Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-								<DynamicResource ResourceKey="MaterialDesignShadowLight" />
-								<DynamicResource ResourceKey="MaterialDesignShadowDark" />
+								<DynamicResource ResourceKey="NeumorphismShadowLight" />
+								<DynamicResource ResourceKey="NeumorphismShadowDark" />
 							</MultiBinding>
 						</Border.BoxShadow>
 
@@ -434,8 +434,8 @@
 							<Border.BoxShadow>
 								<MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedInset}">
 									<Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-									<DynamicResource ResourceKey="MaterialDesignShadowLight" />
-									<DynamicResource ResourceKey="MaterialDesignShadowDark" />
+									<DynamicResource ResourceKey="NeumorphismShadowLight" />
+									<DynamicResource ResourceKey="NeumorphismShadowDark" />
 								</MultiBinding>
 							</Border.BoxShadow>
 
@@ -474,7 +474,7 @@
 											  HorizontalAlignment="Right"
 											  VerticalAlignment="Center"
 											  Data="M7,10L12,15L17,10H7Z"
-											  Fill="{DynamicResource MaterialDesignTextBoxBorder}" />
+											  Fill="{DynamicResource NeumorphismTextBoxBorder}" />
 									</Border>
 								</Grid>
 
@@ -501,8 +501,8 @@
 							<Border.BoxShadow>
 								<MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
 									<Binding ElementName="PART_Popup" Path="Height"/>
-									<DynamicResource ResourceKey="MaterialDesignShadowLight" />
-									<DynamicResource ResourceKey="MaterialDesignShadowDark" />
+									<DynamicResource ResourceKey="NeumorphismShadowLight" />
+									<DynamicResource ResourceKey="NeumorphismShadowDark" />
 								</MultiBinding>
 							</Border.BoxShadow>
 							<ScrollViewer Background="{TemplateBinding Background}"
@@ -524,7 +524,7 @@
 
 
     <Style Selector="^[IsDropDownOpen=true] /template/ Border#PART_PopupBorder">
-			<Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}"/>
+			<Setter Property="Background" Value="{DynamicResource NeumorphismPaper}"/>
 		</Style>
 
 		<Style Selector="^:not(^[SelectedIndex=-1]) /template/ TextBlock#floatingWatermark">
@@ -536,7 +536,7 @@
       <Setter Property="FocusAdorner">
         <FocusAdornerTemplate>
           <Border BorderThickness="1" CornerRadius="{Binding $self.(AdornerLayer.AdornedElement).(Border.Height), Converter={StaticResource ControlHeightToCornerRadiusConverter}, ConverterParameter=0}}"
-							BorderBrush="{DynamicResource MaterialDesignFocus}"/>
+							BorderBrush="{DynamicResource NeumorphismFocus}"/>
         </FocusAdornerTemplate>
       </Setter>
     </Style>

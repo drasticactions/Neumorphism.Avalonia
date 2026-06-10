@@ -13,11 +13,11 @@
                 x:Class="Neumorphism.Avalonia.Demo.Pages.ComboBoxesDemo">
 
 	<StackPanel Margin="20" HorizontalAlignment="Stretch">
-		<TextBlock Classes="Headline4 Subheadline" Text="ComboBoxes" Foreground="{DynamicResource MaterialDesignDarkGray}" />
+		<TextBlock Classes="Headline4 Subheadline" Text="ComboBoxes" Foreground="{DynamicResource NeumorphismDarkGray}" />
 
 		<WrapPanel HorizontalAlignment="Stretch" Margin="0,30,0,0">
 			<StackPanel>
-				<TextBlock Classes="Headline6 Subheadline2" Text="Classic comboboxes" Foreground="{DynamicResource MaterialDesignMediumGray}" />
+				<TextBlock Classes="Headline6 Subheadline2" Text="Classic comboboxes" Foreground="{DynamicResource NeumorphismMediumGray}" />
 				<StackPanel Orientation="Horizontal">
 					<!--****************************************************************-->
 					<showMeTheXaml:XamlDisplay UniqueId="ClassicComboBoxes0">
@@ -106,7 +106,7 @@
 
 		<WrapPanel HorizontalAlignment="Stretch" Margin="0,30,0,0">
 			<StackPanel>
-				<TextBlock Classes="Headline6 Subheadline2" Text="Outset comboboxes" Foreground="{DynamicResource MaterialDesignMediumGray}" />
+				<TextBlock Classes="Headline6 Subheadline2" Text="Outset comboboxes" Foreground="{DynamicResource NeumorphismMediumGray}" />
 				<StackPanel Orientation="Horizontal">
 					<!--****************************************************************-->
 					<showMeTheXaml:XamlDisplay UniqueId="OutsetComboBoxes0">
@@ -210,7 +210,7 @@
 
 		<WrapPanel HorizontalAlignment="Stretch" Margin="0,30,0,0">
 			<StackPanel>
-				<TextBlock Classes="Headline6 Subheadline2" Text="Filled comboboxes" Foreground="{DynamicResource MaterialDesignMediumGray}" />
+				<TextBlock Classes="Headline6 Subheadline2" Text="Filled comboboxes" Foreground="{DynamicResource NeumorphismMediumGray}" />
 				<StackPanel Orientation="Horizontal">
 					<!--****************************************************************-->
 					<showMeTheXaml:XamlDisplay UniqueId="FilledComboBoxes0">
@@ -237,40 +237,40 @@
 						<ComboBox Classes="Filled" Height="38" SelectedIndex="0">
 							<ComboBoxItem BorderThickness="0,0,0,1"
 										  ToolTip.Tip='ComboBox with theme "Filled" applied'
-										  BorderBrush="{DynamicResource MaterialDesignFlatButtonRipple}">
+										  BorderBrush="{DynamicResource NeumorphismFlatButtonRipple}">
 								<StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
-									<icons:MaterialIcon Kind="Robot" Width="24" Height="24" Foreground="{DynamicResource MaterialDesignForeground}" Margin="0,0,8,0" Opacity="0.3" />
-									<TextBlock Text="Choose a robot" Foreground="{DynamicResource MaterialDesignForeground}" VerticalAlignment="Center" />
+									<icons:MaterialIcon Kind="Robot" Width="24" Height="24" Foreground="{DynamicResource NeumorphismForeground}" Margin="0,0,8,0" Opacity="0.3" />
+									<TextBlock Text="Choose a robot" Foreground="{DynamicResource NeumorphismForeground}" VerticalAlignment="Center" />
 								</StackPanel>
 							</ComboBoxItem>
 							<ComboBoxItem>
 								<StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
-									<icons:MaterialIcon Kind="RobotAngry" Width="28" Height="28" Foreground="{DynamicResource MaterialDesignForeground}" Margin="0,0,8,0" />
-									<TextBlock Text="Angry" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignForeground}" />
+									<icons:MaterialIcon Kind="RobotAngry" Width="28" Height="28" Foreground="{DynamicResource NeumorphismForeground}" Margin="0,0,8,0" />
+									<TextBlock Text="Angry" VerticalAlignment="Center" Foreground="{DynamicResource NeumorphismForeground}" />
 								</StackPanel>
 							</ComboBoxItem>
 							<ComboBoxItem>
 								<StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
-									<icons:MaterialIcon Kind="RobotConfused" Width="28" Height="28" Foreground="{DynamicResource MaterialDesignForeground}" Margin="0,0,8,0" />
-									<TextBlock Text="Confused" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignForeground}" />
+									<icons:MaterialIcon Kind="RobotConfused" Width="28" Height="28" Foreground="{DynamicResource NeumorphismForeground}" Margin="0,0,8,0" />
+									<TextBlock Text="Confused" VerticalAlignment="Center" Foreground="{DynamicResource NeumorphismForeground}" />
 								</StackPanel>
 							</ComboBoxItem>
 							<ComboBoxItem>
 								<StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
-									<icons:MaterialIcon Kind="RobotExcited" Width="28" Height="28" Foreground="{DynamicResource MaterialDesignForeground}" Margin="0,0,8,0" />
-									<TextBlock Text="Excited" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignForeground}" />
+									<icons:MaterialIcon Kind="RobotExcited" Width="28" Height="28" Foreground="{DynamicResource NeumorphismForeground}" Margin="0,0,8,0" />
+									<TextBlock Text="Excited" VerticalAlignment="Center" Foreground="{DynamicResource NeumorphismForeground}" />
 								</StackPanel>
 							</ComboBoxItem>
 							<ComboBoxItem>
 								<StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
-									<icons:MaterialIcon Kind="RobotHappy" Width="28" Height="28" Foreground="{DynamicResource MaterialDesignForeground}" Margin="0,0,8,0" />
-									<TextBlock Text="Happy" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignForeground}" />
+									<icons:MaterialIcon Kind="RobotHappy" Width="28" Height="28" Foreground="{DynamicResource NeumorphismForeground}" Margin="0,0,8,0" />
+									<TextBlock Text="Happy" VerticalAlignment="Center" Foreground="{DynamicResource NeumorphismForeground}" />
 								</StackPanel>
 							</ComboBoxItem>
 							<ComboBoxItem>
 								<StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
-									<icons:MaterialIcon Kind="RobotDead" Width="28" Height="28" Foreground="{DynamicResource MaterialDesignForeground}" Margin="0,0,8,0" />
-									<TextBlock Text="Dead" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignForeground}" />
+									<icons:MaterialIcon Kind="RobotDead" Width="28" Height="28" Foreground="{DynamicResource NeumorphismForeground}" Margin="0,0,8,0" />
+									<TextBlock Text="Dead" VerticalAlignment="Center" Foreground="{DynamicResource NeumorphismForeground}" />
 								</StackPanel>
 							</ComboBoxItem>
 						</ComboBox>
@@ -291,7 +291,7 @@
 
 		<WrapPanel HorizontalAlignment="Stretch" Margin="0,30,0,0">
 			<StackPanel Margin="0,0,0,50">
-				<TextBlock Classes="Headline6 Subheadline2" Text="Outline comboboxes" Foreground="{DynamicResource MaterialDesignMediumGray}" />
+				<TextBlock Classes="Headline6 Subheadline2" Text="Outline comboboxes" Foreground="{DynamicResource NeumorphismMediumGray}" />
 				<StackPanel Orientation="Horizontal">
 					<!--****************************************************************-->
 					<showMeTheXaml:XamlDisplay UniqueId="OutlinedComboBoxes0">
@@ -318,27 +318,27 @@
 					<showMeTheXaml:XamlDisplay UniqueId="OutlinedComboBoxes2">
 						<ComboBox Theme="{StaticResource ComboBoxOutline}" SelectedIndex="0"
 								  ToolTip.Tip='ComboBox with theme "ComboBoxOutline" applied'>
-							<ComboBoxItem Background="{DynamicResource MaterialDesignChipBackground}" BorderThickness="1,1,1,0" BorderBrush="{DynamicResource MaterialDesignFlatButtonRipple}">
+							<ComboBoxItem Background="{DynamicResource NeumorphismChipBackground}" BorderThickness="1,1,1,0" BorderBrush="{DynamicResource NeumorphismFlatButtonRipple}">
 								<StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
-									<icons:MaterialIcon Kind="SettingsOutline" Width="24" Height="24"  Foreground="{DynamicResource MaterialDesignForeground}" Margin="0,0,8,0" VerticalAlignment="Center" />
+									<icons:MaterialIcon Kind="SettingsOutline" Width="24" Height="24"  Foreground="{DynamicResource NeumorphismForeground}" Margin="0,0,8,0" VerticalAlignment="Center" />
 									<TextBlock Text="Settings" Opacity="0.8" VerticalAlignment="Center" />
 								</StackPanel>
 							</ComboBoxItem>
-							<ComboBoxItem BorderThickness="1,1,1,0" BorderBrush="{DynamicResource MaterialDesignFlatButtonRipple}">
+							<ComboBoxItem BorderThickness="1,1,1,0" BorderBrush="{DynamicResource NeumorphismFlatButtonRipple}">
 								<StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
-									<icons:MaterialIcon Kind="DatabaseAdd" Width="24" Height="24" Foreground="{DynamicResource MaterialDesignForeground}" Margin="0,0,8,0" />
+									<icons:MaterialIcon Kind="DatabaseAdd" Width="24" Height="24" Foreground="{DynamicResource NeumorphismForeground}" Margin="0,0,8,0" />
 									<TextBlock Text="Add" VerticalAlignment="Center" />
 								</StackPanel>
 							</ComboBoxItem>
-							<ComboBoxItem BorderThickness="1,1,1,0" BorderBrush="{DynamicResource MaterialDesignFlatButtonRipple}">
+							<ComboBoxItem BorderThickness="1,1,1,0" BorderBrush="{DynamicResource NeumorphismFlatButtonRipple}">
 								<StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
-									<icons:MaterialIcon Kind="DatabaseRemove" Width="24" Height="24" Foreground="{DynamicResource MaterialDesignForeground}" Margin="0,0,8,0" />
+									<icons:MaterialIcon Kind="DatabaseRemove" Width="24" Height="24" Foreground="{DynamicResource NeumorphismForeground}" Margin="0,0,8,0" />
 									<TextBlock Text="Remove" VerticalAlignment="Center" />
 								</StackPanel>
 							</ComboBoxItem>
-							<ComboBoxItem BorderThickness="1,1,1,1" BorderBrush="{DynamicResource MaterialDesignFlatButtonRipple}">
+							<ComboBoxItem BorderThickness="1,1,1,1" BorderBrush="{DynamicResource NeumorphismFlatButtonRipple}">
 								<StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
-									<icons:MaterialIcon Kind="DatabaseRefresh" Width="24" Height="24" Foreground="{DynamicResource MaterialDesignForeground}" Margin="0,0,8,0" />
+									<icons:MaterialIcon Kind="DatabaseRefresh" Width="24" Height="24" Foreground="{DynamicResource NeumorphismForeground}" Margin="0,0,8,0" />
 									<TextBlock Text="Refresh" VerticalAlignment="Center" />
 								</StackPanel>
 							</ComboBoxItem>

@@ -66,7 +66,7 @@
   <!--Default MenuItem theme-->
   <ControlTheme x:Key="{x:Type MenuItem}" TargetType="MenuItem">
     <Setter Property="Background" Value="Transparent" />
-    <Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}" />
+    <Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}" />
     <Setter Property="Padding" Value="{DynamicResource MenuFlyoutItemThemePaddingNarrow}" />
     <Setter Property="FontSize" Value="{DynamicResource ControlContentThemeFontSize}" />
     <Setter Property="assist:MenuAssist.PopupAnchor" Value="TopRight" />
@@ -144,7 +144,7 @@
                  IsLightDismissEnabled="False"
                  IsOpen="{TemplateBinding IsSubMenuOpen, Mode=TwoWay}">
             <Border Name="PART_PopupBorder"
-                    Background="{DynamicResource MaterialDesignPaper}"
+                    Background="{DynamicResource NeumorphismPaper}"
                     BorderBrush="{TemplateBinding assist:MenuAssist.PopupBorderBrush}"
                     BorderThickness="{TemplateBinding assist:MenuAssist.PopupBorderThickness}"
                     Padding="{DynamicResource MenuFlyoutPresenterThemePadding}"
@@ -243,7 +243,7 @@
 
     <!-- Focused State (custom FocusAdorner) -->
     <Style Selector="^:focus /template/ Border#PART_LayoutRoot">
-      <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignFocus}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource NeumorphismFocus}" />
     </Style>
   </ControlTheme>
 
@@ -289,7 +289,7 @@
                    VerticalOffset="{TemplateBinding assist:MenuAssist.PopupVerticalOffset}"
                    OverlayInputPassThroughElement="{Binding $parent[Menu]}">
               <Border Name="PART_PopupBorder"
-                      Background="{DynamicResource MaterialDesignPaper}"
+                      Background="{DynamicResource NeumorphismPaper}"
                       BorderBrush="{TemplateBinding assist:MenuAssist.PopupBorderBrush}"
                       BorderThickness="{TemplateBinding assist:MenuAssist.PopupBorderThickness}"
                       Padding="{DynamicResource MenuFlyoutPresenterThemePadding}"
@@ -422,8 +422,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -473,8 +473,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -497,8 +497,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -521,8 +521,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -551,8 +551,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedInset}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -575,8 +575,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedInset}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -598,8 +598,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedInset}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>

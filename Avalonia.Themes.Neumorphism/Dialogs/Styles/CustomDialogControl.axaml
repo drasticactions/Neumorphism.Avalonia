@@ -18,13 +18,13 @@
         <Setter Property="ClipToBounds" Value="True"/>
         <Setter Property="Template">
             <ControlTemplate>
-                <Border Name="PART_RootBorder" CornerRadius="{TemplateBinding CornerRadius}" Background="{DynamicResource MaterialDesignPaper}"
+                <Border Name="PART_RootBorder" CornerRadius="{TemplateBinding CornerRadius}" Background="{DynamicResource NeumorphismPaper}"
                         ClipToBounds="{TemplateBinding ClipToBounds}">
                   <Border.BoxShadow>
                     <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
                       <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                      <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                      <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                      <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                      <DynamicResource ResourceKey="NeumorphismShadowDark" />
                     </MultiBinding>
                   </Border.BoxShadow>
 

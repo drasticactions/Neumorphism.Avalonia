@@ -44,7 +44,7 @@
                   
                     <Popup Name="XamlPopup" Grid.Column="1" IsLightDismissEnabled="True" Width="800" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center">
 	                          <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="800" Height="200" AcceptsReturn="True"
-                                    IsReadOnly="True" TextWrapping="Wrap" Background="{DynamicResource MaterialDesignPaper}"
+                                    IsReadOnly="True" TextWrapping="Wrap" Background="{DynamicResource NeumorphismPaper}"
                                     Text="{TemplateBinding XamlText}" />
                     </Popup>
                 </Grid>

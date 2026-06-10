@@ -77,8 +77,8 @@
             <Border.BoxShadow>
               <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
                 <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                <DynamicResource ResourceKey="NeumorphismShadowDark" />
               </MultiBinding>
             </Border.BoxShadow>
 
@@ -89,14 +89,14 @@
               <!--Left slider part-->
               <Track.DecreaseButton>
                 <RepeatButton Name="PART_DecreaseButton" Margin="{TemplateBinding Height, Converter={StaticResource HeightToMarginConverter}, ConverterParameter=-40%|0%|0%|0%}"
-                        Theme="{StaticResource MaterialDesignHorizontalTrackRepeatButtonLeft}"
+                        Theme="{StaticResource NeumorphismHorizontalTrackRepeatButtonLeft}"
                         Background="{Binding $parent[Slider].Foreground}" />
               </Track.DecreaseButton>
 
               <!--Right slider part-->
               <Track.IncreaseButton>
                 <RepeatButton Name="PART_IncreaseButton" Margin="{TemplateBinding Height, Converter={StaticResource HeightToMarginConverter}, ConverterParameter=0%|0%|-40%|0%}"
-                        Theme="{StaticResource MaterialDesignHorizontalTrackRepeatButtonRight}"
+                        Theme="{StaticResource NeumorphismHorizontalTrackRepeatButtonRight}"
                         Background="Transparent" />
               </Track.IncreaseButton>
 
@@ -104,7 +104,7 @@
               <Track.Thumb>
                 <Thumb Name="thumb" Focusable="False" Margin="0" Width="0" IsEnabled="{TemplateBinding IsEnabled}"
                      ClipToBounds="False" Foreground="{TemplateBinding assist:SliderAssist.ThumbForeground}"
-                     Theme="{StaticResource MaterialDesignSliderThumbHorizontal}" Tag="{TemplateBinding assist:SliderAssist.ValueTooltip}" />
+                     Theme="{StaticResource NeumorphismSliderThumbHorizontal}" Tag="{TemplateBinding assist:SliderAssist.ValueTooltip}" />
               </Track.Thumb>
             </Track>
           </Border>
@@ -126,7 +126,7 @@
       <Setter Property="FocusAdorner">
         <FocusAdornerTemplate>
           <Border BorderThickness="1" CornerRadius="{Binding $self.(AdornerLayer.AdornedElement).(Border.Height), Converter={StaticResource HeightToCornerRadiusConverter}}"
-							BorderBrush="{DynamicResource MaterialDesignFocus}"/>
+							BorderBrush="{DynamicResource NeumorphismFocus}"/>
         </FocusAdornerTemplate>
       </Setter>
     </Style>
@@ -165,8 +165,8 @@
             <Border.BoxShadow>
               <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
                 <Binding Path="Width" RelativeSource="{RelativeSource TemplatedParent}"/>
-                <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                <DynamicResource ResourceKey="NeumorphismShadowDark" />
               </MultiBinding>
             </Border.BoxShadow>
             <Track Name="PART_Track" Grid.Column="1" VerticalAlignment="Stretch"
@@ -177,14 +177,14 @@
               <!--Bottom slider part-->
               <Track.DecreaseButton>
                 <RepeatButton Name="PART_DecreaseButton" Margin="{TemplateBinding Width, Converter={StaticResource HeightToMarginConverter}, ConverterParameter=0%|-40%|0%|0%}"
-											  Theme="{StaticResource MaterialDesignVerticalTrackRepeatButtonBottom}"
+											  Theme="{StaticResource NeumorphismVerticalTrackRepeatButtonBottom}"
 											  Background="{Binding $parent[Slider].Foreground}" />
               </Track.DecreaseButton>
 
               <!--Top slider part-->
               <Track.IncreaseButton>
                 <RepeatButton Name="PART_IncreaseButton" Margin="{TemplateBinding Width, Converter={StaticResource HeightToMarginConverter}, ConverterParameter=0%|0%|0%|-40%}"
-											  Theme="{StaticResource MaterialDesignVerticalTrackRepeatButtonTop}"
+											  Theme="{StaticResource NeumorphismVerticalTrackRepeatButtonTop}"
 											  Background="Transparent" />
               </Track.IncreaseButton>
 
@@ -193,7 +193,7 @@
                 <Thumb Name="thumb" Focusable="False"
 									   Margin="{TemplateBinding Width, Converter={StaticResource HeightToMarginConverter}, ConverterParameter=0%|-20%|0%|-26%}"
 									   ClipToBounds="False" Foreground="{TemplateBinding assist:SliderAssist.ThumbForeground}" IsEnabled="{TemplateBinding IsEnabled}"
-									   Theme="{StaticResource MaterialDesignSliderThumbVertical}" Tag="{TemplateBinding assist:SliderAssist.ValueTooltip}" />
+									   Theme="{StaticResource NeumorphismSliderThumbVertical}" Tag="{TemplateBinding assist:SliderAssist.ValueTooltip}" />
               </Track.Thumb>
             </Track>
           </Border>
@@ -215,7 +215,7 @@
       <Setter Property="FocusAdorner">
         <FocusAdornerTemplate>
           <Border BorderThickness="1" CornerRadius="{Binding $self.(AdornerLayer.AdornedElement).(Border.Width), Converter={StaticResource HeightToCornerRadiusConverter}}"
-              BorderBrush="{DynamicResource MaterialDesignFocus}"/>
+              BorderBrush="{DynamicResource NeumorphismFocus}"/>
         </FocusAdornerTemplate>
       </Setter>
     </Style>
@@ -252,8 +252,8 @@
               <Border.BoxShadow>
                 <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
                   <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </Border.BoxShadow>
 
@@ -264,14 +264,14 @@
                 <!--Left slider part-->
                 <Track.DecreaseButton>
                   <RepeatButton Name="PART_DecreaseButton" Margin="{TemplateBinding Height, Converter={StaticResource HeightToMarginConverter}, ConverterParameter=-40%|0%|0%|0%}"
-                          Theme="{StaticResource MaterialDesignHorizontalTrackRepeatButtonLeft}"
+                          Theme="{StaticResource NeumorphismHorizontalTrackRepeatButtonLeft}"
                           Background="{Binding $parent[Slider].Foreground}" />
                 </Track.DecreaseButton>
 
                 <!--Right slider part-->
                 <Track.IncreaseButton>
                   <RepeatButton Name="PART_IncreaseButton" Margin="{TemplateBinding Height, Converter={StaticResource HeightToMarginConverter}, ConverterParameter=0%|0%|-40%|0%}"
-                          Theme="{StaticResource MaterialDesignHorizontalTrackRepeatButtonRight}"
+                          Theme="{StaticResource NeumorphismHorizontalTrackRepeatButtonRight}"
                           Background="Transparent" />
                 </Track.IncreaseButton>
 
@@ -279,7 +279,7 @@
                 <Track.Thumb>
                   <Thumb Name="thumb" Focusable="False" Margin="0" Width="0" IsEnabled="{TemplateBinding IsEnabled}"
                        ClipToBounds="False" Foreground="{TemplateBinding assist:SliderAssist.ThumbForeground}"
-                       Theme="{StaticResource MaterialDesignSliderThumbHorizontal}" Tag="{TemplateBinding assist:SliderAssist.ValueTooltip}" />
+                       Theme="{StaticResource NeumorphismSliderThumbHorizontal}" Tag="{TemplateBinding assist:SliderAssist.ValueTooltip}" />
                 </Track.Thumb>
               </Track>
             </Border>
@@ -298,7 +298,7 @@
       <Setter Property="FocusAdorner">
         <FocusAdornerTemplate>
           <Border BorderThickness="1" CornerRadius="{Binding $self.(AdornerLayer.AdornedElement).(Border.Height), Converter={StaticResource HeightToCornerRadiusConverter}}"
-              BorderBrush="{DynamicResource MaterialDesignFocus}"/>
+              BorderBrush="{DynamicResource NeumorphismFocus}"/>
         </FocusAdornerTemplate>
       </Setter>
     </Style>
@@ -334,8 +334,8 @@
               <Border.BoxShadow>
                 <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
                   <Binding Path="Width" RelativeSource="{RelativeSource TemplatedParent}"/>
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </Border.BoxShadow>
 
@@ -347,14 +347,14 @@
                 <!--Bottom slider part-->
                 <Track.DecreaseButton>
                   <RepeatButton Name="PART_DecreaseButton" Margin="{TemplateBinding Width, Converter={StaticResource HeightToMarginConverter}, ConverterParameter=0%|-40%|0%|0%}"
-												  Theme="{StaticResource MaterialDesignVerticalTrackRepeatButtonBottom}"
+												  Theme="{StaticResource NeumorphismVerticalTrackRepeatButtonBottom}"
 												  Background="{Binding $parent[Slider].Foreground}" />
                 </Track.DecreaseButton>
 
                 <!--Top slider part-->
                 <Track.IncreaseButton>
                   <RepeatButton Name="PART_IncreaseButton" Margin="{TemplateBinding Width, Converter={StaticResource HeightToMarginConverter}, ConverterParameter=0%|0%|0%|-40%}"
-												  Theme="{StaticResource MaterialDesignVerticalTrackRepeatButtonTop}"
+												  Theme="{StaticResource NeumorphismVerticalTrackRepeatButtonTop}"
 												  Background="Transparent" />
                 </Track.IncreaseButton>
 
@@ -363,7 +363,7 @@
                   <Thumb Name="thumb" Focusable="False"
 										   Margin="{TemplateBinding Width, Converter={StaticResource HeightToMarginConverter}, ConverterParameter=0%|-20%|0%|-26%}"
 										   ClipToBounds="False" Foreground="{TemplateBinding assist:SliderAssist.ThumbForeground}" IsEnabled="{TemplateBinding IsEnabled}"
-										   Theme="{StaticResource MaterialDesignSliderThumbVertical}" Tag="{TemplateBinding assist:SliderAssist.ValueTooltip}" />
+										   Theme="{StaticResource NeumorphismSliderThumbVertical}" Tag="{TemplateBinding assist:SliderAssist.ValueTooltip}" />
                 </Track.Thumb>
               </Track>
             </Border>
@@ -380,7 +380,7 @@
       <Setter Property="FocusAdorner">
         <FocusAdornerTemplate>
           <Border BorderThickness="1" CornerRadius="{Binding $self.(AdornerLayer.AdornedElement).(Border.Width), Converter={StaticResource HeightToCornerRadiusConverter}}"
-              BorderBrush="{DynamicResource MaterialDesignFocus}"/>
+              BorderBrush="{DynamicResource NeumorphismFocus}"/>
         </FocusAdornerTemplate>
       </Setter>
     </Style>
@@ -399,7 +399,7 @@
 
     <!-- Shared styles -->
     <Style Selector="^:disabled">
-      <Setter Property="Foreground" Value="{DynamicResource MaterialDesignDisabled}" />
+      <Setter Property="Foreground" Value="{DynamicResource NeumorphismDisabled}" />
     </Style>
 
     <Style Selector="^[TickPlacement=None] /template/ TickBar#TopTick">
@@ -434,8 +434,8 @@
   </ControlTheme>
 
 
-  <!--MaterialDesignSliderThumbHorizontal-->
-  <ControlTheme x:Key="MaterialDesignSliderThumbHorizontal" BasedOn="{StaticResource ThumbSliderBase}" TargetType="Thumb">
+  <!--NeumorphismSliderThumbHorizontal-->
+  <ControlTheme x:Key="NeumorphismSliderThumbHorizontal" BasedOn="{StaticResource ThumbSliderBase}" TargetType="Thumb">
     <Setter Property="Template">
       <ControlTemplate>
         <Grid HorizontalAlignment="Center" UseLayoutRounding="True" VerticalAlignment="Center" ClipToBounds="False">
@@ -472,8 +472,8 @@
   </ControlTheme>
 
 
-  <!--MaterialDesignSliderThumbVertical-->
-  <ControlTheme x:Key="MaterialDesignSliderThumbVertical" BasedOn="{StaticResource ThumbSliderBase}" TargetType="Thumb">
+  <!--NeumorphismSliderThumbVertical-->
+  <ControlTheme x:Key="NeumorphismSliderThumbVertical" BasedOn="{StaticResource ThumbSliderBase}" TargetType="Thumb">
     <Setter Property="Template">
       <ControlTemplate>
         <Grid HorizontalAlignment="Center" UseLayoutRounding="True" VerticalAlignment="Center" ClipToBounds="False">
@@ -512,8 +512,8 @@
 
   <ControlTheme x:Key="ThumbSliderBase" TargetType="Thumb">
     <Style Selector="^.SliderThumb:disabled /template/ Ellipse#grip">
-      <Setter Property="Fill" Value="{DynamicResource MaterialDesignDisabled}" />
-      <Setter Property="Stroke" Value="{DynamicResource MaterialDesignDisabled}" />
+      <Setter Property="Fill" Value="{DynamicResource NeumorphismDisabled}" />
+      <Setter Property="Stroke" Value="{DynamicResource NeumorphismDisabled}" />
     </Style>
     <Style Selector="^.SliderThumb /template/ Ellipse#shadow">
       <Setter Property="Opacity" Value="0" />
@@ -535,8 +535,8 @@
       <Setter Property="Fill" Value="{DynamicResource Foreground}" />
     </Style>
     <Style Selector="^:disabled /template/ Ellipse#grip">
-      <Setter Property="Fill" Value="{DynamicResource MaterialDesignDisabled}" />
-      <Setter Property="Stroke" Value="{DynamicResource MaterialDesignDisabled}" />
+      <Setter Property="Fill" Value="{DynamicResource NeumorphismDisabled}" />
+      <Setter Property="Stroke" Value="{DynamicResource NeumorphismDisabled}" />
     </Style>
     <Style Selector="^:pointerover /template/ Ellipse#shadow">
       <Setter Property="Opacity" Value="0.26" />
@@ -549,8 +549,8 @@
     </Style>
 
     <Style Selector="^[IsEnabled=False] /template/ Border#grip">
-      <Setter Property="Background" Value="{DynamicResource MaterialDesignDisabled}" />
-      <Setter Property="assist:SliderAssist.ThumbForeground" Value="{DynamicResource MaterialDesignDisabled}"/>
+      <Setter Property="Background" Value="{DynamicResource NeumorphismDisabled}" />
+      <Setter Property="assist:SliderAssist.ThumbForeground" Value="{DynamicResource NeumorphismDisabled}"/>
     </Style>
 
     <!--Discrete thumb definitions and styles-->
@@ -569,11 +569,11 @@
               <TextBlock Classes="Caption" Text="{Binding Text, ElementName=InnerBubbleText}"
                          Margin="{Binding Margin, ElementName=InnerBubbleText}" Foreground="Transparent"/>
             </Border>
-            <Border Name="PART_ContentContainer" Background="{DynamicResource MaterialDesignToolTipBackground}"
+            <Border Name="PART_ContentContainer" Background="{DynamicResource NeumorphismToolTipBackground}"
                     Padding="4, 8" CornerRadius="2">
 
               <TextBlock Name="InnerBubbleText" Classes="Caption" Text="{Binding $parent[Slider].Value}"
-                         Foreground="{DynamicResource MaterialDesignBackground}"/>
+                         Foreground="{DynamicResource NeumorphismBackground}"/>
             </Border>
           </Grid>
         </Template>
@@ -607,8 +607,8 @@
   </ControlTheme>
 
 
-  <!--MaterialDesignHorizontalTrackRepeatButtonLeft-->
-  <ControlTheme x:Key="MaterialDesignHorizontalTrackRepeatButtonLeft" TargetType="RepeatButton">
+  <!--NeumorphismHorizontalTrackRepeatButtonLeft-->
+  <ControlTheme x:Key="NeumorphismHorizontalTrackRepeatButtonLeft" TargetType="RepeatButton">
     <Setter Property="Focusable" Value="false" />
     <Setter Property="Template">
       <Setter.Value>
@@ -623,8 +623,8 @@
   </ControlTheme>
 
 
-  <!--MaterialDesignHorizontalTrackRepeatButtonRight-->
-  <ControlTheme x:Key="MaterialDesignHorizontalTrackRepeatButtonRight" TargetType="RepeatButton">
+  <!--NeumorphismHorizontalTrackRepeatButtonRight-->
+  <ControlTheme x:Key="NeumorphismHorizontalTrackRepeatButtonRight" TargetType="RepeatButton">
     <Setter Property="Focusable" Value="false" />
     <Setter Property="Template">
       <Setter.Value>
@@ -640,8 +640,8 @@
 
 
 
-  <!--MaterialDesignVerticalTrackRepeatButtonTop-->
-  <ControlTheme x:Key="MaterialDesignVerticalTrackRepeatButtonTop" TargetType="RepeatButton">
+  <!--NeumorphismVerticalTrackRepeatButtonTop-->
+  <ControlTheme x:Key="NeumorphismVerticalTrackRepeatButtonTop" TargetType="RepeatButton">
     <Setter Property="Focusable" Value="false" />
     <Setter Property="Template">
       <Setter.Value>
@@ -656,8 +656,8 @@
   </ControlTheme>
 
 
-  <!--MaterialDesignVerticalTrackRepeatButtonBottom-->
-  <ControlTheme x:Key="MaterialDesignVerticalTrackRepeatButtonBottom" TargetType="RepeatButton">
+  <!--NeumorphismVerticalTrackRepeatButtonBottom-->
+  <ControlTheme x:Key="NeumorphismVerticalTrackRepeatButtonBottom" TargetType="RepeatButton">
     <Setter Property="Focusable" Value="false" />
     <Setter Property="Template">
       <Setter.Value>

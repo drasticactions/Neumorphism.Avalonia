@@ -22,24 +22,24 @@
   <!-- Only values coming from BaseColorsPalette.xaml are allowed ! -->
   <!-- All this resources can be overrided easily -->
   <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent" />
-  <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="{DynamicResource MaterialDesignDataGridRowHoverBackground}" />
-  <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="{DynamicResource MaterialDesignDataGridRowHoverBackground}" />
+  <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="{DynamicResource NeumorphismDataGridRowHoverBackground}" />
+  <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="{DynamicResource NeumorphismDataGridRowHoverBackground}" />
   <SolidColorBrush x:Key="MenuFlyoutItemBackgroundDisabled" Color="Transparent" />
   <SolidColorBrush x:Key="MenuFlyoutItemForeground" Color="{DynamicResource SystemBaseHighColor}" />
   <SolidColorBrush x:Key="MenuFlyoutItemForegroundPointerOver" Color="{DynamicResource SystemBaseHighColor}" />
   <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="{DynamicResource SystemBaseHighColor}" />
-  <SolidColorBrush x:Key="MenuFlyoutItemForegroundDisabled" Color="{DynamicResource MaterialDesignDisabledNoTransparency}" />
+  <SolidColorBrush x:Key="MenuFlyoutItemForegroundDisabled" Color="{DynamicResource NeumorphismDisabledNoTransparency}" />
   <SolidColorBrush x:Key="MenuFlyoutSubItemChevron" Color="{DynamicResource SystemBaseMediumColor}" />
   <SolidColorBrush x:Key="MenuFlyoutSubItemChevronPointerOver" Color="{DynamicResource SystemBaseMediumColor}" />
   <SolidColorBrush x:Key="MenuFlyoutSubItemChevronPressed" Color="{DynamicResource SystemBaseMediumColor}" />
   <SolidColorBrush x:Key="MenuFlyoutSubItemChevronSubMenuOpened" Color="{DynamicResource SystemBaseMediumColor}" />
-  <SolidColorBrush x:Key="MenuFlyoutSubItemChevronDisabled" Color="{DynamicResource MaterialDesignDisabledNoTransparency}" />
+  <SolidColorBrush x:Key="MenuFlyoutSubItemChevronDisabled" Color="{DynamicResource NeumorphismDisabledNoTransparency}" />
   <SolidColorBrush x:Key="MenuFlyoutItemKeyboardAcceleratorTextForeground" Color="{DynamicResource SystemBaseHighColor}" />
   <SolidColorBrush x:Key="MenuFlyoutItemKeyboardAcceleratorTextForegroundPointerOver" Color="{DynamicResource SystemBaseHighColor}" />
   <SolidColorBrush x:Key="MenuFlyoutItemKeyboardAcceleratorTextForegroundPressed" Color="{DynamicResource SystemBaseHighColor}" />
-  <SolidColorBrush x:Key="MenuFlyoutItemKeyboardAcceleratorTextForegroundDisabled" Color="{DynamicResource MaterialDesignDisabledNoTransparency}" />
-  <SolidColorBrush x:Key="MenuFlyoutPresenterBackground" Color="{DynamicResource MaterialDesignPaper}" />
-  <SolidColorBrush x:Key="MenuFlyoutPresenterBorderBrush" Color="{DynamicResource MaterialDesignSilverGray}" />
+  <SolidColorBrush x:Key="MenuFlyoutItemKeyboardAcceleratorTextForegroundDisabled" Color="{DynamicResource NeumorphismDisabledNoTransparency}" />
+  <SolidColorBrush x:Key="MenuFlyoutPresenterBackground" Color="{DynamicResource NeumorphismPaper}" />
+  <SolidColorBrush x:Key="MenuFlyoutPresenterBorderBrush" Color="{DynamicResource NeumorphismSilverGray}" />
   <SolidColorBrush x:Key="MenuFlyoutSeparatorColor" Color="{DynamicResource SystemBaseLowColor}" />
   <Thickness x:Key="MenuFlyoutItemThemePadding">11,9,11,10</Thickness>
   <Thickness x:Key="MenuFlyoutItemThemePaddingNarrow">11,4,11,7</Thickness>
@@ -115,7 +115,7 @@
                             HorizontalAlignment="Center"
                             KeyboardNavigation.TabNavigation="Continue" />
           </Border>
-          <Rectangle Name="PART_Stroke" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="1" Fill="{DynamicResource MaterialDesignBorderShadow}"/>
+          <Rectangle Name="PART_Stroke" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="1" Fill="{DynamicResource NeumorphismBorderShadow}"/>
         </Panel>
       </ControlTemplate>
     </Setter>
@@ -145,7 +145,7 @@
     <Setter Property="Background" Value="Transparent"/>
     <Setter Property="Height" Value="48"/>
     <Setter Property="HorizontalAlignment" Value="Left"/>
-    <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignBorderShadow}"/>
+    <Setter Property="BorderBrush" Value="{DynamicResource NeumorphismBorderShadow}"/>
     <Setter Property="BorderThickness" Value="1"/>
     <Setter Property="ItemContainerTheme" Value="{StaticResource MenuCapsuleBarFlatMenuItem}" />
   </ControlTheme>
@@ -169,8 +169,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -194,8 +194,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedInset}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>

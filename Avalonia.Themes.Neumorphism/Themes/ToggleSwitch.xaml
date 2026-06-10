@@ -24,7 +24,7 @@
 
   <!--Default ToggleSwitch theme-->
   <ControlTheme x:Key="{x:Type ToggleSwitch}" TargetType="ToggleSwitch">
-    <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
+    <Setter Property="Foreground" Value="{DynamicResource NeumorphismBody}" />
     <Setter Property="Background" Value="{DynamicResource PrimaryHueLightBrush}" />
     <Setter Property="assist:ToggleSwitchAssist.SwitchTrackOnBackground" Value="Transparent" />
     <Setter Property="assist:ToggleSwitchAssist.SwitchTrackOffBackground" Value="Transparent" />
@@ -89,8 +89,8 @@
               <Border.BoxShadow>
                 <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedInset}">
                   <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </Border.BoxShadow>
             </Border>
@@ -118,8 +118,8 @@
                   <Border.BoxShadow>
                     <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
                       <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                      <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                      <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                      <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                      <DynamicResource ResourceKey="NeumorphismShadowDark" />
                     </MultiBinding>
                   </Border.BoxShadow>
                 </Border>
@@ -276,7 +276,7 @@
     </Style>
 
     <Style Selector="^:not(:checked) /template/ Border#Thumb">
-      <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}"/>
+      <Setter Property="Background" Value="{DynamicResource NeumorphismPaper}"/>
     </Style>
 
     <!--Default-->
@@ -337,7 +337,7 @@
     </Style>
 
     <Style Selector="^:disabled">
-      <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
+      <Setter Property="Foreground" Value="{DynamicResource NeumorphismBody}" />
     </Style>
 
 
@@ -345,7 +345,7 @@
     <Style Selector="^:focus">
       <Style Selector="^ /template/ Border#Track">
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignFocus}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource NeumorphismFocus}" />
       </Style>
     </Style>
   </ControlTheme>
@@ -353,7 +353,7 @@
 
   <!--Class Outline-->
   <ControlTheme x:Key="ToggleSwitchOutline" BasedOn="{StaticResource {x:Type ToggleSwitch}}" TargetType="ToggleSwitch">
-    <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
+    <Setter Property="Foreground" Value="{DynamicResource NeumorphismBody}" />
     <Setter Property="Background" Value="Transparent" />
     <Setter Property="assist:ToggleSwitchAssist.SwitchTrackOnBackground" Value="Transparent" />
     <Setter Property="assist:ToggleSwitchAssist.SwitchTrackOffBackground" Value="Transparent" />
@@ -416,8 +416,8 @@
               <Border.BoxShadow>
                 <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
                   <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </Border.BoxShadow>
               <!--Outline-->
@@ -444,8 +444,8 @@
                   <Border.BoxShadow>
                     <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedInset}">
                       <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                      <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                      <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                      <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                      <DynamicResource ResourceKey="NeumorphismShadowDark" />
                     </MultiBinding>
                   </Border.BoxShadow>
                 </Border>
@@ -475,8 +475,8 @@
                   <Border.BoxShadow>
                     <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
                       <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                      <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                      <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                      <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                      <DynamicResource ResourceKey="NeumorphismShadowDark" />
                     </MultiBinding>
                   </Border.BoxShadow>
                 </Border>
@@ -530,7 +530,7 @@
     <Style Selector="^:focus">
       <Style Selector="^ /template/ Border#OutlineFocus">
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignFocus}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource NeumorphismFocus}" />
       </Style>
     </Style>
   </ControlTheme>

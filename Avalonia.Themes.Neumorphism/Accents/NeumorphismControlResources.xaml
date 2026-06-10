@@ -171,7 +171,7 @@
       <StaticResource x:Key="MenuFlyoutItemKeyboardAcceleratorTextForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
       <Thickness x:Key="MenuFlyoutItemThemePadding">11,9,11,10</Thickness>
       <Thickness x:Key="MenuFlyoutItemThemePaddingNarrow">11,4,11,7</Thickness>
-      <StaticResource x:Key="MenuFlyoutPresenterBackground" ResourceKey="MaterialDesignPaper" />
+      <StaticResource x:Key="MenuFlyoutPresenterBackground" ResourceKey="NeumorphismPaper" />
       <StaticResource x:Key="MenuFlyoutPresenterBorderBrush" ResourceKey="SystemControlTransientBorderBrush" />
       <Thickness x:Key="MenuFlyoutPresenterBorderThemeThickness">1</Thickness>-->
 

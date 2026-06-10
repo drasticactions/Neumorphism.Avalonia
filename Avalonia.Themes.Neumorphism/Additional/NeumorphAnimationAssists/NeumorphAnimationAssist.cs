@@ -5,11 +5,11 @@ using Avalonia.Animation;
 namespace Avalonia.Themes.Neumorphism.Additional
 {
 
-    public static partial class MaterialAnimationAssist
+    public static partial class NeumorphAnimationAssist
     {
         private static readonly AttachedProperty<Dictionary<string, object>> AnimationsInternalDataProperty =
-            AvaloniaProperty.RegisterAttached<Animatable, Dictionary<string, object>>("AnimationsInternalData", typeof(MaterialAnimationAssist));
-        static MaterialAnimationAssist()
+            AvaloniaProperty.RegisterAttached<Animatable, Dictionary<string, object>>("AnimationsInternalData", typeof(NeumorphAnimationAssist));
+        static NeumorphAnimationAssist()
         {
             ContinuousAnimationProperty.Changed.AddClassHandler<Animatable, Animation.Animation>(OnBeginAnimationChanged);
             ReverseAfterEndAnimationProperty.Changed.AddClassHandler<Animatable, Animation.Animation>(OnReverseAfterEndAnimationChanged);

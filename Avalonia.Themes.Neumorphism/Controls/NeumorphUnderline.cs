@@ -3,13 +3,13 @@ using Avalonia.Media;
 
 namespace Avalonia.Themes.Neumorphism.Controls
 {
-    public sealed class MaterialUnderline : ContentControl
+    public sealed class NeumorphUnderline : ContentControl
     {
         /// <summary>
         /// Defines the <see cref="IdleBrush"/> property.
         /// </summary>
         public static readonly StyledProperty<IBrush> IdleBrushProperty =
-            AvaloniaProperty.Register<MaterialUnderline, IBrush>(nameof(IdleBrush));
+            AvaloniaProperty.Register<NeumorphUnderline, IBrush>(nameof(IdleBrush));
 
         public IBrush IdleBrush
         {
@@ -21,7 +21,7 @@ namespace Avalonia.Themes.Neumorphism.Controls
         /// Defines the <see cref="ActiveBrush"/> property.
         /// </summary>
         public static readonly StyledProperty<IBrush> ActiveBrushProperty =
-            AvaloniaProperty.Register<MaterialUnderline, IBrush>(nameof(ActiveBrush));
+            AvaloniaProperty.Register<NeumorphUnderline, IBrush>(nameof(ActiveBrush));
 
         public IBrush ActiveBrush
         {
@@ -33,7 +33,7 @@ namespace Avalonia.Themes.Neumorphism.Controls
         /// Defines the <see cref="IsActive"/> property.
         /// </summary>
         public static readonly StyledProperty<bool> IsActiveProperty =
-            AvaloniaProperty.Register<MaterialUnderline, bool>(nameof(IsActive));
+            AvaloniaProperty.Register<NeumorphUnderline, bool>(nameof(IsActive));
 
         public bool IsActive
         {
@@ -45,7 +45,7 @@ namespace Avalonia.Themes.Neumorphism.Controls
         /// Defines the <see cref="IsHovered"/> property.
         /// </summary>
         public static readonly StyledProperty<bool> IsHoveredProperty =
-            AvaloniaProperty.Register<MaterialUnderline, bool>(nameof(IsHovered));
+            AvaloniaProperty.Register<NeumorphUnderline, bool>(nameof(IsHovered));
 
         public bool IsHovered
         {

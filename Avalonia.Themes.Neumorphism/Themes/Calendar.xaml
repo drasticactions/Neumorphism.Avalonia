@@ -12,8 +12,8 @@
   </Design.PreviewWith>
 
   <ControlTheme x:Key="{x:Type Calendar}" TargetType="Calendar">
-    <Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}" />
-    <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />
+    <Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}" />
+    <Setter Property="Background" Value="{DynamicResource NeumorphismPaper}" />
     <Setter Property="BorderBrush" Value="Transparent" />
     <Setter Property="BorderThickness" Value="0" />
     <Setter Property="HorizontalAlignment" Value="Left" />

@@ -168,206 +168,206 @@ namespace Avalonia.Themes.Neumorphism
 
 
         /// <summary>
-        /// Gets or sets the MaterialDesignPaper color value.
+        /// Gets or sets the NeumorphismPaper color value.
         /// </summary>
-        public Color MaterialDesignPaper { get => GetColor("MaterialDesignPaper"); set => SetColor("MaterialDesignPaper", value); }
+        public Color NeumorphismPaper { get => GetColor("NeumorphismPaper"); set => SetColor("NeumorphismPaper", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignBackground color value.
+        /// Gets or sets the NeumorphismBackground color value.
         /// </summary>
-        public Color MaterialDesignBackground { get => GetColor("MaterialDesignBackground"); set => SetColor("MaterialDesignBackground", value); }
+        public Color NeumorphismBackground { get => GetColor("NeumorphismBackground"); set => SetColor("NeumorphismBackground", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignForeground color value.
+        /// Gets or sets the NeumorphismForeground color value.
         /// </summary>
-        public Color MaterialDesignForeground { get => GetColor("MaterialDesignForeground"); set => SetColor("MaterialDesignForeground", value); }
+        public Color NeumorphismForeground { get => GetColor("NeumorphismForeground"); set => SetColor("NeumorphismForeground", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignCardBackground color value.
+        /// Gets or sets the NeumorphismCardBackground color value.
         /// </summary>
-        public Color MaterialDesignCardBackground { get => GetColor("MaterialDesignCardBackground"); set => SetColor("MaterialDesignCardBackground", value); }
+        public Color NeumorphismCardBackground { get => GetColor("NeumorphismCardBackground"); set => SetColor("NeumorphismCardBackground", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignToolBarBackground color value.
+        /// Gets or sets the NeumorphismToolBarBackground color value.
         /// </summary>
-        public Color MaterialDesignToolBarBackground { get => GetColor("MaterialDesignToolBarBackground"); set => SetColor("MaterialDesignToolBarBackground", value); }
+        public Color NeumorphismToolBarBackground { get => GetColor("NeumorphismToolBarBackground"); set => SetColor("NeumorphismToolBarBackground", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignBody color value.
+        /// Gets or sets the NeumorphismBody color value.
         /// </summary>
-        public Color MaterialDesignBody { get => GetColor("MaterialDesignBody"); set => SetColor("MaterialDesignBody", value); }
+        public Color NeumorphismBody { get => GetColor("NeumorphismBody"); set => SetColor("NeumorphismBody", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignBodyLight color value.
+        /// Gets or sets the NeumorphismBodyLight color value.
         /// </summary>
-        public Color MaterialDesignBodyLight { get => GetColor("MaterialDesignBodyLight"); set => SetColor("MaterialDesignBodyLight", value); }
+        public Color NeumorphismBodyLight { get => GetColor("NeumorphismBodyLight"); set => SetColor("NeumorphismBodyLight", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignColumnHeader color value.
+        /// Gets or sets the NeumorphismColumnHeader color value.
         /// </summary>
-        public Color MaterialDesignColumnHeader { get => GetColor("MaterialDesignColumnHeader"); set => SetColor("MaterialDesignColumnHeader", value); }
+        public Color NeumorphismColumnHeader { get => GetColor("NeumorphismColumnHeader"); set => SetColor("NeumorphismColumnHeader", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignCheckBoxOff color value.
+        /// Gets or sets the NeumorphismCheckBoxOff color value.
         /// </summary>
-        public Color MaterialDesignCheckBoxOff { get => GetColor("MaterialDesignCheckBoxOff"); set => SetColor("MaterialDesignCheckBoxOff", value); }
+        public Color NeumorphismCheckBoxOff { get => GetColor("NeumorphismCheckBoxOff"); set => SetColor("NeumorphismCheckBoxOff", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignDisabled color value.
+        /// Gets or sets the NeumorphismDisabled color value.
         /// </summary>
-        public Color MaterialDesignDisabled { get => GetColor("MaterialDesignDisabled"); set => SetColor("MaterialDesignDisabled", value); }
+        public Color NeumorphismDisabled { get => GetColor("NeumorphismDisabled"); set => SetColor("NeumorphismDisabled", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignTextBoxBorder color value.
+        /// Gets or sets the NeumorphismTextBoxBorder color value.
         /// </summary>
-        public Color MaterialDesignTextBoxBorder { get => GetColor("MaterialDesignTextBoxBorder"); set => SetColor("MaterialDesignTextBoxBorder", value); }
+        public Color NeumorphismTextBoxBorder { get => GetColor("NeumorphismTextBoxBorder"); set => SetColor("NeumorphismTextBoxBorder", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignDivider color value.
+        /// Gets or sets the NeumorphismDivider color value.
         /// </summary>
-        public Color MaterialDesignDivider { get => GetColor("MaterialDesignDivider"); set => SetColor("MaterialDesignDivider", value); }
+        public Color NeumorphismDivider { get => GetColor("NeumorphismDivider"); set => SetColor("NeumorphismDivider", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignSelection color value.
+        /// Gets or sets the NeumorphismSelection color value.
         /// </summary>
-        public Color MaterialDesignSelection { get => GetColor("MaterialDesignSelection"); set => SetColor("MaterialDesignSelection", value); }
+        public Color NeumorphismSelection { get => GetColor("NeumorphismSelection"); set => SetColor("NeumorphismSelection", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignToolForeground color value.
+        /// Gets or sets the NeumorphismToolForeground color value.
         /// </summary>
-        public Color MaterialDesignToolForeground { get => GetColor("MaterialDesignToolForeground"); set => SetColor("MaterialDesignToolForeground", value); }
+        public Color NeumorphismToolForeground { get => GetColor("NeumorphismToolForeground"); set => SetColor("NeumorphismToolForeground", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignToolBackground color value.
+        /// Gets or sets the NeumorphismToolBackground color value.
         /// </summary>
-        public Color MaterialDesignToolBackground { get => GetColor("MaterialDesignToolBackground"); set => SetColor("MaterialDesignToolBackground", value); }
+        public Color NeumorphismToolBackground { get => GetColor("NeumorphismToolBackground"); set => SetColor("NeumorphismToolBackground", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignFlatButtonClick color value.
+        /// Gets or sets the NeumorphismFlatButtonClick color value.
         /// </summary>
-        public Color MaterialDesignFlatButtonClick { get => GetColor("MaterialDesignFlatButtonClick"); set => SetColor("MaterialDesignFlatButtonClick", value); }
+        public Color NeumorphismFlatButtonClick { get => GetColor("NeumorphismFlatButtonClick"); set => SetColor("NeumorphismFlatButtonClick", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignFlatButtonRipple color value.
+        /// Gets or sets the NeumorphismFlatButtonRipple color value.
         /// </summary>
-        public Color MaterialDesignFlatButtonRipple { get => GetColor("MaterialDesignFlatButtonRipple"); set => SetColor("MaterialDesignFlatButtonRipple", value); }
-
-
-        /// <summary>
-        /// Gets or sets the MaterialDesignToolTipBackground color value.
-        /// </summary>
-        public Color MaterialDesignToolTipBackground { get => GetColor("MaterialDesignToolTipBackground"); set => SetColor("MaterialDesignToolTipBackground", value); }
+        public Color NeumorphismFlatButtonRipple { get => GetColor("NeumorphismFlatButtonRipple"); set => SetColor("NeumorphismFlatButtonRipple", value); }
 
 
         /// <summary>
-        /// Gets or sets the MaterialDesignChipBackground color value.
+        /// Gets or sets the NeumorphismToolTipBackground color value.
         /// </summary>
-        public Color MaterialDesignChipBackground { get => GetColor("MaterialDesignChipBackground"); set => SetColor("MaterialDesignChipBackground", value); }
-
-        /// <summary>
-        /// Gets or sets the MaterialDesignSnackbarBackground color value.
-        /// </summary>
-        public Color MaterialDesignSnackbarBackground { get => GetColor("MaterialDesignSnackbarBackground"); set => SetColor("MaterialDesignSnackbarBackground", value); }
-
-        /// <summary>
-        /// Gets or sets the MaterialDesignSnackbarMouseOver color value.
-        /// </summary>
-        public Color MaterialDesignSnackbarMouseOver { get => GetColor("MaterialDesignSnackbarMouseOver"); set => SetColor("MaterialDesignSnackbarMouseOver", value); }
-
-        /// <summary>
-        /// Gets or sets the MaterialDesignSnackbarRipple color value.
-        /// </summary>
-        public Color MaterialDesignSnackbarRipple { get => GetColor("MaterialDesignSnackbarRipple"); set => SetColor("MaterialDesignSnackbarRipple", value); }
+        public Color NeumorphismToolTipBackground { get => GetColor("NeumorphismToolTipBackground"); set => SetColor("NeumorphismToolTipBackground", value); }
 
 
         /// <summary>
-        /// Gets or sets the MaterialDesignTextFieldBoxBackground color value.
+        /// Gets or sets the NeumorphismChipBackground color value.
         /// </summary>
-        public Color MaterialDesignTextFieldBoxBackground { get => GetColor("MaterialDesignTextFieldBoxBackground"); set => SetColor("MaterialDesignTextFieldBoxBackground", value); }
+        public Color NeumorphismChipBackground { get => GetColor("NeumorphismChipBackground"); set => SetColor("NeumorphismChipBackground", value); }
+
+        /// <summary>
+        /// Gets or sets the NeumorphismSnackbarBackground color value.
+        /// </summary>
+        public Color NeumorphismSnackbarBackground { get => GetColor("NeumorphismSnackbarBackground"); set => SetColor("NeumorphismSnackbarBackground", value); }
+
+        /// <summary>
+        /// Gets or sets the NeumorphismSnackbarMouseOver color value.
+        /// </summary>
+        public Color NeumorphismSnackbarMouseOver { get => GetColor("NeumorphismSnackbarMouseOver"); set => SetColor("NeumorphismSnackbarMouseOver", value); }
+
+        /// <summary>
+        /// Gets or sets the NeumorphismSnackbarRipple color value.
+        /// </summary>
+        public Color NeumorphismSnackbarRipple { get => GetColor("NeumorphismSnackbarRipple"); set => SetColor("NeumorphismSnackbarRipple", value); }
 
 
         /// <summary>
-        /// Gets or sets the MaterialDesignTextFieldBoxHoverBackground color value.
+        /// Gets or sets the NeumorphismTextFieldBoxBackground color value.
         /// </summary>
-        public Color MaterialDesignTextFieldBoxHoverBackground { get => GetColor("MaterialDesignTextFieldBoxHoverBackground"); set => SetColor("MaterialDesignTextFieldBoxHoverBackground", value); }
+        public Color NeumorphismTextFieldBoxBackground { get => GetColor("NeumorphismTextFieldBoxBackground"); set => SetColor("NeumorphismTextFieldBoxBackground", value); }
 
 
         /// <summary>
-        /// Gets or sets the MaterialDesignTextFieldBoxDisabledBackground color value.
+        /// Gets or sets the NeumorphismTextFieldBoxHoverBackground color value.
         /// </summary>
-        public Color MaterialDesignTextFieldBoxDisabledBackground { get => GetColor("MaterialDesignTextFieldBoxDisabledBackground"); set => SetColor("MaterialDesignTextFieldBoxDisabledBackground", value); }
+        public Color NeumorphismTextFieldBoxHoverBackground { get => GetColor("NeumorphismTextFieldBoxHoverBackground"); set => SetColor("NeumorphismTextFieldBoxHoverBackground", value); }
 
 
         /// <summary>
-        /// Gets or sets the MaterialDesignTextAreaBorder color value.
+        /// Gets or sets the NeumorphismTextFieldBoxDisabledBackground color value.
         /// </summary>
-        public Color MaterialDesignTextAreaBorder { get => GetColor("MaterialDesignTextAreaBorder"); set => SetColor("MaterialDesignTextAreaBorder", value); }
+        public Color NeumorphismTextFieldBoxDisabledBackground { get => GetColor("NeumorphismTextFieldBoxDisabledBackground"); set => SetColor("NeumorphismTextFieldBoxDisabledBackground", value); }
 
 
         /// <summary>
-        /// Gets or sets the MaterialDesignTextAreaInactiveBorder color value.
+        /// Gets or sets the NeumorphismTextAreaBorder color value.
         /// </summary>
-        public Color MaterialDesignTextAreaInactiveBorder { get => GetColor("MaterialDesignTextAreaInactiveBorder"); set => SetColor("MaterialDesignTextAreaInactiveBorder", value); }
+        public Color NeumorphismTextAreaBorder { get => GetColor("NeumorphismTextAreaBorder"); set => SetColor("NeumorphismTextAreaBorder", value); }
 
 
         /// <summary>
-        /// Gets or sets the MaterialDesignDataGridRowHoverBackground color value.
+        /// Gets or sets the NeumorphismTextAreaInactiveBorder color value.
         /// </summary>
-        public Color MaterialDesignDataGridRowHoverBackground { get => GetColor("MaterialDesignDataGridRowHoverBackground"); set => SetColor("MaterialDesignDataGridRowHoverBackground", value); }
+        public Color NeumorphismTextAreaInactiveBorder { get => GetColor("NeumorphismTextAreaInactiveBorder"); set => SetColor("NeumorphismTextAreaInactiveBorder", value); }
 
 
         /// <summary>
-        /// Gets or sets the MaterialDesignShadowLight color value.
+        /// Gets or sets the NeumorphismDataGridRowHoverBackground color value.
         /// </summary>
-        public Color MaterialDesignShadowLight { get => GetColor("MaterialDesignShadowLight"); set => SetColor("MaterialDesignShadowLight", value); }
+        public Color NeumorphismDataGridRowHoverBackground { get => GetColor("NeumorphismDataGridRowHoverBackground"); set => SetColor("NeumorphismDataGridRowHoverBackground", value); }
 
 
         /// <summary>
-        /// Gets or sets the MaterialDesignShadowDark color value.
+        /// Gets or sets the NeumorphismShadowLight color value.
         /// </summary>
-        public Color MaterialDesignShadowDark { get => GetColor("MaterialDesignShadowDark"); set => SetColor("MaterialDesignShadowDark", value); }
+        public Color NeumorphismShadowLight { get => GetColor("NeumorphismShadowLight"); set => SetColor("NeumorphismShadowLight", value); }
 
 
         /// <summary>
-        /// Gets or sets the MaterialDesignBorderShadow color value.
+        /// Gets or sets the NeumorphismShadowDark color value.
         /// </summary>
-        public Color MaterialDesignBorderShadow { get => GetColor("MaterialDesignBorderShadow"); set => SetColor("MaterialDesignBorderShadow", value); }
+        public Color NeumorphismShadowDark { get => GetColor("NeumorphismShadowDark"); set => SetColor("NeumorphismShadowDark", value); }
 
 
         /// <summary>
-        /// Gets or sets the MaterialDesignDisabledNoTransparency color value.
+        /// Gets or sets the NeumorphismBorderShadow color value.
         /// </summary>
-        public Color MaterialDesignDisabledNoTransparency { get => GetColor("MaterialDesignDisabledNoTransparency"); set => SetColor("MaterialDesignDisabledNoTransparency", value); }
+        public Color NeumorphismBorderShadow { get => GetColor("NeumorphismBorderShadow"); set => SetColor("NeumorphismBorderShadow", value); }
 
 
         /// <summary>
-        /// Gets or sets the MaterialDesignTransparent color value.
+        /// Gets or sets the NeumorphismDisabledNoTransparency color value.
         /// </summary>
-        public Color MaterialDesignTransparent { get => GetColor("MaterialDesignTransparent"); set => SetColor("MaterialDesignTransparent", value); }
+        public Color NeumorphismDisabledNoTransparency { get => GetColor("NeumorphismDisabledNoTransparency"); set => SetColor("NeumorphismDisabledNoTransparency", value); }
+
 
         /// <summary>
-        /// Gets or sets the MaterialDesignSilverGray color value.
+        /// Gets or sets the NeumorphismTransparent color value.
         /// </summary>
-        public Color MaterialDesignSilverGray { get => GetColor("MaterialDesignSilverGray"); set => SetColor("MaterialDesignSilverGray", value); }
+        public Color NeumorphismTransparent { get => GetColor("NeumorphismTransparent"); set => SetColor("NeumorphismTransparent", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignDarkGray color value.
+        /// Gets or sets the NeumorphismSilverGray color value.
         /// </summary>
-        public Color MaterialDesignDarkGray { get => GetColor("MaterialDesignDarkGray"); set => SetColor("MaterialDesignDarkGray", value); }
+        public Color NeumorphismSilverGray { get => GetColor("NeumorphismSilverGray"); set => SetColor("NeumorphismSilverGray", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignMediumGray color value.
+        /// Gets or sets the NeumorphismDarkGray color value.
         /// </summary>
-        public Color MaterialDesignMediumGray { get => GetColor("MaterialDesignMediumGray"); set => SetColor("MaterialDesignMediumGray", value); }
+        public Color NeumorphismDarkGray { get => GetColor("NeumorphismDarkGray"); set => SetColor("NeumorphismDarkGray", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignLightGray color value.
+        /// Gets or sets the NeumorphismMediumGray color value.
         /// </summary>
-        public Color MaterialDesignLightGray { get => GetColor("MaterialDesignLightGray"); set => SetColor("MaterialDesignLightGray", value); }
+        public Color NeumorphismMediumGray { get => GetColor("NeumorphismMediumGray"); set => SetColor("NeumorphismMediumGray", value); }
 
         /// <summary>
-        /// Gets or sets the MaterialDesignFocus color value.
+        /// Gets or sets the NeumorphismLightGray color value.
         /// </summary>
-        public Color MaterialDesignFocus { get => GetColor("MaterialDesignFocus"); set => SetColor("MaterialDesignFocus", value); }
+        public Color NeumorphismLightGray { get => GetColor("NeumorphismLightGray"); set => SetColor("NeumorphismLightGray", value); }
+
+        /// <summary>
+        /// Gets or sets the NeumorphismFocus color value.
+        /// </summary>
+        public Color NeumorphismFocus { get => GetColor("NeumorphismFocus"); set => SetColor("NeumorphismFocus", value); }
     }
 }

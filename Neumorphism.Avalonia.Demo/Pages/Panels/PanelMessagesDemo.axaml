@@ -13,7 +13,7 @@
 
 
   <StackPanel Margin="30" VerticalAlignment="Top">
-    <controls:Card Width="300" VerticalAlignment="Top" CornerRadius="15" Padding="30" Background="{DynamicResource MaterialDesignLinearGradient1}">
+    <controls:Card Width="300" VerticalAlignment="Top" CornerRadius="15" Padding="30" Background="{DynamicResource NeumorphismLinearGradient1}">
 
 
       <StackPanel Orientation="Vertical" Margin="0,4" HorizontalAlignment="Center">
@@ -27,9 +27,9 @@
 		  </Grid>
 
 
-		  <controls:Card Width="240" VerticalAlignment="Top" Margin="0,20,0,0" CornerRadius="15" Padding="10" Background="{DynamicResource MaterialDesignLinearGradient1}">
+		  <controls:Card Width="240" VerticalAlignment="Top" Margin="0,20,0,0" CornerRadius="15" Padding="10" Background="{DynamicResource NeumorphismLinearGradient1}">
 			  <Grid ColumnDefinitions="Auto,*,Auto">
-				<Border Grid.Column="0" Width="50" Height="50" Margin="0,0,8,0" CornerRadius="25" BorderBrush="{DynamicResource MaterialDesignToolBackground}" BorderThickness="3" ClipToBounds="True">
+				<Border Grid.Column="0" Width="50" Height="50" Margin="0,0,8,0" CornerRadius="25" BorderBrush="{DynamicResource NeumorphismToolBackground}" BorderThickness="3" ClipToBounds="True">
 					<Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="120" ClipToBounds="True">
 						<Image HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" ClipToBounds="True"
 													Source="avares://Neumorphism.Avalonia.Demo/Assets/200.jpg" Stretch="Uniform" Width="50" Height="50" />
@@ -50,9 +50,9 @@
 		  </controls:Card>
 
 
-		  <controls:Card Classes="Inset" Width="240" VerticalAlignment="Top" Margin="0,10,0,0" CornerRadius="15" Padding="10" Background="{DynamicResource MaterialDesignLinearGradient1}">
+		  <controls:Card Classes="Inset" Width="240" VerticalAlignment="Top" Margin="0,10,0,0" CornerRadius="15" Padding="10" Background="{DynamicResource NeumorphismLinearGradient1}">
 			  <Grid ColumnDefinitions="Auto,*,Auto">
-				  <Border Grid.Column="0" Width="50" Height="50" Margin="0,0,8,0" CornerRadius="25" BorderBrush="{DynamicResource MaterialDesignToolBackground}" BorderThickness="3" ClipToBounds="True">
+				  <Border Grid.Column="0" Width="50" Height="50" Margin="0,0,8,0" CornerRadius="25" BorderBrush="{DynamicResource NeumorphismToolBackground}" BorderThickness="3" ClipToBounds="True">
 					  <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="120" ClipToBounds="True">
 						  <Image HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" ClipToBounds="True"
 													  Source="avares://Neumorphism.Avalonia.Demo/Assets/100.jpg" Stretch="Uniform" Width="50" Height="50" />
@@ -69,9 +69,9 @@
 			  </Grid>
 		  </controls:Card>
 
-		  <controls:Card Classes="Inset" Width="240" VerticalAlignment="Top" Margin="0,10,0,20" CornerRadius="15" Padding="10" Background="{DynamicResource MaterialDesignLinearGradient1}">
+		  <controls:Card Classes="Inset" Width="240" VerticalAlignment="Top" Margin="0,10,0,20" CornerRadius="15" Padding="10" Background="{DynamicResource NeumorphismLinearGradient1}">
 			  <Grid ColumnDefinitions="Auto,*,Auto">
-				  <Border Grid.Column="0" Width="50" Height="50" Margin="0,0,8,0" CornerRadius="25" BorderBrush="{DynamicResource MaterialDesignToolBackground}" BorderThickness="3" ClipToBounds="True">
+				  <Border Grid.Column="0" Width="50" Height="50" Margin="0,0,8,0" CornerRadius="25" BorderBrush="{DynamicResource NeumorphismToolBackground}" BorderThickness="3" ClipToBounds="True">
 					  <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="120" ClipToBounds="True">
 						  <Image HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" ClipToBounds="True"
 													  Source="avares://Neumorphism.Avalonia.Demo/Assets/400.jpg" Stretch="Uniform" Width="50" Height="50" />

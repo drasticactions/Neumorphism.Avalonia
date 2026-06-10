@@ -72,7 +72,7 @@
     </Setter>
 
     <Style Selector="^[IsVisible=true]:horizontal:not(.notransitions) /template/ Panel#PART_RootPanel">
-      <Setter Property="materialAnimationAssists:MaterialAnimationAssist.ContinuousAnimation">
+      <Setter Property="materialAnimationAssists:NeumorphAnimationAssist.ContinuousAnimation">
         <Animation Duration="0:0:1" FillMode="Both" Easing="CubicEaseOut">
           <KeyFrame Cue="0%">
             <Setter Property="Opacity" Value="0" />
@@ -89,7 +89,7 @@
     </Style>
 
     <Style Selector="^[IsVisible=true]:vertical:not(.notransitions) /template/ Panel#PART_RootPanel">
-      <Setter Property="materialAnimationAssists:MaterialAnimationAssist.ContinuousAnimation">
+      <Setter Property="materialAnimationAssists:NeumorphAnimationAssist.ContinuousAnimation">
         <Animation Duration="0:0:1" FillMode="Both" Easing="CubicEaseOut">
           <KeyFrame Cue="0%">
             <Setter Property="Opacity" Value="0" />
@@ -258,8 +258,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -270,8 +270,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
             <Binding Path="Width" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -282,8 +282,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
             <Binding Path="Width" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -294,8 +294,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -454,8 +454,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -467,8 +467,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
             <Binding Path="Width" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -654,8 +654,8 @@
               <Border.BoxShadow>
                 <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
                   <Binding Path="Height" ElementName="PART_RootBorder"/>
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </Border.BoxShadow>
               <Panel Name="PART_RootPanel"
@@ -714,8 +714,8 @@
               <Border.BoxShadow>
                 <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
                   <Binding Path="Height" ElementName="PART_RootBorder"/>
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </Border.BoxShadow>
 
@@ -729,8 +729,8 @@
                   <Border.BoxShadow>
                     <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
                       <Binding Path="$self.Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                      <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                      <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                      <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                      <DynamicResource ResourceKey="NeumorphismShadowDark" />
                     </MultiBinding>
                   </Border.BoxShadow>
                 </Border>
@@ -743,8 +743,8 @@
                   <Border.BoxShadow>
                     <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
                       <Binding Path="$self.Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                      <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                      <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                      <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                      <DynamicResource ResourceKey="NeumorphismShadowDark" />
                     </MultiBinding>
                   </Border.BoxShadow>
                 </Border>
@@ -809,8 +809,8 @@
               <Border.BoxShadow>
                 <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
                   <Binding Path="Height" ElementName="PART_RootBorder"/>
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </Border.BoxShadow>
 
@@ -824,8 +824,8 @@
                   <Border.BoxShadow>
                     <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
                       <Binding Path="$self.Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                      <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                      <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                      <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                      <DynamicResource ResourceKey="NeumorphismShadowDark" />
                     </MultiBinding>
                   </Border.BoxShadow>
                 </Border>
@@ -838,8 +838,8 @@
                   <Border.BoxShadow>
                     <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
                       <Binding Path="$self.Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                      <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                      <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                      <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                      <DynamicResource ResourceKey="NeumorphismShadowDark" />
                     </MultiBinding>
                   </Border.BoxShadow>
                 </Border>
@@ -903,8 +903,8 @@
               <Border.BoxShadow>
                 <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
                   <Binding Path="Height" ElementName="PART_RootBorder"/>
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </Border.BoxShadow>
 

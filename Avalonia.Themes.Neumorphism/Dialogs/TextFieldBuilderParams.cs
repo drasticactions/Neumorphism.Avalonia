@@ -31,7 +31,6 @@ namespace Avalonia.Themes.Neumorphism.Dialogs
 
         /// <summary>
         /// <p>Helper text conveys additional guidance about the input field, such as how it will be used. It should only take up a single line, being persistently visible or visible only on focus.</p>
-        /// Read <a href="https://material.io/components/text-fields#anatomy">Material Design documentations. Text fields anatomy. Assistive elements</a> for more information.
         /// </summary>
         public string HelperText = null;
 

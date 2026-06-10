@@ -3,10 +3,10 @@ using Avalonia.Animation;
 
 namespace Avalonia.Themes.Neumorphism.Additional
 {
-    public static partial class MaterialAnimationAssist
+    public static partial class NeumorphAnimationAssist
     {
         public static readonly AttachedProperty<Animation.Animation> ReverseAfterEndAnimationProperty =
-            AvaloniaProperty.RegisterAttached<Animatable, Animation.Animation>("ReverseAfterEndAnimation", typeof(MaterialAnimationAssist));
+            AvaloniaProperty.RegisterAttached<Animatable, Animation.Animation>("ReverseAfterEndAnimation", typeof(NeumorphAnimationAssist));
 
         public static Animation.Animation GetReverseAfterEndAnimation(Animatable element)
         {

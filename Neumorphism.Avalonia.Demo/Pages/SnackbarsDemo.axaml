@@ -17,12 +17,12 @@
 
 
   <StackPanel Margin="20">
-    <TextBlock Classes="Headline4 Subheadline" Text="Snackbars" Foreground="{DynamicResource MaterialDesignDarkGray}" />
+    <TextBlock Classes="Headline4 Subheadline" Text="Snackbars" Foreground="{DynamicResource NeumorphismDarkGray}" />
 
     <WrapPanel Orientation="Horizontal">
 
       <StackPanel Orientation="Vertical" Width="400">
-        <TextBlock Classes="Headline6 Subheadline2" Margin="15,0,0,0" Text="Basic" Foreground="{DynamicResource MaterialDesignMediumGray}" />
+        <TextBlock Classes="Headline6 Subheadline2" Margin="15,0,0,0" Text="Basic" Foreground="{DynamicResource NeumorphismMediumGray}" />
         <StackPanel Orientation="Vertical">
           <!--****************************************************************-->
           <showMeTheXaml:XamlDisplay UniqueId="Snackbar1">
@@ -55,7 +55,7 @@
       </StackPanel>
 
       <StackPanel Orientation="Vertical" Width="400">
-        <TextBlock Classes="Headline6 Subheadline2" Margin="15,0,0,0" Text="Advanced" Foreground="{DynamicResource MaterialDesignMediumGray}" />
+        <TextBlock Classes="Headline6 Subheadline2" Margin="15,0,0,0" Text="Advanced" Foreground="{DynamicResource NeumorphismMediumGray}" />
         <StackPanel Orientation="Vertical">
           <!--****************************************************************-->
           <showMeTheXaml:XamlDisplay UniqueId="Snackbar6">

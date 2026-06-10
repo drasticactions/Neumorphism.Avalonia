@@ -6,21 +6,21 @@ using Avalonia.Themes.Neumorphism.Additional;
 
 namespace Avalonia.Themes.Neumorphism.Controls
 {
-    public sealed class MaterialInternalIcon : TemplatedControl
+    public sealed class NeumorphInternalIcon : TemplatedControl
     {
         private static readonly Lazy<IDictionary<string, string>> DataSetInstance = new(IconsDataSet.CreateDataSet);
 
         public static readonly AvaloniaProperty<string> KindProperty =
-            AvaloniaProperty.Register<MaterialInternalIcon, string>(nameof(Kind));
+            AvaloniaProperty.Register<NeumorphInternalIcon, string>(nameof(Kind));
 
-        private static readonly DirectProperty<MaterialInternalIcon, Geometry> DataProperty =
-            AvaloniaProperty.RegisterDirect<MaterialInternalIcon, Geometry>(nameof(Data), icon => icon.Data);
+        private static readonly DirectProperty<NeumorphInternalIcon, Geometry> DataProperty =
+            AvaloniaProperty.RegisterDirect<NeumorphInternalIcon, Geometry>(nameof(Data), icon => icon.Data);
 
         private Geometry _data;
 
-        static MaterialInternalIcon()
+        static NeumorphInternalIcon()
         {
-            KindProperty.Changed.Subscribe(args => (args.Sender as MaterialInternalIcon)?.UpdateData());
+            KindProperty.Changed.Subscribe(args => (args.Sender as NeumorphInternalIcon)?.UpdateData());
         }
 
         /// <summary>

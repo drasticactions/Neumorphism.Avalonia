@@ -19,7 +19,7 @@
   
 
   <StackPanel Margin="20" >
-		<TextBlock Classes="Headline4 Subheadline" Text="Menus" Foreground="{DynamicResource MaterialDesignDarkGray}" />
+		<TextBlock Classes="Headline4 Subheadline" Text="Menus" Foreground="{DynamicResource NeumorphismDarkGray}" />
 
 
 
@@ -40,7 +40,7 @@
                                         VerticalAlignment="Center"
                                         IsEnabled="{CompiledBinding Enabled}"
                                         HorizontalAlignment="Center"
-                                        Foreground="{DynamicResource MaterialDesignForeground}"
+                                        Foreground="{DynamicResource NeumorphismForeground}"
                                         Width="16"
                                         Height="16">
                         <icons:MaterialIcon.Styles>
@@ -77,7 +77,7 @@
                                         VerticalAlignment="Center"
                                         IsEnabled="{CompiledBinding Enabled}"
                                         HorizontalAlignment="Center"
-                                        Foreground="{DynamicResource MaterialDesignForeground}"
+                                        Foreground="{DynamicResource NeumorphismForeground}"
                                         Width="16"
                                         Height="16">
                       <icons:MaterialIcon.Styles>
@@ -114,7 +114,7 @@
                                         VerticalAlignment="Center"
                                         IsEnabled="{CompiledBinding Enabled}"
                                         HorizontalAlignment="Center"
-                                        Foreground="{DynamicResource MaterialDesignForeground}"
+                                        Foreground="{DynamicResource NeumorphismForeground}"
                                         Width="16"
                                         Height="16">
                       <icons:MaterialIcon.Styles>
@@ -156,7 +156,7 @@
                                           VerticalAlignment="Center"
                                           IsEnabled="{CompiledBinding Enabled}"
                                           HorizontalAlignment="Center"
-                                          Foreground="{DynamicResource MaterialDesignForeground}"
+                                          Foreground="{DynamicResource NeumorphismForeground}"
                                           Width="20"
                                           Height="20">
                         <icons:MaterialIcon.Styles>
@@ -193,7 +193,7 @@
                                           VerticalAlignment="Center"
                                           IsEnabled="{CompiledBinding Enabled}"
                                           HorizontalAlignment="Center"
-                                          Foreground="{DynamicResource MaterialDesignForeground}"
+                                          Foreground="{DynamicResource NeumorphismForeground}"
                                           Width="16"
                                           Height="16">
                         <icons:MaterialIcon.Styles>
@@ -230,7 +230,7 @@
                                           VerticalAlignment="Center"
                                           IsEnabled="{CompiledBinding Enabled}"
                                           HorizontalAlignment="Center"
-                                          Foreground="{DynamicResource MaterialDesignForeground}"
+                                          Foreground="{DynamicResource NeumorphismForeground}"
                                           Width="20"
                                           Height="20">
                         <icons:MaterialIcon.Styles>
@@ -273,11 +273,11 @@
                     <Border.BoxShadow>
                       <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Outset}">
                         <DynamicResource ResourceKey="CustomBoxShadowRadius"/>
-                        <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                        <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                        <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                        <DynamicResource ResourceKey="NeumorphismShadowDark" />
                       </MultiBinding>
                     </Border.BoxShadow>
-								  <Border Width="64" Height="64" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="100" BorderBrush="{DynamicResource MaterialDesignToolBackground}" BorderThickness="4" ClipToBounds="False">
+								  <Border Width="64" Height="64" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="100" BorderBrush="{DynamicResource NeumorphismToolBackground}" BorderThickness="4" ClipToBounds="False">
 									  <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="100" ClipToBounds="True">
 										  <Image HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" ClipToBounds="True"
 													  Source="avares://Neumorphism.Avalonia.Demo/Assets/300.jpg" Stretch="Uniform" Width="64" Height="64" />
@@ -290,7 +290,7 @@
 						   HorizontalOffset="-16"
 						   IsLightDismissEnabled="False"
 						   IsOpen="{TemplateBinding IsSubMenuOpen, Mode=TwoWay}">
-									  <Border Background="{DynamicResource MaterialDesignPaper}"
+									  <Border Background="{DynamicResource NeumorphismPaper}"
 											  BorderBrush="{DynamicResource MenuFlyoutSeparatorColor}"
 											  BorderThickness="1"
 											  Padding="0"
@@ -312,7 +312,7 @@
 
             <MenuItem.Styles>
                 <Style Selector="MenuItem:focus /template/ Border#PART_RootBorder">
-                  <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignFocus}" />
+                  <Setter Property="BorderBrush" Value="{DynamicResource NeumorphismFocus}" />
               </Style>
             </MenuItem.Styles>
 
@@ -353,7 +353,7 @@
         <Menu Height="48" Padding="0" Margin="0" HorizontalAlignment="Center"
               Theme="{StaticResource NoMaterialMenu}" VerticalAlignment="Center"
               ToolTip.Tip='Custom icons based menu with theme "NoMaterialMenu" applied'>
-          <MenuItem Height="48" Width="48" CornerRadius="6" Header="{icons:MaterialIconExt RocketLaunchOutline, IconSize=34}" Foreground="{DynamicResource MaterialDesignBodyLight}" Margin="10,0,10,0"
+          <MenuItem Height="48" Width="48" CornerRadius="6" Header="{icons:MaterialIconExt RocketLaunchOutline, IconSize=34}" Foreground="{DynamicResource NeumorphismBodyLight}" Margin="10,0,10,0"
 											assist:MenuAssist.PopupAnchor="TopLeft"
 											assist:MenuAssist.PopupPlacement="Top"
 											assist:MenuAssist.PopupHorizontalOffset="0"
@@ -364,7 +364,7 @@
             <Separator />
             <MenuItem Header="Go to Saturn !" Icon="{icons:MaterialIconExt SpaceInvaders, IconSize=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
           </MenuItem>
-          <MenuItem Height="48" Width="48" CornerRadius="6" Header="{icons:MaterialIconExt UserOutline, IconSize=34}" Foreground="{DynamicResource MaterialDesignBodyLight}" Margin="10,0,10,0"
+          <MenuItem Height="48" Width="48" CornerRadius="6" Header="{icons:MaterialIconExt UserOutline, IconSize=34}" Foreground="{DynamicResource NeumorphismBodyLight}" Margin="10,0,10,0"
 											assist:MenuAssist.PopupAnchor="TopLeft"
 											assist:MenuAssist.PopupPlacement="Top"
 											assist:MenuAssist.PopupHorizontalOffset="0"
@@ -375,7 +375,7 @@
             <Separator />
             <MenuItem Header="Lock" Icon="{icons:MaterialIconExt LockOffOutline, IconSize=24}" Command="{Binding MenuItemClickCommand}" CommandParameter="{Binding $self.Header}"/>
           </MenuItem>
-          <MenuItem Height="48" Width="48" CornerRadius="6" Header="{icons:MaterialIconExt SecurityAccountOutline, IconSize=34}" Foreground="{DynamicResource MaterialDesignBodyLight}" Margin="10,0,10,0"
+          <MenuItem Height="48" Width="48" CornerRadius="6" Header="{icons:MaterialIconExt SecurityAccountOutline, IconSize=34}" Foreground="{DynamicResource NeumorphismBodyLight}" Margin="10,0,10,0"
 											assist:MenuAssist.PopupAnchor="TopLeft"
 											assist:MenuAssist.PopupPlacement="Top"
 											assist:MenuAssist.PopupHorizontalOffset="0"

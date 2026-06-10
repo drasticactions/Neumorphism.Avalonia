@@ -30,7 +30,7 @@
 
         <controls:ColorZone Grid.Row="0" Mode="Standard" Padding="8" assist:ShadowAssist.ShadowDepth="Depth2">
           <StackPanel Margin="16,8,16,0">
-            <TextBlock Classes="Headline4" Text="Icons" Foreground="{DynamicResource MaterialDesignDarkGray}" />
+            <TextBlock Classes="Headline4" Text="Icons" Foreground="{DynamicResource NeumorphismDarkGray}" />
             <TextBlock Classes="Subtitle1 Subheadline" TextWrapping="Wrap" Text="Neumorphism.Avalonia.Demo using Material.Icons.Avalonia packages to provide icons for Neumorphic design. You can always use them freely in your application with Neumorphism.Avalonia !" />
           </StackPanel>
         </controls:ColorZone>
@@ -83,7 +83,7 @@
                             Width="300" Classes="Header" Text="{Binding SearchText}" Margin="0">
                       <TextBox.InnerRightContent>
                           <Button Width="60" Focusable="False"
-                                  Name="SearchButton" Foreground="{DynamicResource MaterialDesignCardBackground}"
+                                  Name="SearchButton" Foreground="{DynamicResource NeumorphismCardBackground}"
                                   Classes="no-material" Command="{Binding SearchCommand}"
                                   CommandParameter="{Binding ElementName=SearchBox, Path=Text}">
                               <icons:MaterialIcon Kind="Magnify" Width="28" Height="28" Foreground="Gray"/>
@@ -98,7 +98,7 @@
                   <TextBox Grid.Column="2" GotFocus="TextBox_OnGotFocus" IsReadOnly="True" Classes="Header" Margin="0" Width="500" FontSize="14"
                             Text="{Binding SelectedGroup.KindToCopy, FallbackValue='&lt;icons:MaterialIcon Kind=&quot;&quot; \/>'}">
                       <TextBox.InnerRightContent>
-                          <Button Width="60" Foreground="{DynamicResource MaterialDesignCardBackground}" Click="CopyToClipboardAsync" Tag="{Binding SelectedGroup.Kind}"
+                          <Button Width="60" Foreground="{DynamicResource NeumorphismCardBackground}" Click="CopyToClipboardAsync" Tag="{Binding SelectedGroup.Kind}"
                                   Classes="no-material" Focusable="False">
                               <icons:MaterialIcon Kind="ContentCopy" Width="24" Height="24" Foreground="Gray"/>
                           </Button>

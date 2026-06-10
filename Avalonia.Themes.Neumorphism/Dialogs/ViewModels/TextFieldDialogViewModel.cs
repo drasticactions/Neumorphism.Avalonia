@@ -40,7 +40,7 @@ namespace Avalonia.Themes.Neumorphism.Dialogs.ViewModels
 
         public TextFieldDialogViewModel(TextFieldDialog dialog) : base(dialog)
         {
-            SubmitCommand = new MaterialDialogRelayCommand(OnPressButton, CanPressButton);
+            SubmitCommand = new NeumorphDialogRelayCommand(OnPressButton, CanPressButton);
         }
 
         public void BindValidateHandler()
@@ -77,7 +77,7 @@ namespace Avalonia.Themes.Neumorphism.Dialogs.ViewModels
             SubmitCommand.RaiseCanExecute();
         }
 
-        public MaterialDialogRelayCommand SubmitCommand { get; }
+        public NeumorphDialogRelayCommand SubmitCommand { get; }
 
         private bool CanPressButton(object args)
         {

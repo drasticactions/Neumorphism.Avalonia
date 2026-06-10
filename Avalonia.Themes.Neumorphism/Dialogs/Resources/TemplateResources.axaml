@@ -40,7 +40,7 @@
     <Panel Tag="{CompiledBinding DialogButtonStyle.BackgroundButtonColor}" Margin="10">
       <Panel.Styles>
         <Style Selector="Panel[Tag=0] Button">
-          <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}"/>
+          <Setter Property="Background" Value="{DynamicResource NeumorphismPaper}"/>
         </Style>
         <Style Selector="Panel[Tag=1] Button">
           <Setter Property="Background" Value="{DynamicResource PrimaryHueLightBrush}"/>
@@ -57,13 +57,13 @@
               CommandParameter="{CompiledBinding}">
         <Button.Styles>
             <Style Selector="Button[Tag=0]">
-                <Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}"/>
+                <Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}"/>
             </Style>
             <Style Selector="Button[Tag=1]">
-                <Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}"/>
+                <Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}"/>
             </Style>
             <Style Selector="Button[Tag=2]">
-                <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBackground}"/>
+                <Setter Property="Foreground" Value="{DynamicResource NeumorphismBackground}"/>
             </Style>
             <Style Selector="Button[Tag=3]">
                 <Setter Property="Foreground" Value="White"/>

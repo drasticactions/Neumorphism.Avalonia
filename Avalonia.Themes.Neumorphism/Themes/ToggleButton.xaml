@@ -23,7 +23,7 @@
     <Setter Property="assist:ToggleButtonAssist.UncheckedForeground" Value="Gray" />
     <Setter Property="assist:ToggleButtonAssist.CheckedBackground" Value="Transparent" />
     <Setter Property="assist:ToggleButtonAssist.CheckedForeground" Value="Gray" />
-    <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignDivider}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource NeumorphismDivider}" />
     <Setter Property="HorizontalContentAlignment" Value="Center" />
     <Setter Property="VerticalContentAlignment" Value="Center" />
     <Setter Property="BorderThickness" Value="0" />
@@ -95,8 +95,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>

@@ -3,15 +3,15 @@
     public enum DialogButtonForegroundColor
     {
         /// <summary>
-        /// MaterialDesignForeground
+        /// NeumorphismForeground
         /// </summary>
         Default,
         /// <summary>
-        /// MaterialDesignForeground
+        /// NeumorphismForeground
         /// </summary>
         Foreground,
         /// <summary>
-        /// MaterialDesignBackground
+        /// NeumorphismBackground
         /// </summary>
         Background,
         /// <summary>

@@ -29,7 +29,7 @@
               VerticalAlignment="Center"
               Margin="0"
               ClipToBounds="False">
-          <controls:MaterialInternalIcon Background="Transparent" Cursor="Hand"
+          <controls:NeumorphInternalIcon Background="Transparent" Cursor="Hand"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Center"
                      Kind="Calendar" Width="24" Height="24"/>
@@ -52,8 +52,8 @@
 
 
   <ControlTheme x:Key="{x:Type controls:ExtendedCalendarDatePicker}" TargetType="controls:ExtendedCalendarDatePicker">
-    <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />
-    <Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}" />
+    <Setter Property="Background" Value="{DynamicResource NeumorphismPaper}" />
+    <Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}" />
     <Setter Property="BorderBrush" Value="Transparent" />
     <Setter Property="BorderThickness" Value="1" />
     <Setter Property="UseFloatingWatermark" Value="False"/>
@@ -87,8 +87,8 @@
           <Border.BoxShadow>
             <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedInset}">
               <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-              <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-              <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+              <DynamicResource ResourceKey="NeumorphismShadowLight" />
+              <DynamicResource ResourceKey="NeumorphismShadowDark" />
             </MultiBinding>
           </Border.BoxShadow>
 
@@ -152,8 +152,8 @@
                 <Border.BoxShadow>
                   <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
                     <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                    <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                    <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                    <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                    <DynamicResource ResourceKey="NeumorphismShadowDark" />
                   </MultiBinding>
                 </Border.BoxShadow>
 
@@ -175,7 +175,7 @@
 
     <!-- Focused State (custom FocusAdorner) -->
     <Style Selector="^:focus-within /template/ Border#PART_RootBorder">
-      <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignFocus}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource NeumorphismFocus}" />
     </Style>
 
     <!-- Pressed State -->

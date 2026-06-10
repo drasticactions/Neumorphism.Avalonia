@@ -5,10 +5,10 @@ using Avalonia.Animation;
 namespace Avalonia.Themes.Neumorphism.Additional
 {
 
-    public static partial class MaterialAnimationAssist
+    public static partial class NeumorphAnimationAssist
     {
         public static readonly AttachedProperty<Animation.Animation> ContinuousAnimationProperty =
-            AvaloniaProperty.RegisterAttached<Animatable, Animation.Animation>("ContinuousAnimation", typeof(MaterialAnimationAssist));
+            AvaloniaProperty.RegisterAttached<Animatable, Animation.Animation>("ContinuousAnimation", typeof(NeumorphAnimationAssist));
 
         public static Animation.Animation GetContinuousAnimation(Animatable element)
         {

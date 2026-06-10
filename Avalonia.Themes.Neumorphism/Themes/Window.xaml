@@ -3,7 +3,7 @@
 
   <!--Default Window theme-->
   <ControlTheme x:Key="{x:Type Window}" TargetType="Window">
-    <Setter Property="Background" Value="{DynamicResource MaterialDesignPaperBrush}"/>
+    <Setter Property="Background" Value="{DynamicResource NeumorphismPaperBrush}"/>
     <Setter Property="TransparencyBackgroundFallback" Value="{DynamicResource SystemControlBackgroundAltHighBrush}" />
     <Setter Property="TopLevel.SystemBarColor" Value="{DynamicResource SystemControlBackgroundAltHighBrush}"/>
     <Setter Property="Foreground" Value="{DynamicResource SystemControlForegroundBaseHighBrush}"/>

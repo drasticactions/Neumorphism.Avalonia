@@ -43,8 +43,8 @@
     <!--OpenDialogWithModel-->
     <DataTemplate DataType="models:DialogSampleModel">
       <StackPanel Orientation="Vertical">
-        <TextBlock FontSize="18" Margin="15,15,15,0" Text="Open dialog from model" TextAlignment="Center" Foreground="{DynamicResource MaterialDesignDarkGray}"/>
-        <TextBlock FontSize="16" Margin="15,0,15,10" Text='Hello, I am model "DialogSampleModel" !' TextAlignment="Center" Foreground="{DynamicResource MaterialDesignMediumGray}"/>
+        <TextBlock FontSize="18" Margin="15,15,15,0" Text="Open dialog from model" TextAlignment="Center" Foreground="{DynamicResource NeumorphismDarkGray}"/>
+        <TextBlock FontSize="16" Margin="15,0,15,10" Text='Hello, I am model "DialogSampleModel" !' TextAlignment="Center" Foreground="{DynamicResource NeumorphismMediumGray}"/>
 
         <TextBlock Margin="0,15,0,0" TextAlignment="Center">Your lucky number:</TextBlock>
         <TextBlock Classes="Body1"
@@ -70,8 +70,8 @@
   <Window.Resources>
     <!-- OpenDialogWithView -->
     <StackPanel x:Key="DialogSampleView">
-      <TextBlock FontSize="18" Margin="15,15,15,0" Text="Open dialog from view" TextAlignment="Center" Foreground="{DynamicResource MaterialDesignDarkGray}"/>
-      <TextBlock FontSize="16" Margin="15,0,15,10" Text='Hello, I am view "DialogSampleView" !' TextAlignment="Center" Foreground="{DynamicResource MaterialDesignMediumGray}"/>
+      <TextBlock FontSize="18" Margin="15,15,15,0" Text="Open dialog from view" TextAlignment="Center" Foreground="{DynamicResource NeumorphismDarkGray}"/>
+      <TextBlock FontSize="16" Margin="15,0,15,10" Text='Hello, I am view "DialogSampleView" !' TextAlignment="Center" Foreground="{DynamicResource NeumorphismMediumGray}"/>
       <ProgressBar Classes="Circle" Margin="15,20,15,20" IsIndeterminate="True" />
       <Grid ColumnDefinitions="*,*" Margin="15">
         <Button Grid.Column="0" HorizontalAlignment="Left" Height="38" Width="NaN" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=dialogHost:DialogHost}, Path=CloseDialogCommand}" CommandParameter="cancel">
@@ -254,7 +254,7 @@
                 <ToggleButton Name="NavDrawerSwitch2"
                         Classes="Flat TransparentBack"
                         Width="38" Height="38" CornerRadius="6" Padding="4">
-                  <icons:MaterialIcon Kind="Menu" Width="28" Height="28" UseLayoutRounding="False" Foreground="{DynamicResource MaterialDesignForeground}" />
+                  <icons:MaterialIcon Kind="Menu" Width="28" Height="28" UseLayoutRounding="False" Foreground="{DynamicResource NeumorphismForeground}" />
                 </ToggleButton>
                 <!--App title-->
                 <TextBlock Grid.Column="2" Classes="Headline6" Text="Neumorphism.Avalonia Demo" VerticalAlignment="Center" />

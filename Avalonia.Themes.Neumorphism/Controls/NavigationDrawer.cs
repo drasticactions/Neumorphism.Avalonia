@@ -91,9 +91,7 @@ namespace Avalonia.Themes.Neumorphism.Controls
         }
 
         /// <summary>
-        /// <p>Get or sets the width threshold of the NavigationDrawer for expand left drawer automatically. Most used on desktop application.</p>
-        /// <p>For more information, please visit <a href="https://material.io/components/navigation-drawer#standard-drawer">material.io - Standard navigation drawer, Permanently visible</a> page.</p>
-        /// <b>Use it on desktop application is recommended!!</b> 
+        /// <p>Get or sets the width threshold of the NavigationDrawer for expand left drawer automatically. Most used on desktop application.</p>        /// <b>Use it on desktop application is recommended!!</b> 
         /// </summary>
         public double? LeftDrawerExpandThresholdWidth
         {
@@ -133,9 +131,7 @@ namespace Avalonia.Themes.Neumorphism.Controls
         }
 
         /// <summary>
-        /// <p>Get or sets the width threshold of the NavigationDrawer for expand right drawer automatically. Most used on desktop application.</p>
-        /// <p>For more information, please visit <a href="https://material.io/components/navigation-drawer#standard-drawer">material.io - Standard navigation drawer, Permanently visible</a> page.</p>
-        /// <b>This feature is not recommended if your application is Left-to-Right language orientated. Reference: <a href="https://material.io/components/navigation-drawer#anatomy">material.io.</a></b>
+        /// <p>Get or sets the width threshold of the NavigationDrawer for expand right drawer automatically. Most used on desktop application.</p>        /// <b>This feature is not recommended if your application is Left-to-Right language orientated.</b>
         /// </summary>
         public double? RightDrawerExpandThresholdWidth
         {

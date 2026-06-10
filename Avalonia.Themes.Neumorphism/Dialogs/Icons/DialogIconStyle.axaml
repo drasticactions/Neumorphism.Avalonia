@@ -26,13 +26,13 @@
                                Fill="{TemplateBinding Foreground}">-->
                         <!--<controls:SkiaGeometry.Resources>
                           <converters:CustomBoxShadowsConverter x:Key="CustomBoxShadowsConverter"/>
-                          <system:String x:Key="BoxShadowsTemplate">-5 -5 20 {MaterialDesignShadowLight}, 5 5 20 {MaterialDesignShadowDark}</system:String>
+                          <system:String x:Key="BoxShadowsTemplate">-5 -5 20 {NeumorphismShadowLight}, 5 5 20 {NeumorphismShadowDark}</system:String>
                         </controls:SkiaGeometry.Resources>
                         <controls:SkiaGeometry.BoxShadow>
                           <MultiBinding Converter="{StaticResource CustomBoxShadowsConverter}">
                             <DynamicResource ResourceKey="BoxShadowsTemplate" />
-                            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                            <DynamicResource ResourceKey="NeumorphismShadowDark" />
                           </MultiBinding>
                         </controls:SkiaGeometry.BoxShadow>-->
                       <!--</controls:SkiaGeometry>-->

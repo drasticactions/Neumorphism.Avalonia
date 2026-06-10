@@ -13,11 +13,11 @@
 
 
     <StackPanel Margin="20" >
-        <TextBlock Classes="Headline4 Subheadline" Text="Dialogs" Foreground="{DynamicResource MaterialDesignDarkGray}" />
+        <TextBlock Classes="Headline4 Subheadline" Text="Dialogs" Foreground="{DynamicResource NeumorphismDarkGray}" />
         <Grid ColumnDefinitions="*,*" RowDefinitions="*">
 
             <Grid RowDefinitions="Auto,*">
-                <TextBlock Grid.Row="0" Classes="Headline6 Subheadline2" Text="DialogHost (fake popup window)" Foreground="{DynamicResource MaterialDesignMediumGray}" />
+                <TextBlock Grid.Row="0" Classes="Headline6 Subheadline2" Text="DialogHost (fake popup window)" Foreground="{DynamicResource NeumorphismMediumGray}" />
                 <StackPanel Grid.Row="1" VerticalAlignment="Stretch">
                   <Grid RowDefinitions="*,28">
                     <Button Grid.Row="0" Width="220" Height="44" Margin="20" VerticalAlignment="Center" Command="{CompiledBinding OpenDialogWithViewCommand}">Open dialog from view</Button>
@@ -40,7 +40,7 @@
             </Grid>
 
             <StackPanel Grid.Column="1">
-              <TextBlock Classes="Headline6 Subheadline2" Text="Builder dialogs (real child windows)" Foreground="{DynamicResource MaterialDesignMediumGray}" />
+              <TextBlock Classes="Headline6 Subheadline2" Text="Builder dialogs (real child windows)" Foreground="{DynamicResource NeumorphismMediumGray}" />
               
               <Grid RowDefinitions="*,*,*,*,*" ColumnDefinitions="*,*" HorizontalAlignment="Center">
                 <!--****************************************************************-->

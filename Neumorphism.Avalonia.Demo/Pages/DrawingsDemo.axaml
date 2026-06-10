@@ -16,18 +16,18 @@
 
   <UserControl.Resources>
     <converters:CustomBoxShadowsConverter x:Key="CustomBoxShadowsConverter"/>
-    <system:String x:Key="BoxShadowsTemplate">-5 -5 20 {MaterialDesignShadowLight}, 5 5 20 {MaterialDesignShadowDark}</system:String>
+    <system:String x:Key="BoxShadowsTemplate">-5 -5 20 {NeumorphismShadowLight}, 5 5 20 {NeumorphismShadowDark}</system:String>
   </UserControl.Resources>
 
   <StackPanel Margin="20">
 
 
-    <TextBlock Classes="Headline4 Subheadline" Text="Drawings" Foreground="{DynamicResource MaterialDesignDarkGray}" />
+    <TextBlock Classes="Headline4 Subheadline" Text="Drawings" Foreground="{DynamicResource NeumorphismDarkGray}" />
 
 
     <WrapPanel>
       <StackPanel>
-        <TextBlock Classes="Headline6 Subheadline2" Text="Titles" Foreground="{DynamicResource MaterialDesignMediumGray}" />
+        <TextBlock Classes="Headline6 Subheadline2" Text="Titles" Foreground="{DynamicResource NeumorphismMediumGray}" />
         <StackPanel Classes="Content" Orientation="Vertical">
           <!--****************************************************************-->
           <showMeTheXaml:XamlDisplay UniqueId="DrawingText1">
@@ -38,13 +38,13 @@
             Text="NEUMORPHISM"
             FontSize="100"
             ClipToBounds="False"
-            Fill="{DynamicResource MaterialDesignPaper}"
+            Fill="{DynamicResource NeumorphismPaper}"
             StrokeThickness="0">
               <controls:SkiaGeometry.BoxShadow>
                 <MultiBinding Converter="{StaticResource CustomBoxShadowsConverter}">
                   <DynamicResource ResourceKey="BoxShadowsTemplate" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </controls:SkiaGeometry.BoxShadow>
             </controls:SkiaText>
@@ -58,14 +58,14 @@
             Text="NEUMORPHISM"
             FontSize="80"
             ClipToBounds="False"
-            Fill="{DynamicResource MaterialDesignPaper}"
+            Fill="{DynamicResource NeumorphismPaper}"
             Stroke="White"
             StrokeThickness="1">
               <controls:SkiaGeometry.BoxShadow>
                 <MultiBinding Converter="{StaticResource CustomBoxShadowsConverter}">
                   <DynamicResource ResourceKey="BoxShadowsTemplate" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </controls:SkiaGeometry.BoxShadow>
             </controls:SkiaText>
@@ -79,14 +79,14 @@
             Text="NEUMORPHISM"
             FontSize="60"
             ClipToBounds="False"
-            Fill="{DynamicResource MaterialDesignPaper}"
+            Fill="{DynamicResource NeumorphismPaper}"
             Stroke="#33666666"
             StrokeThickness="1">
               <controls:SkiaGeometry.BoxShadow>
                 <MultiBinding Converter="{StaticResource CustomBoxShadowsConverter}">
                   <DynamicResource ResourceKey="BoxShadowsTemplate" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </controls:SkiaGeometry.BoxShadow>
             </controls:SkiaText>
@@ -99,7 +99,7 @@
 
     <WrapPanel>
       <StackPanel>
-        <TextBlock Classes="Headline6 Subheadline2" Text="Icons" Foreground="{DynamicResource MaterialDesignMediumGray}" />
+        <TextBlock Classes="Headline6 Subheadline2" Text="Icons" Foreground="{DynamicResource NeumorphismMediumGray}" />
         <StackPanel Classes="Content" Orientation="Horizontal">
           <!--****************************************************************-->
           <showMeTheXaml:XamlDisplay UniqueId="DrawingIcon1">
@@ -108,13 +108,13 @@
                        Stretch="Uniform"
                        Path="M19 3L13 9L15 11L22 4V3M12 12.5A0.5 0.5 0 0 1 11.5 12A0.5 0.5 0 0 1 12 11.5A0.5 0.5 0 0 1 12.5 12A0.5 0.5 0 0 1 12 12.5M6 20A2 2 0 0 1 4 18C4 16.89 4.9 16 6 16A2 2 0 0 1 8 18C8 19.11 7.1 20 6 20M6 8A2 2 0 0 1 4 6C4 4.89 4.9 4 6 4A2 2 0 0 1 8 6C8 7.11 7.1 8 6 8M9.64 7.64C9.87 7.14 10 6.59 10 6A4 4 0 0 0 6 2A4 4 0 0 0 2 6A4 4 0 0 0 6 10C6.59 10 7.14 9.87 7.64 9.64L10 12L7.64 14.36C7.14 14.13 6.59 14 6 14A4 4 0 0 0 2 18A4 4 0 0 0 6 22A4 4 0 0 0 10 18C10 17.41 9.87 16.86 9.64 16.36L12 14L19 21H22V20L9.64 7.64Z"
                    ClipToBounds="False"
-                   Fill="{DynamicResource MaterialDesignPaper}"
+                   Fill="{DynamicResource NeumorphismPaper}"
                    StrokeThickness="0">
               <controls:SkiaGeometry.BoxShadow>
                 <MultiBinding Converter="{StaticResource CustomBoxShadowsConverter}">
                   <DynamicResource ResourceKey="BoxShadowsTemplate" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </controls:SkiaGeometry.BoxShadow>
             </controls:SkiaGeometry>
@@ -131,8 +131,8 @@
               <controls:SkiaGeometry.BoxShadow>
                 <MultiBinding Converter="{StaticResource CustomBoxShadowsConverter}">
                   <DynamicResource ResourceKey="BoxShadowsTemplate" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </controls:SkiaGeometry.BoxShadow>
             </controls:SkiaGeometry>
@@ -149,8 +149,8 @@
               <controls:SkiaGeometry.BoxShadow>
                 <MultiBinding Converter="{StaticResource CustomBoxShadowsConverter}">
                   <DynamicResource ResourceKey="BoxShadowsTemplate" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </controls:SkiaGeometry.BoxShadow>
             </controls:SkiaGeometry>
@@ -162,14 +162,14 @@
                              Stretch="Uniform"
                              Path="M19 21H8V7H19M19 5H8A2 2 0 0 0 6 7V21A2 2 0 0 0 8 23H19A2 2 0 0 0 21 21V7A2 2 0 0 0 19 5M16 1H4A2 2 0 0 0 2 3V17H4V3H16V1Z"
                              ClipToBounds="False"
-                             Fill="{DynamicResource MaterialDesignPaper}"
+                             Fill="{DynamicResource NeumorphismPaper}"
                              Stroke="White"
                              StrokeThickness="1">
               <controls:SkiaGeometry.BoxShadow>
                 <MultiBinding Converter="{StaticResource CustomBoxShadowsConverter}">
                   <DynamicResource ResourceKey="BoxShadowsTemplate" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </controls:SkiaGeometry.BoxShadow>
             </controls:SkiaGeometry>
@@ -181,14 +181,14 @@
                        Stretch="Uniform"
                        Path="M19 20H5V4H7V7H17V4H19M12 2A1 1 0 0 1 13 3A1 1 0 0 1 12 4A1 1 0 0 1 11 3A1 1 0 0 1 12 2M19 2H14.82C14.4 0.84 13.3 0 12 0C10.7 0 9.6 0.84 9.18 2H5A2 2 0 0 0 3 4V20A2 2 0 0 0 5 22H19A2 2 0 0 0 21 20V4A2 2 0 0 0 19 2Z"
                    ClipToBounds="False"
-                   Fill="{DynamicResource MaterialDesignPaper}"
+                   Fill="{DynamicResource NeumorphismPaper}"
                    Stroke="#FFCCCCCC"
                    StrokeThickness="1">
               <controls:SkiaGeometry.BoxShadow>
                 <MultiBinding Converter="{StaticResource CustomBoxShadowsConverter}">
                   <DynamicResource ResourceKey="BoxShadowsTemplate" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                  <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                  <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                  <DynamicResource ResourceKey="NeumorphismShadowDark" />
                 </MultiBinding>
               </controls:SkiaGeometry.BoxShadow>
             </controls:SkiaGeometry>

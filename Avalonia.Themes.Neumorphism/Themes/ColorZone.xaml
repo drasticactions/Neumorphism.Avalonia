@@ -21,8 +21,8 @@
                         <Border.BoxShadow>
                           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}">
                             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                            <DynamicResource ResourceKey="NeumorphismShadowDark" />
                           </MultiBinding>
                         </Border.BoxShadow>
                         <Border Name="{x:Static naming:PartNames.PartInnerBorder}"

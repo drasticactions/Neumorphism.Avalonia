@@ -38,7 +38,7 @@
 
          
           <ResourceDictionary.MergedDictionaries>
-                <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/MaterialInternalIcon.xaml" />
+                <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/NeumorphInternalIcon.xaml" />
                 <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/AdornerLayer.xaml" />
                 <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/TextBlock.xaml" />
                 <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/Button.xaml" />
@@ -111,7 +111,7 @@
                 <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/NavigationDrawer.xaml" />
                 <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/ColorZone.xaml" />
                 <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/FloatingButton.xaml" />
-                <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/MaterialUnderline.xaml" />
+                <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/NeumorphUnderline.xaml" />
                 <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/CircularProgress.xaml" />
                 <MergeResourceInclude Source="avares://Avalonia.Themes.Neumorphism/Themes/DialogHost.xaml" />
           </ResourceDictionary.MergedDictionaries>

@@ -115,11 +115,11 @@
     </Style>
 
     <Style Selector="^ /template/ Border#PART_LeftDrawerBorder" >
-      <Setter Property="Background" Value="{DynamicResource MaterialDesignCardBackground}" />
+      <Setter Property="Background" Value="{DynamicResource NeumorphismCardBackground}" />
     </Style>
 
     <Style Selector="^ /template/ Border#PART_RightDrawerBorder" >
-      <Setter Property="Background" Value="{DynamicResource MaterialDesignCardBackground}" />
+      <Setter Property="Background" Value="{DynamicResource NeumorphismCardBackground}" />
     </Style>
 
     <Style Selector="^ /template/ Border#PART_Scrim" >
@@ -140,8 +140,8 @@
           <Setter.Value>
             <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}">
               <Binding Path="Bounds.Height" RelativeSource="{RelativeSource Self}"/>
-              <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-              <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+              <DynamicResource ResourceKey="NeumorphismShadowLight" />
+              <DynamicResource ResourceKey="NeumorphismShadowDark" />
             </MultiBinding>
           </Setter.Value>
         </Setter>
@@ -153,8 +153,8 @@
           <Setter.Value>
             <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}">
               <Binding Path="Bounds.Height" RelativeSource="{RelativeSource Self}"/>
-              <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-              <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+              <DynamicResource ResourceKey="NeumorphismShadowLight" />
+              <DynamicResource ResourceKey="NeumorphismShadowDark" />
             </MultiBinding>
           </Setter.Value>
         </Setter>

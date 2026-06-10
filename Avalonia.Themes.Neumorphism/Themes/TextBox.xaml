@@ -39,21 +39,21 @@
 				  Command="{Binding $parent[TextBox].Cut}"
 				  IsEnabled="{Binding $parent[TextBox].CanCut}"
 				  InputGesture="{Binding $parent[TextBox], Converter={StaticResource GetPlatformHotkeyConfig}, ConverterParameter=cut}"
-				  Icon="{extensions:MaterialInternalIcon Kind=MaterialContentCut}" />
+				  Icon="{extensions:NeumorphInternalIcon Kind=MaterialContentCut}" />
 
 		<MenuItem Name="TextBoxContextMenuCopyItem"
 				  Header="Copy"
 				  Command="{Binding $parent[TextBox].Copy}"
 				  IsEnabled="{Binding $parent[TextBox].CanCopy}"
 				  InputGesture="{Binding $parent[TextBox], Converter={StaticResource GetPlatformHotkeyConfig}, ConverterParameter=copy}"
-					Icon="{extensions:MaterialInternalIcon Kind=MaterialContentCopy}" />
+					Icon="{extensions:NeumorphInternalIcon Kind=MaterialContentCopy}" />
     
 		<MenuItem Name="TextBoxContextMenuPasteItem"
 				  Header="Paste"
 				  Command="{Binding $parent[TextBox].Paste}"
 				  IsEnabled="{Binding $parent[TextBox].CanPaste}"
 				  InputGesture="{Binding $parent[TextBox], Converter={StaticResource GetPlatformHotkeyConfig}, ConverterParameter=paste}"
-				  Icon="{extensions:MaterialInternalIcon Kind=MaterialContentPaste}"/>
+				  Icon="{extensions:NeumorphInternalIcon Kind=MaterialContentPaste}"/>
 
 		<Separator />
 
@@ -61,7 +61,7 @@
 				  Header="Select All"
 				  Command="{Binding $parent[TextBox].SelectAll}"
 				  InputGesture="{Binding $parent[TextBox], Converter={StaticResource GetPlatformHotkeyConfig}, ConverterParameter=selectall}"
-					Icon="{extensions:MaterialInternalIcon Kind=MaterialSelectAll}" />
+					Icon="{extensions:NeumorphInternalIcon Kind=MaterialSelectAll}" />
 	</ContextMenu>
 
 
@@ -69,8 +69,8 @@
 	<!--Default TextBox theme-->
 	<ControlTheme x:Key="{x:Type TextBox}" TargetType="TextBox">
 		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}"/>
-		<Setter Property="SelectionBrush" Value="{DynamicResource MaterialDesignSelection}" />
+		<Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}"/>
+		<Setter Property="SelectionBrush" Value="{DynamicResource NeumorphismSelection}" />
 		<Setter Property="SelectionForegroundBrush" Value="{DynamicResource PrimaryHueMidForegroundBrush}" />
 		<Setter Property="Padding" Value="0" />
 		<Setter Property="Margin" Value="0,15,0,15" />
@@ -110,8 +110,8 @@
             <Border.BoxShadow>
               <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedInset}">
                 <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                <DynamicResource ResourceKey="NeumorphismShadowDark" />
               </MultiBinding>
             </Border.BoxShadow>
 
@@ -204,10 +204,10 @@
 		</Style>
 
 		<Style Selector="^ /template/ Border#PART_RootBorder">
-			<Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignTextBoxBorder}" />
+			<Setter Property="BorderBrush" Value="{DynamicResource NeumorphismTextBoxBorder}" />
 		</Style>
 
-		<!--<Style Selector="^:pointerover /template/ controls|MaterialUnderline#PART_Underline">
+		<!--<Style Selector="^:pointerover /template/ controls|NeumorphUnderline#PART_Underline">
 			<Setter Property="IsActive" Value="True" />
 		</Style>-->
 
@@ -279,7 +279,7 @@
       <Setter Property="FocusAdorner">
         <FocusAdornerTemplate>
           <Border BorderThickness="1" CornerRadius="{Binding $self.(AdornerLayer.AdornedElement).(Border.CornerRadius)}"
-                  BorderBrush="{DynamicResource MaterialDesignFocus}" Height="{Binding $self.(AdornerLayer.AdornedElement).(Border.Height)}"/>
+                  BorderBrush="{DynamicResource NeumorphismFocus}" Height="{Binding $self.(AdornerLayer.AdornedElement).(Border.Height)}"/>
         </FocusAdornerTemplate>
       </Setter>
     </Style>
@@ -287,7 +287,7 @@
     
 
 		<!-- Invalid state -->
-		<!--<Style Selector="^:error /template/ controls|MaterialUnderline#PART_Underline">
+		<!--<Style Selector="^:error /template/ controls|NeumorphUnderline#PART_Underline">
 			<Setter Property="Background" Value="{DynamicResource ValidationErrorBrush}" />
 			<Setter Property="Foreground" Value="{DynamicResource ValidationErrorBrush}" />
 		  </Style>-->
@@ -331,7 +331,7 @@
 
 	<!-- Filled textbox theme -->
 	<ControlTheme x:Key="TextBoxFilled" BasedOn="{StaticResource {x:Type TextBox}}" TargetType="TextBox">
-		<Setter Property="Background" Value="{DynamicResource MaterialDesignTextFieldBoxBackground}" />
+		<Setter Property="Background" Value="{DynamicResource NeumorphismTextFieldBoxBackground}" />
 	</ControlTheme>
 
 
@@ -341,8 +341,8 @@
 	<!-- Outline textbox theme -->
 	<ControlTheme x:Key="TextBoxOutline" BasedOn="{StaticResource {x:Type TextBox}}" TargetType="TextBox">
 		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}"/>
-		<Setter Property="SelectionBrush" Value="{DynamicResource MaterialDesignSelection}" />
+		<Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}"/>
+		<Setter Property="SelectionBrush" Value="{DynamicResource NeumorphismSelection}" />
 		<Setter Property="SelectionForegroundBrush" Value="{DynamicResource PrimaryHueMidForegroundBrush}" />
 		<Setter Property="Padding" Value="0" />
 		<Setter Property="Margin" Value="0,15,0,15" />
@@ -373,8 +373,8 @@
 							<Border.BoxShadow>
 							  <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedOutset}">
 								<Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-								<DynamicResource ResourceKey="MaterialDesignShadowLight" />
-								<DynamicResource ResourceKey="MaterialDesignShadowDark" />
+								<DynamicResource ResourceKey="NeumorphismShadowLight" />
+								<DynamicResource ResourceKey="NeumorphismShadowDark" />
 							  </MultiBinding>
 							</Border.BoxShadow>
 
@@ -388,8 +388,8 @@
 									<Border.BoxShadow>
 										<MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedInset}">
 											<Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-											<DynamicResource ResourceKey="MaterialDesignShadowLight" />
-											<DynamicResource ResourceKey="MaterialDesignShadowDark" />
+											<DynamicResource ResourceKey="NeumorphismShadowLight" />
+											<DynamicResource ResourceKey="NeumorphismShadowDark" />
 										</MultiBinding>
 									</Border.BoxShadow>
                 </Border>
@@ -535,8 +535,8 @@
             <Border.BoxShadow>
               <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.FixedInset}">
                 <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-                <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-                <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+                <DynamicResource ResourceKey="NeumorphismShadowLight" />
+                <DynamicResource ResourceKey="NeumorphismShadowDark" />
               </MultiBinding>
             </Border.BoxShadow>
 
@@ -674,8 +674,8 @@
 	<!-- No material textbox theme -->
 	<ControlTheme x:Key="TextBoxNoMaterial" TargetType="TextBox">
 		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}"/>
-		<Setter Property="SelectionBrush" Value="{DynamicResource MaterialDesignSelection}" />
+		<Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}"/>
+		<Setter Property="SelectionBrush" Value="{DynamicResource NeumorphismSelection}" />
 		<Setter Property="SelectionForegroundBrush" Value="{DynamicResource PrimaryHueMidForegroundBrush}" />
 		<Setter Property="Padding" Value="0" />
 		<Setter Property="Margin" Value="0" />
@@ -765,13 +765,13 @@
 		<Setter Property="Padding" Value="4" />
 		<Setter Property="VerticalAlignment" Value="Center" />
 		<Setter Property="HorizontalAlignment" Value="Center" />
-		<Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}" />
+		<Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}" />
 		<Setter Property="ToolTip.Tip" Value="Click to clear field"/>
 		<Setter Property="Opacity" Value="0.5" />
     <Setter Property="KeyboardNavigation.IsTabStop" Value="False" />
 		<Setter Property="Content">
 		  <Template>
-			<controls:MaterialInternalIcon Kind="TextBoxClearButtonData" Width="16" Height="16" Opacity="{TemplateBinding Opacity}" Foreground="{TemplateBinding Foreground}"/>
+			<controls:NeumorphInternalIcon Kind="TextBoxClearButtonData" Width="16" Height="16" Opacity="{TemplateBinding Opacity}" Foreground="{TemplateBinding Foreground}"/>
 		  </Template>
 		</Setter>
 	</ControlTheme>
@@ -791,7 +791,7 @@
       <Setter Property="Padding" Value="4"/>
       <Setter Property="VerticalAlignment" Value="Center" />
       <Setter Property="HorizontalAlignment" Value="Center" />
-      <Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}" />
+      <Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}" />
 			<Setter Property="KeyboardNavigation.IsTabStop" Value="False" />
 			<Setter Property="Opacity" Value="0.5" />
         
@@ -799,7 +799,7 @@
           <Setter Property="ToolTip.Tip" Value="Click to reveal content of field"/>
           <Setter Property="Content">
               <Template>
-                <controls:MaterialInternalIcon Kind="PasswordBoxRevealButtonData" Width="16" Height="16" Opacity="{TemplateBinding Opacity}" Foreground="{TemplateBinding Foreground}"/>
+                <controls:NeumorphInternalIcon Kind="PasswordBoxRevealButtonData" Width="16" Height="16" Opacity="{TemplateBinding Opacity}" Foreground="{TemplateBinding Foreground}"/>
               </Template>
           </Setter>
       </Style>
@@ -808,7 +808,7 @@
           <Setter Property="ToolTip.Tip" Value="Click to hide content of field"/>
           <Setter Property="Content">
               <Template>
-                <controls:MaterialInternalIcon Kind="PasswordBoxHideButtonData" Width="16" Height="16" Opacity="{TemplateBinding Opacity}" Foreground="{TemplateBinding Foreground}"/>
+                <controls:NeumorphInternalIcon Kind="PasswordBoxHideButtonData" Width="16" Height="16" Opacity="{TemplateBinding Opacity}" Foreground="{TemplateBinding Foreground}"/>
               </Template>
           </Setter>
       </Style>
@@ -819,8 +819,8 @@
 	<!--Default TextBox theme-->
 	<ControlTheme x:Key="TextBoxNoMaterial2" TargetType="TextBox">
 		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}"/>
-		<Setter Property="SelectionBrush" Value="{DynamicResource MaterialDesignSelection}" />
+		<Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}"/>
+		<Setter Property="SelectionBrush" Value="{DynamicResource NeumorphismSelection}" />
 		<Setter Property="SelectionForegroundBrush" Value="{DynamicResource PrimaryHueMidForegroundBrush}" />
 		<Setter Property="Padding" Value="0" />
 		<Setter Property="Margin" Value="0" />
@@ -932,7 +932,7 @@
 
 
 		<!-- Invalid state -->
-		<!--<Style Selector="^:error /template/ controls|MaterialUnderline#PART_Underline">
+		<!--<Style Selector="^:error /template/ controls|NeumorphUnderline#PART_Underline">
 			<Setter Property="Background" Value="{DynamicResource ValidationErrorBrush}" />
 			<Setter Property="Foreground" Value="{DynamicResource ValidationErrorBrush}" />
 		</Style>-->

@@ -89,29 +89,29 @@ namespace Avalonia.Themes.Neumorphism.Controls
         //    {
         //        case ColorZoneMode.Standard:
         //            {
-        //                SetValueInternal(BackgroundProperty, Application.Current!.Resources["MaterialDesignPaper"]);
-        //                SetValueInternal(ForegroundProperty, Application.Current!.Resources["MaterialDesignBody"]);
+        //                SetValueInternal(BackgroundProperty, Application.Current!.Resources["NeumorphismPaper"]);
+        //                SetValueInternal(ForegroundProperty, Application.Current!.Resources["NeumorphismBody"]);
         //            }
         //            break;
 
         //        //case ColorZoneMode.Inverted:
         //        //    {
-        //        //        SetValueInternal(BackgroundProperty, GetBrushResource(resources, "MaterialDesignBody"));
-        //        //        SetValueInternal(foregroundProperty, GetBrushResource(resources, "MaterialDesignPaper"));
+        //        //        SetValueInternal(BackgroundProperty, GetBrushResource(resources, "NeumorphismBody"));
+        //        //        SetValueInternal(foregroundProperty, GetBrushResource(resources, "NeumorphismPaper"));
         //        //    }
         //        //    break;
 
         //        //case ColorZoneMode.Light:
         //        //    {
-        //        //        SetValueInternal(BackgroundProperty, GetBrushResource(resources, "MaterialDesignLightBackground"));
-        //        //        SetValueInternal(foregroundProperty, GetBrushResource(resources, "MaterialDesignLightForeground"));
+        //        //        SetValueInternal(BackgroundProperty, GetBrushResource(resources, "NeumorphismLightBackground"));
+        //        //        SetValueInternal(foregroundProperty, GetBrushResource(resources, "NeumorphismLightForeground"));
         //        //    }
         //        //    break;
 
         //        //case ColorZoneMode.Dark:
         //        //    {
-        //        //        SetValueInternal(BackgroundProperty, GetBrushResource(resources, "MaterialDesignDarkBackground"));
-        //        //        SetValueInternal(foregroundProperty, GetBrushResource(resources, "MaterialDesignDarkForeground"));
+        //        //        SetValueInternal(BackgroundProperty, GetBrushResource(resources, "NeumorphismDarkBackground"));
+        //        //        SetValueInternal(foregroundProperty, GetBrushResource(resources, "NeumorphismDarkForeground"));
         //        //    }
         //        //    break;
 

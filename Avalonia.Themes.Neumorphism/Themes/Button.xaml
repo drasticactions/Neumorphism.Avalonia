@@ -38,7 +38,7 @@
     <Setter Property="Cursor" Value="Hand" />
     <Setter Property="Padding" Value="16 8" />
     <Setter Property="Margin" Value="0" />
-    <Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}" />
+    <Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}" />
     <Setter Property="FontSize" Value="14" />
     <Setter Property="FontWeight" Value="Normal"/>
     <Setter Property="FontStyle" Value="Normal"/>
@@ -91,7 +91,7 @@
       <Setter Property="FocusAdorner">
         <FocusAdornerTemplate>
           <Border BorderThickness="1" CornerRadius="{Binding $self.(AdornerLayer.AdornedElement).(Border.Height), Converter={StaticResource ControlHeightToCornerRadiusConverter}, ConverterParameter=0}}"
-                  BorderBrush="{DynamicResource MaterialDesignFocus}"/>
+                  BorderBrush="{DynamicResource NeumorphismFocus}"/>
         </FocusAdornerTemplate>
       </Setter>
     </Style>
@@ -101,7 +101,7 @@
       <Setter Property="FocusAdorner">
         <FocusAdornerTemplate>
           <Border BorderThickness="1" CornerRadius="{Binding $self.(AdornerLayer.AdornedElement).(Border.CornerRadius)}"
-                  BorderBrush="{DynamicResource MaterialDesignFocus}"/>
+                  BorderBrush="{DynamicResource NeumorphismFocus}"/>
         </FocusAdornerTemplate>
       </Setter>
     </Style>
@@ -140,8 +140,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -172,8 +172,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -187,7 +187,7 @@
 
     <!-- Pressed state -->
     <Style Selector="^:pressed:not(.no-material) /template/ Border#PART_HoverIndicator">
-      <Setter Property="Background" Value="{DynamicResource MaterialDesignTextFieldBoxHoverBackground}"/>
+      <Setter Property="Background" Value="{DynamicResource NeumorphismTextFieldBoxHoverBackground}"/>
       <Setter Property="Opacity" Value="1"/>
     </Style>
 
@@ -327,8 +327,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Default}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -339,7 +339,7 @@
 
     <!-- Icon pressed state -->
     <Style Selector="^:pressed:not(.no-material,.Light,.Dark,.Accent) /template/ Border#PART_ButtonRootBorder">
-      <Setter Property="Background" Value="{DynamicResource MaterialDesignTextFieldBoxHoverBackground}"/>
+      <Setter Property="Background" Value="{DynamicResource NeumorphismTextFieldBoxHoverBackground}"/>
     </Style>
 
     <!--Class Icon Light: accent-tinted glyph on the neumorphic surface (no Material fill)-->
@@ -366,7 +366,7 @@
     <Setter Property="Background" Value="Transparent"/>
     <Setter Property="BorderThickness" Value="0" />
     <Setter Property="BorderBrush" Value="Transparent"/>
-    <Setter Property="Foreground" Value="{DynamicResource MaterialDesignForeground}"/>
+    <Setter Property="Foreground" Value="{DynamicResource NeumorphismForeground}"/>
 
     <Style Selector="^:not(.no-material) /template/ Border#PART_HoverIndicator">
       <Setter Property="BorderBrush" Value="Transparent" />
@@ -377,8 +377,8 @@
         <Setter.Value>
           <MultiBinding Converter="{StaticResource AutoBoxShadowsConverter}" ConverterParameter="{x:Static naming:BoxShadowsStyle.Inset}">
             <Binding Path="Height" RelativeSource="{RelativeSource TemplatedParent}"/>
-            <DynamicResource ResourceKey="MaterialDesignShadowLight" />
-            <DynamicResource ResourceKey="MaterialDesignShadowDark" />
+            <DynamicResource ResourceKey="NeumorphismShadowLight" />
+            <DynamicResource ResourceKey="NeumorphismShadowDark" />
           </MultiBinding>
         </Setter.Value>
       </Setter>
@@ -386,7 +386,7 @@
 
     <!-- Pressed state -->
     <Style Selector="^:pressed:not(.no-material) /template/ Border#PART_HoverIndicator">
-      <Setter Property="Background" Value="{DynamicResource MaterialDesignTextFieldBoxHoverBackground}"/>
+      <Setter Property="Background" Value="{DynamicResource NeumorphismTextFieldBoxHoverBackground}"/>
       <Setter Property="Opacity" Value="1"/>
     </Style>
 
