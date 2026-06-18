@@ -327,6 +327,36 @@
     </WrapPanel>
 
 
+    <!--Dynamic-width fields-->
+    <TextBlock Classes="Headline4 Subheadline" Text="Dynamic-width fields" Foreground="{DynamicResource NeumorphismDarkGray}" Margin="0,30,0,0" />
+    <TextBlock Classes="Headline6 Subheadline2" Text="Set HorizontalAlignment=&quot;Stretch&quot; to fill the container (resize the window to see them grow)"
+               Foreground="{DynamicResource NeumorphismMediumGray}" Margin="14,20,0,20" TextWrapping="Wrap" />
+
+    <!--****************************************************************-->
+    <showMeTheXaml:XamlDisplay UniqueId="DynamicWidthFields0">
+      <!-- TextBox in a '*' grid column now stretches to fill it -->
+      <Grid ColumnDefinitions="Auto,*,Auto" HorizontalAlignment="Stretch" Margin="14,0">
+        <icons:MaterialIcon Grid.Column="0" Kind="Magnify" Width="24" Height="24" VerticalAlignment="Center" Margin="0,0,12,0" />
+        <TextBox Grid.Column="1" HorizontalAlignment="Stretch" UseFloatingPlaceholder="True"
+                 assist:TextFieldAssist.Label="Stretches to fill the * column"
+                 ToolTip.Tip='TextBox with HorizontalAlignment="Stretch" inside a Grid "*" column' />
+        <TextBox Grid.Column="2" Width="120" UseFloatingPlaceholder="True"
+                 assist:TextFieldAssist.Label="Fixed 120"
+                 ToolTip.Tip="TextBox with an explicit Width stays fixed" />
+      </Grid>
+    </showMeTheXaml:XamlDisplay>
+    <!--****************************************************************-->
+    <showMeTheXaml:XamlDisplay UniqueId="DynamicWidthFields1">
+      <!-- Filled and Outline themes inherit the same stretch behaviour -->
+      <Grid ColumnDefinitions="*,*" ColumnSpacing="20" HorizontalAlignment="Stretch" Margin="14,10,14,0">
+        <TextBox Grid.Column="0" HorizontalAlignment="Stretch" Theme="{StaticResource TextBoxFilled}"
+                 UseFloatingPlaceholder="True" assist:TextFieldAssist.Label="Filled, stretched" />
+        <TextBox Grid.Column="1" HorizontalAlignment="Stretch" Theme="{StaticResource TextBoxOutline}"
+                 UseFloatingPlaceholder="True" assist:TextFieldAssist.Label="Outline, stretched" />
+      </Grid>
+    </showMeTheXaml:XamlDisplay>
+    <!--****************************************************************-->
+
     <WrapPanel HorizontalAlignment="Stretch" Margin="0,0,0,50">
       <StackPanel Orientation="Horizontal">
         <StackPanel Orientation="Vertical">
